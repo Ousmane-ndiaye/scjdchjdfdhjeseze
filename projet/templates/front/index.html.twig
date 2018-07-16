@@ -1,0 +1,173 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Bienvenue ! {% endblock %}
+
+{% block slide %}
+<div id="mega-slider" class="carousel slide " data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#mega-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#mega-slider" data-slide-to="1"></li>
+        <li data-target="#mega-slider" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active beactive">
+            <img src="{{asset ('assets/template/images/slide-4.png')}}" style="width: 100%;" alt="...">
+            <div class="carousel-caption">
+                <img src="{{asset ('assets/template/images/stars.png')}}" alt="">
+                <h2>Bienvenue Sen Office</h2>
+                <p>Vos séminaires et réunions dans le lieu idéal</p>
+                <div class="col-md-3 ">
+                </div>
+                <div class="col-md-4" style="margin-left: 9%;">
+                    <center><button type="submit" class="btn btn-main btn-block">Comment ça marche?</button></center>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{{asset ('assets/template/images/slide-2.png')}}" style="width: 100%;" alt="...">
+            <div class="carousel-caption">
+                <img src="{{asset ('assets/template/images/stars.png')}}" alt="">
+                <h2>Sen Office</h2>
+                <p>Pour faire de chaque rencontre un moment qui vous inspire.</p>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4" style="margin-left: 9%;">
+                    <center><button type="submit" class="btn btn-main btn-block comment ça marche">Comment ça marche?</button></center>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{asset ('assets/template/images/slide-3.png')}}" style="width: 100%;" alt="...">
+            <div class="carousel-caption">
+                <img src="{{asset ('assets/template/images/stars.png')}}" alt="">
+                <h2>Sen Office</h2>
+                <p>L'endroit parfait pour vos événements.</p>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-4" style="margin-left: 9%;">
+                    <center><button type="submit" class="btn btn-main btn-block comment ça marche">Comment ça marche?</button></center>
+                </div>
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#mega-slider" role="button" data-slide="prev">
+        </a>
+        <a class="right carousel-control" href="#mega-slider" role="button" data-slide="next">
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block recherche %}
+<div class="mg-book-now">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5 class="mg-bn-title">&nbsp;Recherchez <span class="mg-bn-big">Par lieux & disponiblité</span></h5>
+            </div>
+            <div class="col-md-9">
+                <div class="mg-bn-forms">
+                    <form method="post" action="" class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-12">
+                                <select class="select2 form-control" style="padding: 0;" data-placeholder="Choisir une localité...">
+                                    <option value="">&nbsp;</option>
+                                    {% for arrondissement in arrondissements %}
+                                        {% for cArrondissement in arrondissement.cArrondissements %}
+                                            <option value="{{arrondissement.id ~ '-' ~ cArrondissement.id}}">{{cArrondissement.nomCArrond}}</option>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <select class="cs-select cs-skin-elastic">
+                                    <option value="" disabled selected>Type d'évènement</option>
+                                    {% for type in types %}
+                                        <option value="{{type.id}}">{{type.nomType}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
+                                    <input type="number" class="form-control" name="nbreDePlaces" id="nbreDePlaces" placeholder="Nombre de participants">
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-xs-12">
+                                <button type="submit" class="btn btn-main btn-block">Rechercher</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block offre %}
+<div class="mg-best-rooms">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mg-sec-title">
+                    <h2>Nos meilleures salles</h2>
+                    <p>Les salles les plus choisies par nos clients</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <figure class="mg-room">
+                            <img src="{{asset ('assets/template/images/room-1.png')}}" alt="img11" class="img-responsive">
+                            <figcaption>
+                                <h2>Super Deluxe</h2>
+                                <div class="mg-room-rating"><i class="fa fa-star"></i> 5.00</div>
+                                <div class="mg-room-price">$249<sup>.99/Night</sup></div>
+                                <p>adversantur probatum iudicante indicaverunt repugnantibus.</p>
+                                <a href="#" class="btn btn-link">View Details <i class="fa fa-angle-double-right"></i></a>
+                                <a href="#" class="btn btn-main">Book</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-4">
+                        <figure class="mg-room">
+                            <img src="{{asset ('assets/template/images/room-2.png')}}" alt="img11" class="img-responsive">
+                            <figcaption>
+                                <h2>Super Deluxe</h2>
+                                <div class="mg-room-rating"><i class="fa fa-star"></i> 5.00</div>
+                                <div class="mg-room-price">$249<sup>.99/Night</sup></div>
+                                <p>adversantur probatum iudicante indicaverunt repugnantibus.</p>
+                                <a href="#" class="btn btn-link">View Details <i class="fa fa-angle-double-right"></i></a>
+                                <a href="#" class="btn btn-main">Book</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-sm-4">
+                        <figure class="mg-room">
+                            <img src="{{asset ('assets/template/images/room-3.png')}}" alt="img11" class="img-responsive">
+                            <figcaption>
+                                <h2>Super Deluxe</h2>
+                                <div class="mg-room-rating"><i class="fa fa-star"></i> 5.00</div>
+                                <div class="mg-room-price">$249<sup>.99/Night</sup></div>
+                                <p>adversantur probatum iudicante indicaverunt repugnantibus.</p>
+                                <a href="#" class="btn btn-link">View Details <i class="fa fa-angle-double-right"></i></a>
+                                <a href="#" class="btn btn-main">Book</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+        </div>
+    </div>
+</div> -->
+{% endblock %}
