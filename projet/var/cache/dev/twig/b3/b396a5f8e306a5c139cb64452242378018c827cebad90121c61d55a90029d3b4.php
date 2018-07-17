@@ -54,100 +54,92 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
         var body = document.querySelector(\"body\");
         body.setAttribute(\"class\", \"external-page external-alt sb-l-c sb-r-c\");
     </script>
-    <div id=\"main\" class=\"animated fadeIn\">
-        <!-- Start: Content-Wrapper -->
-        <section id=\"content_wrapper\">
-            <!-- Begin: Content -->
-            <section id=\"content\">
-                <div class=\"admin-form theme-info mw500\" id=\"login\">
-                    <!-- Login Logo -->
-                    <div class=\"row table-layout\">
-                \t\t<img src=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("inc/templates/back/assets/img/logos/logo.png"), "html", null, true);
-        echo "\" title=\"AdminDesigns Logo\" class=\"center-block img-responsive\" style=\"max-width: 275px;\">
+
+    <div class=\"wrapper-page\">
+        <div class=\"panel panel-color panel-primary panel-pages\">
+            <div class=\"panel-heading bg-img\">
+                <div class=\"bg-overlay\"></div>
+                <h3 class=\"text-center m-t-10 text-white\"> Se connecter à <strong>Sen Office</strong> </h3>
+            </div>
+
+
+            <div class=\"panel-body\">
+                <form class=\"form-horizontal m-t-20\" method=\"post\" action=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
+        echo "\">
+
+                    ";
+        // line 20
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 20, $this->source); })())) {
+            // line 21
+            echo "                        <div class=\"alert alert-danger\">
+                            ";
+            // line 22
+            if ((twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 22, $this->source); })()), "message", array()) == "Bad credentials.")) {
+                // line 23
+                echo "                            E-mail ou Mot de passe incorrecte.
+                            ";
+            }
+            // line 25
+            echo "                        </div>
+                    ";
+        }
+        // line 27
+        echo "
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <input class=\"form-control input-lg\" type=\"email\" id=\"email\" name=\"_username\" value=\"";
+        // line 30
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 30, $this->source); })()), "html", null, true);
+        echo "\" placeholder=\"E-mail\" required=\"required\">
+                        </div>
                     </div>
 
-                    <!-- Login Panel/Form -->
-                    <div class=\"panel mt30 mb25\">
-                        <form method=\"post\" action=\"";
-        // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
-        echo "\" id=\"contact\">
-                            <div class=\"panel-body bg-light p25 pb15\">
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <input class=\"form-control input-lg\" type=\"password\" id=\"password\" name=\"_password\" required=\"required\" placeholder=\"Mot de passe\">
+                        </div>
+                    </div>
 
-                                <!-- Divider -->
-                                <div class=\"section-divider mv30\">
-                            \t\t<span>CONNEXION</span>
-                                </div>
-
-                                ";
-        // line 29
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 29, $this->source); })())) {
-            // line 30
-            echo "                                    <div class=\"alert alert-danger\">
-                                        ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 31, $this->source); })()), "messageKey", array()), "html", null, true);
-            echo "
-                                    </div>
-                                ";
-        }
-        // line 34
-        echo "
-                                <!-- Username Input -->
-                                <div class=\"section\">
-                                    <label for=\"username\" class=\"field-label text-muted fs18 mb10\">Nom d'utilisateur</label>
-                                    <label for=\"username\" class=\"field prepend-icon\">
-                                        <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 39
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 39, $this->source); })()), "html", null, true);
-        echo "\" class=\"gui-input\" placeholder=\"Entrer votre nom d'utilisateur\">
-                                        <label for=\"username\" class=\"field-icon\">
-                                            <i class=\"fa fa-user\"></i>
-                                        </label>
-                                    </label>
-                                </div>
-
-                                <!-- Password Input -->
-                                <div class=\"section\">
-                                    <label for=\"username\" class=\"field-label text-muted fs18 mb10\">Mot de passe</label>
-                                    <label for=\"password\" class=\"field prepend-icon\">
-                                        <input type=\"password\" id=\"password\" name=\"_password\" class=\"gui-input\" placeholder=\"Entrer votre mot de passe\">
-                                        <label for=\"password\" class=\"field-icon\">
-                                            <i class=\"fa fa-lock\"></i>
-                                        </label>
-                                    </label>
-                                </div>
-                                <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 56
+                    <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 40
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"/>
-                            </div>
 
-                            <div class=\"panel-footer clearfix\">
-                                <button type=\"submit\" class=\"button btn-primary mr10 pull-right\">Se connecter</button>
-                                <label class=\"switch ib switch-primary mt10\">
-                                    <input type=\"checkbox\" name=\"remember\" id=\"remember\" checked>
-                                    <label for=\"remember\" data-on=\"YES\" data-off=\"NO\"></label>
-                                    <span>Se souvenir de moi</span>
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <div class=\"checkbox checkbox-primary\">
+                                <input type=\"checkbox\" id=\"checkbox-signup\" name=\"_remember_me\" checked />
+                                <label for=\"checkbox-signup\">
+                                    Se souvenir de moi
                                 </label>
                             </div>
-                        </form>
+
+                        </div>
                     </div>
 
-                    <!-- Registration Links -->
-                    <div class=\"login-links\">
-                        <p>
-                            <a href=\"\" class=\"active\" title=\"Récuperer votre mot de passe\">Mot de passe oublié?</a>
-                        </p>
+                    <div class=\"form-group text-center m-t-40\">
+                        <div class=\"col-xs-12\">
+                            <button class=\"btn btn-primary btn-lg w-lg waves-effect waves-light\" type=\"submit\">Se connecter</button>
+                        </div>
                     </div>
 
-                </div>
-            </section>
-            <!-- End: Content -->
-        </section>
-        <!-- End: Content-Wrapper -->
+                    <div class=\"form-group m-t-30\">
+                        <div class=\"col-sm-7\">
+                            <a href=\"pages-recoverpw.html\"><i class=\"fa fa-lock m-r-5\"></i> Mot de passe oublié?</a>
+                        </div>
+                        <div class=\"col-sm-5 text-right\">
+                            <a href=\"";
+        // line 65
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("partager_salle_front");
+        echo "\">Nouveau proprietaire?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
 
 ";
@@ -171,7 +163,7 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
 
     public function getDebugInfo()
     {
-        return array (  124 => 56,  104 => 39,  97 => 34,  91 => 31,  88 => 30,  86 => 29,  75 => 21,  67 => 16,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  135 => 65,  107 => 40,  94 => 30,  89 => 27,  85 => 25,  81 => 23,  79 => 22,  76 => 21,  74 => 20,  69 => 18,  53 => 4,  44 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -183,80 +175,70 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
         var body = document.querySelector(\"body\");
         body.setAttribute(\"class\", \"external-page external-alt sb-l-c sb-r-c\");
     </script>
-    <div id=\"main\" class=\"animated fadeIn\">
-        <!-- Start: Content-Wrapper -->
-        <section id=\"content_wrapper\">
-            <!-- Begin: Content -->
-            <section id=\"content\">
-                <div class=\"admin-form theme-info mw500\" id=\"login\">
-                    <!-- Login Logo -->
-                    <div class=\"row table-layout\">
-                \t\t<img src=\"{{asset('inc/templates/back/assets/img/logos/logo.png')}}\" title=\"AdminDesigns Logo\" class=\"center-block img-responsive\" style=\"max-width: 275px;\">
+
+    <div class=\"wrapper-page\">
+        <div class=\"panel panel-color panel-primary panel-pages\">
+            <div class=\"panel-heading bg-img\">
+                <div class=\"bg-overlay\"></div>
+                <h3 class=\"text-center m-t-10 text-white\"> Se connecter à <strong>Sen Office</strong> </h3>
+            </div>
+
+
+            <div class=\"panel-body\">
+                <form class=\"form-horizontal m-t-20\" method=\"post\" action=\"{{ path('security_login') }}\">
+
+                    {% if error %}
+                        <div class=\"alert alert-danger\">
+                            {% if error.message == \"Bad credentials.\" %}
+                            E-mail ou Mot de passe incorrecte.
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <input class=\"form-control input-lg\" type=\"email\" id=\"email\" name=\"_username\" value=\"{{ last_username }}\" placeholder=\"E-mail\" required=\"required\">
+                        </div>
                     </div>
 
-                    <!-- Login Panel/Form -->
-                    <div class=\"panel mt30 mb25\">
-                        <form method=\"post\" action=\"{{ path('security_login') }}\" id=\"contact\">
-                            <div class=\"panel-body bg-light p25 pb15\">
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <input class=\"form-control input-lg\" type=\"password\" id=\"password\" name=\"_password\" required=\"required\" placeholder=\"Mot de passe\">
+                        </div>
+                    </div>
 
-                                <!-- Divider -->
-                                <div class=\"section-divider mv30\">
-                            \t\t<span>CONNEXION</span>
-                                </div>
+                    <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\"/>
 
-                                {% if error %}
-                                    <div class=\"alert alert-danger\">
-                                        {{ error.messageKey }}
-                                    </div>
-                                {% endif %}
-
-                                <!-- Username Input -->
-                                <div class=\"section\">
-                                    <label for=\"username\" class=\"field-label text-muted fs18 mb10\">Nom d'utilisateur</label>
-                                    <label for=\"username\" class=\"field prepend-icon\">
-                                        <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" class=\"gui-input\" placeholder=\"Entrer votre nom d'utilisateur\">
-                                        <label for=\"username\" class=\"field-icon\">
-                                            <i class=\"fa fa-user\"></i>
-                                        </label>
-                                    </label>
-                                </div>
-
-                                <!-- Password Input -->
-                                <div class=\"section\">
-                                    <label for=\"username\" class=\"field-label text-muted fs18 mb10\">Mot de passe</label>
-                                    <label for=\"password\" class=\"field prepend-icon\">
-                                        <input type=\"password\" id=\"password\" name=\"_password\" class=\"gui-input\" placeholder=\"Entrer votre mot de passe\">
-                                        <label for=\"password\" class=\"field-icon\">
-                                            <i class=\"fa fa-lock\"></i>
-                                        </label>
-                                    </label>
-                                </div>
-                                <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\"/>
-                            </div>
-
-                            <div class=\"panel-footer clearfix\">
-                                <button type=\"submit\" class=\"button btn-primary mr10 pull-right\">Se connecter</button>
-                                <label class=\"switch ib switch-primary mt10\">
-                                    <input type=\"checkbox\" name=\"remember\" id=\"remember\" checked>
-                                    <label for=\"remember\" data-on=\"YES\" data-off=\"NO\"></label>
-                                    <span>Se souvenir de moi</span>
+                    <div class=\"form-group\">
+                        <div class=\"col-xs-12\">
+                            <div class=\"checkbox checkbox-primary\">
+                                <input type=\"checkbox\" id=\"checkbox-signup\" name=\"_remember_me\" checked />
+                                <label for=\"checkbox-signup\">
+                                    Se souvenir de moi
                                 </label>
                             </div>
-                        </form>
+
+                        </div>
                     </div>
 
-                    <!-- Registration Links -->
-                    <div class=\"login-links\">
-                        <p>
-                            <a href=\"\" class=\"active\" title=\"Récuperer votre mot de passe\">Mot de passe oublié?</a>
-                        </p>
+                    <div class=\"form-group text-center m-t-40\">
+                        <div class=\"col-xs-12\">
+                            <button class=\"btn btn-primary btn-lg w-lg waves-effect waves-light\" type=\"submit\">Se connecter</button>
+                        </div>
                     </div>
 
-                </div>
-            </section>
-            <!-- End: Content -->
-        </section>
-        <!-- End: Content-Wrapper -->
+                    <div class=\"form-group m-t-30\">
+                        <div class=\"col-sm-7\">
+                            <a href=\"pages-recoverpw.html\"><i class=\"fa fa-lock m-r-5\"></i> Mot de passe oublié?</a>
+                        </div>
+                        <div class=\"col-sm-5 text-right\">
+                            <a href=\"{{path('partager_salle_front')}}\">Nouveau proprietaire?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
 
 {% endblock %}

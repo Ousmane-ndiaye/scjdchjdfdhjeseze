@@ -64,6 +64,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         switch ($pathinfo) {
             default:
                 $routes = array(
+                    '/account/accueil' => array(array('_route' => 'accueil_account', '_controller' => 'App\\Controller\\AccountController::index'), null, null, null),
                     '/back/accueil' => array(array('_route' => 'accueil_back', '_controller' => 'App\\Controller\\BackController::index'), null, null, null),
                     '/front/accueil' => array(array('_route' => 'accueil_front', '_controller' => 'App\\Controller\\FrontController::index'), null, null, null),
                     '/front/catalogue' => array(array('_route' => 'catalogue_front', '_controller' => 'App\\Controller\\FrontController::catalogue'), null, array('GET' => 0, 'POST' => 1), null),

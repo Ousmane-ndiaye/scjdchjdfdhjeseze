@@ -31,6 +31,11 @@ div#OR {
 .a-tab:hover{
     height: 25px;
 }
+
+#LoginForm .form-group,
+#SignupForm .form-group {
+    margin-bottom: 0px;
+}
 </style>
 {% endblock %}
 
@@ -81,9 +86,9 @@ div#OR {
                                     {% endif %}
                                     <div class="form-group">
                                         <label for="email" class="col-sm-4 control-label">
-                                            Username</label>
+                                            E-mail</label>
                                         <div class="col-sm-8">
-                                            <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Username" required/>
+                                            <input type="text" id="email" name="_username" value="{{ last_username }}" class="form-control" placeholder="E-mail" required/>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -94,6 +99,7 @@ div#OR {
                                         </div>
                                     </div>
                                     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+                                    <input type="hidden" name="_target_path" value="{{ path('accueil_account') }}" />
                                     <div class="row">
                                         <div class="col-sm-8 col-sm-offset-4">
                                             <button type="submit" class="btn btn-main">
@@ -104,44 +110,68 @@ div#OR {
                                 </form>
                             </div>
                             <div class="tab-pane" id="Registration">
-                                <!--<form id="SignupForm" method="post" action="" role="form" class="form-horizontal">
+                                {{ form_start(form, {'attr': {'id': 'SignupForm', 'class': 'form-horizontal', 'role':'form'}}) }}
                                     <div class="form-group">
                                         <label for="nomComplet" class="col-sm-4 control-label">
-                                            Prénom et nom</label>
+                                            Prénom et Nom
+                                        </label>
                                         <div class="col-sm-8">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <select name="sexe" class="form-control" required />
-                                                        <option value="">Sexe</option>
-                                                        <option value="m">M.</option>
-                                                        <option value="f">Mme.</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <input type="text" name="nomComplet" class="form-control" placeholder="Prénom et nom" required />
-                                                </div>
-                                            </div>
+                                            {{ form_widget(form.proprietaire.nomComplet, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="numPiece" class="col-sm-4 control-label">
+                                            Numéro de pièce
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {{ form_widget(form.proprietaire.numPiece, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="adresse" class="col-sm-4 control-label">
+                                            Adresse
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {{ form_widget(form.proprietaire.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="col-sm-4 control-label">
-                                            Email</label>
+                                            E-mail</label>
                                         <div class="col-sm-8">
-                                            <input type="email" name="email" class="form-control" id="emailI" placeholder="Email" required/>
+                                            {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="mobile" class="col-sm-4 control-label">
-                                            Téléphone</label>
+                                        <label for="telephone" class="col-sm-4 control-label">
+                                            Téléphone
+                                        </label>
                                         <div class="col-sm-8">
-                                            <input type="number" name="tel" class="form-control" id="mobile" placeholder="775919686" size="20" minlength="9" maxlength="14" required />
+                                            {{ form_widget(form.proprietaire.telephone, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username" class="col-sm-4 control-label">
+                                            Nom d'utilisateur
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="password" class="col-sm-4 control-label">
-                                            Mot de passe</label>
+                                            Mot de passe
+                                        </label>
                                         <div class="col-sm-8">
-                                            <input type="password" class="form-control" id="passwordI" placeholder="Password" minlength="4" required/>
+                                            {{ form_widget(form.password.first, {'attr': {'class': 'form-control', 'placeholder': 'Mot de passe'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-sm-4 control-label">
+                                            Mot de passe
+                                        </label>
+                                        <div class="col-sm-8">
+                                            {{ form_widget(form.password.second, {'attr': {'class': 'form-control', 'placeholder': 'Retapez le mot de passe'}}) }}
                                         </div>
                                     </div>
                                     <div class="row">
@@ -149,19 +179,11 @@ div#OR {
                                             <button type="submit" class="btn btn-main">
                                                 S'inscrire & Continuer
                                             </button>
-                                            <button type="button" class="btn btn-default">
+                                            <button type="reset" class="btn btn-default">
                                                 Annuler
                                             </button>
                                         </div>
                                     </div>
-                                </form>-->
-                                {{ form_start(form) }}
-                                    {{ form_row(form.username) }}
-                                    {{ form_row(form.email) }}
-                                    {{ form_row(form.password.first) }}
-                                    {{ form_row(form.password.second) }}
-
-                                    <button type="submit" class="btn btn-success">S'inscrire !</button>
                                 {{ form_end(form) }}
                             </div>
                         </div>

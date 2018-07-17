@@ -85,10 +85,13 @@ class SecurityController extends AbstractController
         }, $roles);
         // If is a admin or super admin we redirect to the backoffice area
         if (in_array('ROLE_ADMIN', $rolesTab, true) || in_array('ROLE_SUPER_ADMIN', $rolesTab, true))
-            $redirection = new RedirectResponse($this->router->generate('back-accueil'));
+            $redirection = new RedirectResponse($this->router->generate('accueil_back'));
+        // Elseif is a user or proprietaire we redirect to the accountoffice area
+        elseif (in_array('ROLE_USER', $rolesTab, true) || in_array('ROLE_PROPRIETAIRE', $rolesTab, true))
+            $redirection = new RedirectResponse($this->router->generate('accueil_account'));
         // otherwise we redirect user to the member area
         else
-            $redirection = new RedirectResponse($this->router->generate('front-accueil'));
+            $redirection = new RedirectResponse($this->router->generate('accueil_front'));
 
         return $redirection;
     }
@@ -115,7 +118,7 @@ class SecurityController extends AbstractController
             $response = new RedirectResponse($this->router->generate('security_login'));
         // otherwise we redirect user to the homepage of website
         else
-            $response = new RedirectResponse($this->router->generate('front-accueil'));
+            $response = new RedirectResponse($this->router->generate('accueil_front'));
 
         return $response;
     }

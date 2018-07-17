@@ -49,8 +49,8 @@ security:
         # Là dans ce cas seul les utilisateurs ayant le rôle ROLE_ADMIN
         # peuvent acceder à toutes les pages commençant par /admin
 
-        # - { path: '^/back', roles: [ROLE_SUPER_ADMIN, ROLE_ADMIN] }
-        # - { path: '^/front/account', roles: ROLE_USER }
-        # - { path: '^/front', roles: IS_AUTHENTICATED_ANONYMOUSLY}
-        # - { path: '^/login', roles: IS_AUTHENTICATED_ANONYMOUSLY}
-        # - { path: '^/register', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/back', roles: [ROLE_SUPER_ADMIN, ROLE_ADMIN] }
+        - { path: '^/account', roles: [ROLE_USER, ROLE_PROPRIETAIRE] }
+        - { path: '^/front', roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - { path: '^/login', roles: IS_AUTHENTICATED_ANONYMOUSLY}
+        - { path: '^/register', roles: IS_AUTHENTICATED_ANONYMOUSLY }

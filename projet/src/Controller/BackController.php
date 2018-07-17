@@ -16,7 +16,6 @@ class BackController extends Controller
     public function index()
     {
         return $this->render('back/index.html.twig', [
-            'controller_name' => 'BackController',
         ]);
     }
 }

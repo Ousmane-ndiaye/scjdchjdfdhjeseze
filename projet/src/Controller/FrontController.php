@@ -85,7 +85,7 @@ class FrontController extends Controller
             $user->setPassword($password);
 
             // Par defaut l'utilisateur aura toujours le rôle ROLE_USER
-            $user->setEtat(true);
+            $user->setEtat(false);
             $user->setRoles(['ROLE_PROPRIETAIRE']);
 
             // On enregistre l'utilisateur dans la base
@@ -96,13 +96,13 @@ class FrontController extends Controller
             $event = new GenericEvent($user);
             $eventDispatcher->dispatch(Events::USER_REGISTERED, $event);
 
-            //return $this->redirectToRoute('security_login');
+            return $this->redirectToRoute('security_login');
         }
-        return $this->render('front/ajout-salle.html.twig', array(
+        return $this->render('front/ajout-salle.html.twig',[
             'activePS' => 'active',
             'last_username' => $helper->getLastUsername(),
             'error' => $helper->getLastAuthenticationError(),
             'form' => $form->createView(),
-        ));
+        ]);
     }
 }

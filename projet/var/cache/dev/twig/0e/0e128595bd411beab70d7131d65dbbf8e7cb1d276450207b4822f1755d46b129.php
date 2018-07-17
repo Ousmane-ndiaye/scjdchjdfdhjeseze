@@ -104,6 +104,11 @@ div#OR {
 .a-tab:hover{
     height: 25px;
 }
+
+#LoginForm .form-group,
+#SignupForm .form-group {
+    margin-bottom: 0px;
+}
 </style>
 ";
         
@@ -114,7 +119,7 @@ div#OR {
 
     }
 
-    // line 37
+    // line 42
     public function block_slide($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -131,7 +136,7 @@ div#OR {
 
     }
 
-    // line 40
+    // line 45
     public function block_recherche($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -148,7 +153,7 @@ div#OR {
 
     }
 
-    // line 43
+    // line 48
     public function block_offre($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -157,7 +162,7 @@ div#OR {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
 
-        // line 44
+        // line 49
         echo "<div class=\"mg-page-title parallax\" style=\"margin-top: 8.5%;\">
 \t<div class=\"container \">
 \t\t<div class=\"ro\">
@@ -191,30 +196,30 @@ div#OR {
                         <div class=\"tab-content\">
                             <div class=\"tab-pane active\" id=\"Login\">
                                 <form id=\"LoginForm\"  method=\"post\" action=\"";
-        // line 76
+        // line 81
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_login");
         echo "\" role=\"form\" class=\"form-horizontal\">
                                     ";
-        // line 77
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 77, $this->source); })())) {
-            // line 78
+        // line 82
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 82, $this->source); })())) {
+            // line 83
             echo "                                        <div class=\"alert alert-danger\">
                                             ";
-            // line 79
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 79, $this->source); })()), "message", array()), "html", null, true);
+            // line 84
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 84, $this->source); })()), "message", array()), "html", null, true);
             echo "
                                         </div>
                                     ";
         }
-        // line 82
+        // line 87
         echo "                                    <div class=\"form-group\">
                                         <label for=\"email\" class=\"col-sm-4 control-label\">
-                                            Username</label>
+                                            E-mail</label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"text\" id=\"username\" name=\"_username\" value=\"";
-        // line 86
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 86, $this->source); })()), "html", null, true);
-        echo "\" class=\"form-control\" placeholder=\"Username\" required/>
+                                            <input type=\"text\" id=\"email\" name=\"_username\" value=\"";
+        // line 91
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 91, $this->source); })()), "html", null, true);
+        echo "\" class=\"form-control\" placeholder=\"E-mail\" required/>
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -225,9 +230,13 @@ div#OR {
                                         </div>
                                     </div>
                                     <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 96
+        // line 101
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"/>
+                                    <input type=\"hidden\" name=\"_target_path\" value=\"";
+        // line 102
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_account");
+        echo "\" />
                                     <div class=\"row\">
                                         <div class=\"col-sm-8 col-sm-offset-4\">
                                             <button type=\"submit\" class=\"btn btn-main\">
@@ -238,44 +247,95 @@ div#OR {
                                 </form>
                             </div>
                             <div class=\"tab-pane\" id=\"Registration\">
-                                <!--<form id=\"SignupForm\" method=\"post\" action=\"\" role=\"form\" class=\"form-horizontal\">
+                                ";
+        // line 113
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 113, $this->source); })()), 'form_start', array("attr" => array("id" => "SignupForm", "class" => "form-horizontal", "role" => "form")));
+        echo "
                                     <div class=\"form-group\">
                                         <label for=\"nomComplet\" class=\"col-sm-4 control-label\">
-                                            Prénom et nom</label>
+                                            Prénom et Nom
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <div class=\"row\">
-                                                <div class=\"col-md-4\">
-                                                    <select name=\"sexe\" class=\"form-control\" required />
-                                                        <option value=\"\">Sexe</option>
-                                                        <option value=\"m\">M.</option>
-                                                        <option value=\"f\">Mme.</option>
-                                                    </select>
-                                                </div>
-                                                <div class=\"col-md-8\">
-                                                    <input type=\"text\" name=\"nomComplet\" class=\"form-control\" placeholder=\"Prénom et nom\" required />
-                                                </div>
-                                            </div>
+                                            ";
+        // line 119
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 119, $this->source); })()), "proprietaire", array()), "nomComplet", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Prénom et Nom")));
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"numPiece\" class=\"col-sm-4 control-label\">
+                                            Numéro de pièce
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            ";
+        // line 127
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 127, $this->source); })()), "proprietaire", array()), "numPiece", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "175619940126")));
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"adresse\" class=\"col-sm-4 control-label\">
+                                            Adresse
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            ";
+        // line 135
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 135, $this->source); })()), "proprietaire", array()), "adresse", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Colobane, Dakar")));
+        echo "
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
                                         <label for=\"email\" class=\"col-sm-4 control-label\">
-                                            Email</label>
+                                            E-mail</label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"email\" name=\"email\" class=\"form-control\" id=\"emailI\" placeholder=\"Email\" required/>
+                                            ";
+        // line 142
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 142, $this->source); })()), "email", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "E-mail")));
+        echo "
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
-                                        <label for=\"mobile\" class=\"col-sm-4 control-label\">
-                                            Téléphone</label>
+                                        <label for=\"telephone\" class=\"col-sm-4 control-label\">
+                                            Téléphone
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"number\" name=\"tel\" class=\"form-control\" id=\"mobile\" placeholder=\"775919686\" size=\"20\" minlength=\"9\" maxlength=\"14\" required />
+                                            ";
+        // line 150
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 150, $this->source); })()), "proprietaire", array()), "telephone", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "775919686")));
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"username\" class=\"col-sm-4 control-label\">
+                                            Nom d'utilisateur
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            ";
+        // line 158
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 158, $this->source); })()), "username", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Username")));
+        echo "
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
                                         <label for=\"password\" class=\"col-sm-4 control-label\">
-                                            Mot de passe</label>
+                                            Mot de passe
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"password\" class=\"form-control\" id=\"passwordI\" placeholder=\"Password\" minlength=\"4\" required/>
+                                            ";
+        // line 166
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 166, $this->source); })()), "password", array()), "first", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Mot de passe")));
+        echo "
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"password\" class=\"col-sm-4 control-label\">
+                                            Mot de passe
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            ";
+        // line 174
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 174, $this->source); })()), "password", array()), "second", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Retapez le mot de passe")));
+        echo "
                                         </div>
                                     </div>
                                     <div class=\"row\">
@@ -283,37 +343,14 @@ div#OR {
                                             <button type=\"submit\" class=\"btn btn-main\">
                                                 S'inscrire & Continuer
                                             </button>
-                                            <button type=\"button\" class=\"btn btn-default\">
+                                            <button type=\"reset\" class=\"btn btn-default\">
                                                 Annuler
                                             </button>
                                         </div>
                                     </div>
-                                </form>-->
                                 ";
-        // line 158
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 158, $this->source); })()), 'form_start');
-        echo "
-                                    ";
-        // line 159
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 159, $this->source); })()), "username", array()), 'row');
-        echo "
-                                    ";
-        // line 160
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 160, $this->source); })()), "email", array()), 'row');
-        echo "
-                                    ";
-        // line 161
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 161, $this->source); })()), "password", array()), "first", array()), 'row');
-        echo "
-                                    ";
-        // line 162
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 162, $this->source); })()), "password", array()), "second", array()), 'row');
-        echo "
-
-                                    <button type=\"submit\" class=\"btn btn-success\">S'inscrire !</button>
-                                ";
-        // line 165
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 165, $this->source); })()), 'form_end');
+        // line 187
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 187, $this->source); })()), 'form_end');
         echo "
                             </div>
                         </div>
@@ -392,7 +429,7 @@ div#OR {
 
     }
 
-    // line 236
+    // line 258
     public function block_apropos($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -409,7 +446,7 @@ div#OR {
 
     }
 
-    // line 239
+    // line 261
     public function block_partenaires($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -426,7 +463,7 @@ div#OR {
 
     }
 
-    // line 242
+    // line 264
     public function block_galerie($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -455,7 +492,7 @@ div#OR {
 
     public function getDebugInfo()
     {
-        return array (  430 => 242,  413 => 239,  396 => 236,  316 => 165,  310 => 162,  306 => 161,  302 => 160,  298 => 159,  294 => 158,  229 => 96,  216 => 86,  210 => 82,  204 => 79,  201 => 78,  199 => 77,  195 => 76,  161 => 44,  152 => 43,  135 => 40,  118 => 37,  78 => 6,  69 => 5,  51 => 3,  15 => 1,);
+        return array (  467 => 264,  450 => 261,  433 => 258,  353 => 187,  337 => 174,  326 => 166,  315 => 158,  304 => 150,  293 => 142,  283 => 135,  272 => 127,  261 => 119,  252 => 113,  238 => 102,  234 => 101,  221 => 91,  215 => 87,  209 => 84,  206 => 83,  204 => 82,  200 => 81,  166 => 49,  157 => 48,  140 => 45,  123 => 42,  78 => 6,  69 => 5,  51 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -492,6 +529,11 @@ div#OR {
 }
 .a-tab:hover{
     height: 25px;
+}
+
+#LoginForm .form-group,
+#SignupForm .form-group {
+    margin-bottom: 0px;
 }
 </style>
 {% endblock %}
@@ -543,9 +585,9 @@ div#OR {
                                     {% endif %}
                                     <div class=\"form-group\">
                                         <label for=\"email\" class=\"col-sm-4 control-label\">
-                                            Username</label>
+                                            E-mail</label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"text\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" class=\"form-control\" placeholder=\"Username\" required/>
+                                            <input type=\"text\" id=\"email\" name=\"_username\" value=\"{{ last_username }}\" class=\"form-control\" placeholder=\"E-mail\" required/>
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -556,6 +598,7 @@ div#OR {
                                         </div>
                                     </div>
                                     <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\"/>
+                                    <input type=\"hidden\" name=\"_target_path\" value=\"{{ path('accueil_account') }}\" />
                                     <div class=\"row\">
                                         <div class=\"col-sm-8 col-sm-offset-4\">
                                             <button type=\"submit\" class=\"btn btn-main\">
@@ -566,44 +609,68 @@ div#OR {
                                 </form>
                             </div>
                             <div class=\"tab-pane\" id=\"Registration\">
-                                <!--<form id=\"SignupForm\" method=\"post\" action=\"\" role=\"form\" class=\"form-horizontal\">
+                                {{ form_start(form, {'attr': {'id': 'SignupForm', 'class': 'form-horizontal', 'role':'form'}}) }}
                                     <div class=\"form-group\">
                                         <label for=\"nomComplet\" class=\"col-sm-4 control-label\">
-                                            Prénom et nom</label>
+                                            Prénom et Nom
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <div class=\"row\">
-                                                <div class=\"col-md-4\">
-                                                    <select name=\"sexe\" class=\"form-control\" required />
-                                                        <option value=\"\">Sexe</option>
-                                                        <option value=\"m\">M.</option>
-                                                        <option value=\"f\">Mme.</option>
-                                                    </select>
-                                                </div>
-                                                <div class=\"col-md-8\">
-                                                    <input type=\"text\" name=\"nomComplet\" class=\"form-control\" placeholder=\"Prénom et nom\" required />
-                                                </div>
-                                            </div>
+                                            {{ form_widget(form.proprietaire.nomComplet, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"numPiece\" class=\"col-sm-4 control-label\">
+                                            Numéro de pièce
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            {{ form_widget(form.proprietaire.numPiece, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"adresse\" class=\"col-sm-4 control-label\">
+                                            Adresse
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            {{ form_widget(form.proprietaire.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
                                         <label for=\"email\" class=\"col-sm-4 control-label\">
-                                            Email</label>
+                                            E-mail</label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"email\" name=\"email\" class=\"form-control\" id=\"emailI\" placeholder=\"Email\" required/>
+                                            {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
-                                        <label for=\"mobile\" class=\"col-sm-4 control-label\">
-                                            Téléphone</label>
+                                        <label for=\"telephone\" class=\"col-sm-4 control-label\">
+                                            Téléphone
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"number\" name=\"tel\" class=\"form-control\" id=\"mobile\" placeholder=\"775919686\" size=\"20\" minlength=\"9\" maxlength=\"14\" required />
+                                            {{ form_widget(form.proprietaire.telephone, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"username\" class=\"col-sm-4 control-label\">
+                                            Nom d'utilisateur
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
                                         <label for=\"password\" class=\"col-sm-4 control-label\">
-                                            Mot de passe</label>
+                                            Mot de passe
+                                        </label>
                                         <div class=\"col-sm-8\">
-                                            <input type=\"password\" class=\"form-control\" id=\"passwordI\" placeholder=\"Password\" minlength=\"4\" required/>
+                                            {{ form_widget(form.password.first, {'attr': {'class': 'form-control', 'placeholder': 'Mot de passe'}}) }}
+                                        </div>
+                                    </div>
+                                    <div class=\"form-group\">
+                                        <label for=\"password\" class=\"col-sm-4 control-label\">
+                                            Mot de passe
+                                        </label>
+                                        <div class=\"col-sm-8\">
+                                            {{ form_widget(form.password.second, {'attr': {'class': 'form-control', 'placeholder': 'Retapez le mot de passe'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"row\">
@@ -611,19 +678,11 @@ div#OR {
                                             <button type=\"submit\" class=\"btn btn-main\">
                                                 S'inscrire & Continuer
                                             </button>
-                                            <button type=\"button\" class=\"btn btn-default\">
+                                            <button type=\"reset\" class=\"btn btn-default\">
                                                 Annuler
                                             </button>
                                         </div>
                                     </div>
-                                </form>-->
-                                {{ form_start(form) }}
-                                    {{ form_row(form.username) }}
-                                    {{ form_row(form.email) }}
-                                    {{ form_row(form.password.first) }}
-                                    {{ form_row(form.password.second) }}
-
-                                    <button type=\"submit\" class=\"btn btn-success\">S'inscrire !</button>
                                 {{ form_end(form) }}
                             </div>
                         </div>
