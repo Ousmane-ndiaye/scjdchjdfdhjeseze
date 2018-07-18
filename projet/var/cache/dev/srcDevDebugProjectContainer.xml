@@ -413,6 +413,10 @@
     </service>
     <service id="App\Controller\AccountController" class="App\Controller\AccountController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="security.user_password_encoder.generic"/>
+      <argument type="service" id="App\Repository\TypedebienRepository"/>
+      <argument type="service" id="App\Repository\ArrondissementRepository"/>
     </service>
     <service id="App\Controller\BackController" class="App\Controller\BackController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
@@ -439,6 +443,16 @@
       </call>
     </service>
     <service id="App\Events" class="App\Events" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\AjoutBienType" class="App\Form\AjoutBienType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+      <argument type="service" id="App\Repository\JourRepository"/>
+    </service>
+    <service id="App\Form\BienType" class="App\Form\BienType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\JourType" class="App\Form\JourType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\ProprietaireType" class="App\Form\ProprietaireType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -470,6 +484,14 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\JourRepository" class="App\Repository\JourRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\OuvrableRepository" class="App\Repository\OuvrableRepository" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -755,6 +777,9 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AjoutBienType</argument>
+        <argument>App\Form\BienType</argument>
+        <argument>App\Form\JourType</argument>
         <argument>App\Form\ProprietaireType</argument>
         <argument>App\Form\UserType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -979,7 +1004,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator._yjjEkC"/>
+      <argument type="service" id=".service_locator._MTcfGC"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -3849,7 +3874,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.5aBk6I6"/>
+      <argument type="service" id=".service_locator.dVoKzAv"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4498,6 +4523,12 @@
     <service id=".instanceof.Symfony\Component\DependencyInjection\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AjoutBienType" class="App\Form\AjoutBienType" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AjoutBienType" class="App\Form\AjoutBienType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\BienType" class="App\Form\BienType" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\BienType" class="App\Form\BienType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\JourType" class="App\Form\JourType" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\JourType" class="App\Form\JourType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProprietaireType" class="App\Form\ProprietaireType" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ProprietaireType" class="App\Form\ProprietaireType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" public="false" autowire="true" abstract="true"/>
@@ -4516,6 +4547,10 @@
     <service id=".abstract.instanceof.App\Repository\DepartementRepository" class="App\Repository\DepartementRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ImageRepository" class="App\Repository\ImageRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\JourRepository" class="App\Repository\JourRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\JourRepository" class="App\Repository\JourRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OuvrableRepository" class="App\Repository\OuvrableRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\OuvrableRepository" class="App\Repository\OuvrableRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PaysRepository" class="App\Repository\PaysRepository" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\PaysRepository" class="App\Repository\PaysRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PeriodeRepository" class="App\Repository\PeriodeRepository" public="false" autowire="true" abstract="true"/>
@@ -4667,6 +4702,12 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.LY6bLxw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="JourRepository" type="service" id="App\Repository\JourRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.FngfaY1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4687,13 +4728,15 @@
         <argument key="helper" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.SHHLaq1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qY2Bl5q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\FrontController::ajoutSalle" type="service" id=".service_locator.FngfaY1"/>
+        <argument key="App\Controller\AccountController::ajouterSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\FrontController::partagerSalle" type="service" id=".service_locator.FngfaY1"/>
         <argument key="App\Controller\RegistrationController::registerAction" type="service" id=".service_locator.JPXreA6"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.UlhrRhb"/>
-        <argument key="App\Controller\FrontController:ajoutSalle" type="service" id=".service_locator.FngfaY1"/>
+        <argument key="App\Controller\AccountController:ajouterSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\FrontController:partagerSalle" type="service" id=".service_locator.FngfaY1"/>
         <argument key="App\Controller\RegistrationController:registerAction" type="service" id=".service_locator.JPXreA6"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.UlhrRhb"/>
       </argument>
@@ -4897,9 +4940,12 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator._yjjEkC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator._MTcfGC" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AjoutBienType" type="service" id="App\Form\AjoutBienType"/>
+        <argument key="App\Form\BienType" type="service" id="App\Form\BienType"/>
+        <argument key="App\Form\JourType" type="service" id="App\Form\JourType"/>
         <argument key="App\Form\ProprietaireType" type="service" id="App\Form\ProprietaireType"/>
         <argument key="App\Form\UserType" type="service" id="App\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
@@ -4910,7 +4956,7 @@
     <service id="security.logout.handler.csrf_token_clearing" class="Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler" public="false">
       <argument type="service" id="security.csrf.token_storage"/>
     </service>
-    <service id=".service_locator.5aBk6I6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.dVoKzAv" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\ArrondissementRepository" type="service" id="App\Repository\ArrondissementRepository"/>
@@ -4920,6 +4966,8 @@
         <argument key="App\Repository\CommuneRepository" type="service" id="App\Repository\CommuneRepository"/>
         <argument key="App\Repository\DepartementRepository" type="service" id="App\Repository\DepartementRepository"/>
         <argument key="App\Repository\ImageRepository" type="service" id="App\Repository\ImageRepository"/>
+        <argument key="App\Repository\JourRepository" type="service" id="App\Repository\JourRepository"/>
+        <argument key="App\Repository\OuvrableRepository" type="service" id="App\Repository\OuvrableRepository"/>
         <argument key="App\Repository\PaysRepository" type="service" id="App\Repository\PaysRepository"/>
         <argument key="App\Repository\PeriodeRepository" type="service" id="App\Repository\PeriodeRepository"/>
         <argument key="App\Repository\ProprietaireRepository" type="service" id="App\Repository\ProprietaireRepository"/>
@@ -5092,7 +5140,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.SHHLaq1"/>
+      <argument type="service" id=".service_locator.qY2Bl5q"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5344,7 +5392,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.SHHLaq1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.qY2Bl5q"/>
     <service id="console.command.public_alias.doctrine_cache.contains_command" alias="doctrine_cache.contains_command" public="true"/>
     <service id="console.command.public_alias.doctrine_cache.delete_command" alias="doctrine_cache.delete_command" public="true"/>
     <service id="console.command.public_alias.doctrine_cache.flush_command" alias="doctrine_cache.flush_command" public="true"/>

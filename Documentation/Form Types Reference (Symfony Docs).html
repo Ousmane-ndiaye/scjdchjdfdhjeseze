@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://symfony.com/doc/current/reference/forms/types.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" async="" src="./Form Types Reference (Symfony Docs)_files/dc.js"></script><script type="text/javascript" src="./Form Types Reference (Symfony Docs)_files/b10765e88c"></script><script src="./Form Types Reference (Symfony Docs)_files/sln.js" id="sln_bar"></script><script src="./Form Types Reference (Symfony Docs)_files/nr-1071.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta name="robots" content="index, follow, all">
+        <meta name="Author" content="Symfony">
+                    <meta name="description" content="Form Types Reference:   A form is composed of fields, each of which are built with the help of a field type (e.g. TextType, ChoiceType, etc). Symfony comes standard with a large list of field types th...">
+                <meta name="Keywords" content="symfony3, symfony2, symfony, project, framework, php, php5, php7, open-source, components, symphony, symfony framework, symfony tutorial">
+
+                <link rel="search" type="application/opensearchdescription+xml" href="http://symfony.com/opensearch/documentation.xml" title="Symfony documentation">
+
+        <link rel="stylesheet" href="./Form Types Reference (Symfony Docs)_files/sln.css"><title>Form Types Reference (Symfony Docs)</title>
+
+        <link rel="stylesheet" href="./Form Types Reference (Symfony Docs)_files/app.6242c9d08b2c5cf5144987a31a611252.css">
+            
+    <link rel="stylesheet" href="./Form Types Reference (Symfony Docs)_files/doc.3029e67673735e186423b2baf84b3355.css">
+
+        <script src="./Form Types Reference (Symfony Docs)_files/manifest.d41d8cd98f00b204e980.js"></script>
+        <script src="./Form Types Reference (Symfony Docs)_files/app.688dd615bbeb331a3e91.js"></script>
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-89393-6', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async="" src="./Form Types Reference (Symfony Docs)_files/analytics.js"></script>
+            <script src="./Form Types Reference (Symfony Docs)_files/doc.c8dea92dfe91c5b56e4c.js"></script>
+
+                <link rel="apple-touch-icon" type="image/png" href="http://symfony.com/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="http://symfony.com/apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="Symfony">
+
+                <meta name="twitter:site" content="@symfony">
+
+                <meta property="fb:pages" content="211720082183067">
+
+                            <meta property="og:type" content="website">
+            <meta property="og:title" content="Form Types Reference (Symfony Docs)">
+            <meta property="og:image" content="http://symfony.com/images/v5/opengraph/symfony.png">
+
+                            <meta property="og:description" content="Form Types Reference:   A form is composed of fields, each of which are built with the help of a field type (e.g. TextType, ChoiceType, etc). Symfony comes standard with a large list of field types th...">
+                    
+                <meta name="msapplication-TileColor" content="#222222">
+        <meta name="application-name" content="Symfony">
+        <meta name="msapplication-tooltip" content="Official Symfony website">
+
+                <meta name="theme-color" content="#222222">
+
+            </head>
+
+    <body class="null">
+        <script async="">
+            document.body.classList.add(localStorage.getItem('themeName'));
+        </script>
+
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","name":"Symfony","url":"https:\/\/symfony.com"}</script>
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/symfony.com","name":"Symfony","logo":"https:\/\/symfony.com\/images\/v5\/logos\/sf-positive.svg"}</script>
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","url":"https:\/\/symfony.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/symfony.com\/search?q={query}","query-input":"required name=query"}}</script>
+        <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/symfony.com","name":"Symfony SAS","contactPoint":{"@type":"ContactPoint","telephone":"+33-140998109","contactType":"Sales","availableLanguage":["French","English","German","Spanish"]}}</script>
+
+        <div id="sln"><div class="sln-bar"><div class="sln-bar-inner"><div class="sln-network"><a href="http://symfony.com/doc/current/reference/forms/types.html#" title="Toggle SensioLabs menu" class="sln-hidden-phone">SensioLabs<span>World</span></a><a href="http://symfony.com/doc/current/reference/forms/types.html#" title="Toggle SensioLabs menu" class="sln-visible-phone">SL<span>W</span></a></div> <div class="sln-ad"><a href="http://sensiolabs.com/en/symfony/certification.html" data-ga="sl_certification" class="sln-visible-phone"><img src="./Form Types Reference (Symfony Docs)_files/ed5afbce-d292-4ca3-9f33-cc479debcaa5.png" alt="Certification icon">Certification</a><a href="http://sensiolabs.com/en/symfony/certification.html" data-ga="sl_certification" class="sln-visible-tablet"><img src="./Form Types Reference (Symfony Docs)_files/ed5afbce-d292-4ca3-9f33-cc479debcaa5.png" alt="Certification icon">Symfony Certification</a><a href="http://sensiolabs.com/en/symfony/certification.html" data-ga="sl_certification" class="sln-visible-desktop"><img src="./Form Types Reference (Symfony Docs)_files/ed5afbce-d292-4ca3-9f33-cc479debcaa5.png" alt="Certification icon">Symfony Certification now in 4,000 exam centers around the world</a></div> <div class="sln-search"><div class="sln-search-deactivated"><a href="http://symfony.com/doc/current/reference/forms/types.html#" title="Search"><img alt="Search icon" src="./Form Types Reference (Symfony Docs)_files/search.png"></a></div><div class="sln-search-activated sln-hidden"><a href="http://symfony.com/doc/current/reference/forms/types.html#" title="Search"><img alt="Search icon" src="./Form Types Reference (Symfony Docs)_files/search-alt.png"></a><form method="GET" action="http://symfony.com/search"><input name="q" id="sln-autocomplete" type="text" title="Search terms" aria-label="Search terms" placeholder="Search"><button class="sr-only">Search</button></form></div></div> <div class="sln-user"> <a href="http://symfony.com/session/new?target=http://symfony.com/doc/current/reference/forms/types.html" class="sln-connect"> Connect </a> </div>
+    </div>
+    <div class="sln-dropdown-network sln-dropdown sln-hidden"><div class="sln-container"><div class="sln-row"><div class="sln-span6"><div class="sln-row"><div class="sln-span3"><img src="./Form Types Reference (Symfony Docs)_files/sensiolabs.png" alt="SensioLabs"><p>Since 1998, SensioLabs has been promoting the Open-Source software movement by providing quality and performant web application development products, trainings,  and consulting. SensioLabs also supports multiple important Open-Source projects. <br><a data-ga="sln_learn_more" href="http://sensiolabs.com/en">Learn more</a></p><div><a data-ga="sln_sl_international" href="http://sensiolabs.com/en">International</a></div><ul class="sln-websites"><li>Local:</li><li class="first"><a data-ga="sln_sl_FR" href="http://sensiolabs.com/fr">France</a></li><li><a data-ga="sln_sl_DE" href="http://sensiolabs.de/">Germany</a></li></ul></div><div class="sln-span3 sln-ads"><h2>In the Spotlight</h2><div><a data-ga="sln_insight_thumb" href="https://insight.sensiolabs.com/"><img src="./Form Types Reference (Symfony Docs)_files/sensiolabsinsight.png" alt="SensioLabsInsight"></a></div><div><a data-ga="sln_blackfire_thumb" href="https://blackfire.io/"><img src="./Form Types Reference (Symfony Docs)_files/blackfire.png" alt="Blackfire"></a></div></div></div></div><div class="sln-span6 sln-products-listing sln-right-box"><div class="sln-row"><div class="sln-span3"><h2>Open Source</h2><ul><li><a data-ga="sln_sf" href="https://symfony.com/">Symfony - Web framework</a></li><li><a data-ga="sln_twig" href="https://twig.symfony.com/">Twig - Templating</a></li><li><a data-ga="sln_silex" href="https://silex.symfony.com/">Silex - Micro-framework</a></li><li><a data-ga="sln_swift" href="https://swiftmailer.symfony.com/">Swift Mailer - E-Mailing</a></li></ul></div><div class="sln-span3"><h2>Products</h2><ul><li><a data-ga="sln_insight" href="https://insight.sensiolabs.com/">Insight: PHP Quality</a></li><li><a data-ga="sln_profiler" href="https://blackfire.io/">Blackfire: Web App performance</a></li><li><a data-ga="sln_sensiocloud" href="https://sensio.cloud/">SensioCloud: PaaS for Symfony</a></li><li><a data-ga="sln_security_checker" href="https://security.symfony.com/">Security Monitoring</a></li></ul></div></div><div class="sln-row"><div class="sln-span3"><h2>Solutions &amp; Services</h2><ul><li><a data-ga="sln_training" href="https://training.sensiolabs.com/">Training</a></li><li><a data-ga="sln_certification" href="https://certification.symfony.com/">Certification</a></li><li><a data-ga="sln_services" href="https://sensiolabs.com/solutions">Technical Solutions</a></li><li><a data-ga="sln_university" href="https://university.sensiolabs.com/">SensioLabs University</a></li><li><a data-ga="sln_experts" href="https://expert.sensiolabs.com/">Experts</a></li></ul></div><div class="sln-span3"><h2>Community</h2><ul><li><a data-ga="sln_connect" href="https://connect.sensiolabs.com/">Community</a></li><li><a data-ga="sln_live" href="https://live.symfony.com/">Conferences</a></li><li><a data-ga="sln_youtube" href="https://www.youtube.com/user/SensioLabs">Videos</a></li><li><a data-ga="sln_partners" href="https://network.sensiolabs.com/en/">Partners</a></li></ul></div></div></div><div class="sln-right-box sln-our-blogs"><div class="sln-row "><div class="sln-span5"><h2>Our Blogs</h2>&nbsp;&nbsp;&nbsp;
+                        <a href="https://symfony.com/blog/">Symfony</a>,
+                        <a href="https://blog.sensiolabs.com/">SensioLabs</a>,
+                        <a href="http://blog.insight.sensiolabs.com/">Insight</a>,
+                        and <a href="https://blog.blackfire.io/">Blackfire</a>.
+                    </div></div></div></div></div></div>
+    
+</div></div>
+
+                <div id="content_wrapper">
+            <header>
+                <section class="header__top">
+                    <div class="container">
+                        <div class="header__logo">
+                            <a href="http://symfony.com/">
+                                <img src="./Form Types Reference (Symfony Docs)_files/header-logo.svg" alt="Symfony">
+                            </a>
+                        </div>
+                        <div class="hidden-xs">
+                            <a href="https://sensiolabs.com/" title="SensioLabs, PHP services and software solutions for enterprise and community.">
+                                <img height="17" src="./Form Types Reference (Symfony Docs)_files/slsponsor.svg" alt="Symfony is sponsored by SensioLabs">
+                            </a>
+                        </div>
+                        <div class="visible-xs">
+                            <button class="header__toggle__menu" type="button" name="toggle" aria-label="Toggle menu">
+                                <i class="icon icon--large icon--white"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 1344v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45V832q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19H192q-26 0-45-19t-19-45V320q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path></svg></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="header__bottom affix" data-spy="affix" data-offset-top="90">
+                    <div class="container">
+                        <nav class="header__nav">
+                            <ul>
+                                <li class="header__logo--responsive">
+                                    <a href="http://symfony.com/"><img alt="Symfony logo" src="./Form Types Reference (Symfony Docs)_files/sf-positive.svg"></a>
+                                </li>
+
+                                
+        <li>
+        <a href="http://symfony.com/what-is-symfony">What is Symfony?</a>
+    </li>
+            <li class="selected">
+        <a href="http://symfony.com/doc/current/index.html">Documentation</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/community">Community</a>
+    </li>
+            <li>
+        <a href="https://sensiolabs.com/">Business Solutions</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/events">Events</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/blog/">News</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/account">Account</a>
+    </li>
+    
+                                <li class="hidden-xs header__download">
+                                    <a href="http://symfony.com/download">Download</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+            </header>
+
+                        <div class="container">
+                                    <div class="row">
+                        <aside class="col-sm-3">
+                            <style type="text/css">
+    #symfony41-promo { background: white; border: 2px solid #d9d9d9; border-radius: 10px; height: auto; margin: 5px 0 30px; overflow: hidden; position: relative; }
+    #symfony41-promo .figure {
+        background-image: url("/images/v5/promos/symfony-4-1/symfony-4-1.svg");
+        background-position: -20px center;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    #symfony41-promo p { font-weight: bold; margin: 15px; }
+    #symfony41-promo ul { color: #ccc; margin: 0 0 15px 30px; }
+    #symfony41-promo a { text-decoration: none; }
+    #symfony41-promo a:hover { text-decoration: underline; }
+</style>
+
+<div id="symfony41-promo">
+    <p class="visible-xs">Symfony 4.1 is now available:</p>
+    <div class="hidden-xs figure"></div>
+
+    <ul>
+        <li><a href="https://symfony.com/blog/symfony-4-1-0-released">Announcement</a></li>
+        <li><a href="https://symfony.com/blog/category/living-on-the-edge/4.1">New features</a></li>
+        <li><a href="https://github.com/symfony/symfony/blob/master/UPGRADE-4.1.md">Upgrade Guide</a></li>
+    </ul>
+</div>
+
+
+                                                                                    <div class="doc__toc">
+                <h4 class="text-accent">Table of Contents</h4>
+                <div class="box box--small">
+                    <ul>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#">Form Types Reference</a><ul>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#supported-field-types">Supported Field Types</a><ul>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#text-fields">Text Fields</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#choice-fields">Choice Fields</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#date-and-time-fields">Date and Time Fields</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#other-fields">Other Fields</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#field-groups">Field Groups</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#hidden-fields">Hidden Fields</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#buttons">Buttons</a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types.html#base-fields">Base Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+            </div>
+            
+            <div class="hidden-xs m-b-30 doc__nav">
+        <div class="panel">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="http://symfony.com/doc/current/reference/forms/types.html#doc-menu-1" class="collapsed">Getting Started <i class="icon icon--small icon--gray-light pull-right"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg></i></a>
+            </div>
+            <div id="doc-menu-1" class="panel-collapse collapse ">
+                <div class="panel-body">
+                    
+
+    <ul class="list--unstyled">
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/setup.html">
+                    Setup
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/page_creation.html">
+                    Creating Pages
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/routing.html">
+                    Routing
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/controller.html">
+                    Controllers
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/templating.html">
+                    Templates
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/configuration.html">
+                    Configuration
+                </a>
+            </li>
+            </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="http://symfony.com/doc/current/reference/forms/types.html#doc-menu-2" class="collapsed">Guides <i class="icon icon--small icon--gray-light pull-right"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg></i></a>
+            </div>
+            <div id="doc-menu-2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    
+
+    <ul class="">
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/bundles.html">
+                    Bundles
+                </a>
+            </li>
+                    <li class="">
+                                <a class="important" href="http://symfony.com/doc/4.1/console.html">
+                    Console
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/contributing/index.html">
+                    Contributing
+                </a>
+            </li>
+                    <li class="">
+                                <a class="very-important" href="http://symfony.com/doc/4.1/doctrine.html">
+                    Databases (Doctrine ORM)
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/deployment.html">
+                    Deployment
+                </a>
+            </li>
+                    <li class="">
+                                <a class="important" href="http://symfony.com/doc/4.1/email.html">
+                    Email
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/event_dispatcher.html">
+                    Event Dispatcher
+                </a>
+            </li>
+                    <li class="">
+                                <a class="important" href="http://symfony.com/doc/4.1/setup/flex.html">
+                    Flex
+                </a>
+            </li>
+                    <li class="">
+                                <a class="very-important" href="http://symfony.com/doc/4.1/forms.html">
+                    Forms
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/frontend.html">
+                    Front-end
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/http_cache.html">
+                    HTTP Cache
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/logging.html">
+                    Logging
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/messenger.html">
+                    Messenger
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/performance.html">
+                    Performance
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/profiler.html">
+                    Profiler
+                </a>
+            </li>
+                    <li class="">
+                                <a class="important" href="http://symfony.com/doc/4.1/security.html">
+                    Security
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/serializer.html">
+                    Serializer
+                </a>
+            </li>
+                    <li class="">
+                                <a class="very-important" href="http://symfony.com/doc/4.1/service_container.html">
+                    Service Container
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/session.html">
+                    Sessions
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/testing.html">
+                    Testing
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/translation.html">
+                    Translation (i18n)
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/validation.html">
+                    Validation
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/workflow.html">
+                    Workflow
+                </a>
+            </li>
+            </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <a data-toggle="collapse" href="http://symfony.com/doc/current/reference/forms/types.html#doc-menu-3" class="collapsed">Components <i class="icon icon--small icon--gray-light pull-right"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45L531 45q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"></path></svg></i></a>
+            </div>
+            <div id="doc-menu-3" class="panel-collapse collapse">
+                <div class="panel-body">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            <ul class="">
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/asset.html">
+                    Asset
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/browser_kit.html">
+                    BrowserKit
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/cache.html">
+                    Cache
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/class_loader.html">
+                    ClassLoader
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/config.html">
+                    Config
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/console.html">
+                    Console
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/index.html">
+                    Contracts
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/css_selector.html">
+                    CssSelector
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/debug.html">
+                    Debug
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/dependency_injection.html">
+                    DependencyInjection
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/dom_crawler.html">
+                    DomCrawler
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/dotenv.html">
+                    Dotenv
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/event_dispatcher.html">
+                    EventDispatcher
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/expression_language.html">
+                    ExpressionLanguage
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/filesystem.html">
+                    Filesystem
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/finder.html">
+                    Finder
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/form.html">
+                    Form
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/http_foundation.html">
+                    HttpFoundation
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/http_kernel.html">
+                    HttpKernel
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/intl.html">
+                    Intl
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/ldap.html">
+                    Ldap
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/lock.html">
+                    Lock
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/messenger.html">
+                    Messenger
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/options_resolver.html">
+                    OptionsResolver
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/phpunit_bridge.html">
+                    PHPUnit Bridge
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_apcu.html">
+                    Polyfill APCu
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_ctype.html">
+                    Polyfill Ctype
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_iconv.html">
+                    Polyfill Iconv
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_intl_grapheme.html">
+                    Polyfill Intl Grapheme
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_intl_icu.html">
+                    Polyfill Intl ICU
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_intl_normalizer.html">
+                    Polyfill Intl Normalizer
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_mbstring.html">
+                    Polyfill Mbstring
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php54.html">
+                    Polyfill PHP 5.4
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php55.html">
+                    Polyfill PHP 5.5
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php56.html">
+                    Polyfill PHP 5.6
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php70.html">
+                    Polyfill PHP 7.0
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php71.html">
+                    Polyfill PHP 7.1
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php72.html">
+                    Polyfill PHP 7.2
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/polyfill_php73.html">
+                    Polyfill PHP 7.3
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/process.html">
+                    Process
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/property_access.html">
+                    PropertyAccess
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/property_info.html">
+                    PropertyInfo
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/routing.html">
+                    Routing
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/security.html">
+                    Security
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/serializer.html">
+                    Serializer
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/stopwatch.html">
+                    Stopwatch
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/templating.html">
+                    Templating
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/translation.html">
+                    Translation
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/validator.html">
+                    Validator
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/var_dumper.html">
+                    VarDumper
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/workflow.html">
+                    Workflow
+                </a>
+            </li>
+                    <li class="">
+                                <a class="" href="http://symfony.com/doc/4.1/components/yaml.html">
+                    Yaml
+                </a>
+            </li>
+            </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="collapsed" href="https://training.sensiolabs.com/en/courses?q=symfony">Training</a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-heading">
+                <a class="collapsed" href="https://certification.symfony.com/">Certification</a>
+            </div>
+        </div>
+    </div>
+
+
+                                                                <div class="ads m-b-30">
+            <div class="ad m-b-15" id="ad_trainings_1">
+            <h3>
+                <a href="https://training.sensiolabs.com/en/courses?q=symfony" data-tracked="" data-category="Ads" data-action="Ads" data-label="trainings_1">
+                    Master Symfony fundamentals
+                </a>
+            </h3>
+            <div>Be trained by SensioLabs experts (2 to 6 day sessions -- French or English).</div>
+            <div><cite>training.sensiolabs.com</cite></div>
+        </div>
+            <div class="ad m-b-15" id="ad_support_1">
+            <h3>
+                <a href="https://sensiolabs.com/en/packaged-solutions/index.html" data-tracked="" data-category="Ads" data-action="Ads" data-label="support_1">
+                    Discover SensioLabs' Professional Business Solutions
+                </a>
+            </h3>
+            <div>Peruse our complete Symfony &amp; PHP solutions catalog for your web development needs.</div>
+            <div><cite>sensiolabs.com</cite></div>
+        </div>
+    </div>
+
+<div class="ads">
+    
+    <a href="https://blackfire.io/24-days" data-tracked="" data-category="Ads" data-action="sidebar" data-label="blackfire">
+        <img src="./Form Types Reference (Symfony Docs)_files/blackfire-profiler.png" class="m-b-15 img-responsive" alt="Blackfire Profiler Fire up your PHP Apps Performance">
+    </a>
+            <a href="https://security.symfony.com/" data-tracked="" data-category="Ads" data-action="sidebar" data-label="security-monitoring">
+            <img src="./Form Types Reference (Symfony Docs)_files/security-monitoring.png" class="img-responsive" alt="PHP security vulnerabilities monitoring">
+        </a>
+    </div>
+
+                                <div class="box box--small m-t-30 xs-m-0 text-center">
+                                    <a class="block" title="Toggle the website theme" href="http://symfony.com/doc/current/reference/forms/types.html#" id="theme-switcher">Switch to dark theme</a>
+                                </div>
+                                                    </aside>
+
+                        <main class="col-sm-9">
+                                                                                                                                    <ol class="breadcrumb">
+                                                                                    <li class="">
+                                                                                                <a href="http://symfony.com/">Home</a>
+                                            </li>
+                                                                                    <li class="">
+                                                                                                <a href="http://symfony.com/doc/current/index.html">Documentation</a>
+                                            </li>
+                                                                                    <li class="">
+                                                                                                <a href="http://symfony.com/doc/current/reference/index.html">Reference</a>
+                                            </li>
+                                                                                    <li class="active">
+                                                                                                <a href="http://symfony.com/doc/current/reference/forms/types.html">Form Types Reference</a>
+                                            </li>
+                                                                            </ol>
+
+                                    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"\/doc\/current\/index.html","name":"Documentation"}},{"@type":"ListItem","position":3,"item":{"@id":"\/doc\/current\/reference\/index.html","name":"Reference"}},{"@type":"ListItem","position":4,"item":{"@id":"\/doc\/current\/reference\/forms\/types.html","name":"Form Types Reference"}}]}</script>
+                                
+                                    
+            <div class="versionadded">
+            <p>
+                You are browsing the <b>Symfony 4 documentation</b>, which changes
+                significantly from Symfony 3.x. If your app doesn't use Symfony 4 yet, browse the
+                <a href="http://symfony.com/doc/3.4/reference/forms/types.html">Symfony 3.4 documentation</a>.
+            </p>
+        </div>
+    
+    
+                                                                    <h1>Form Types Reference</h1>
+                                
+                                    
+    <div class="page">
+        
+        <div class="doc__tools clearfix">
+                            <div class="doc__version">
+    <div class="version__current">
+        4.1 version
+        <i class="pull-right icon icon--small icon--white"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1408 704q0 26-19 45l-448 448q-19 19-45 19t-45-19L403 749q-19-19-19-45t19-45 45-19h896q26 0 45 19t19 45z"></path></svg></i>    </div>
+
+            <div class="version__all ">
+                            <strong>Maintained</strong>
+                <div class="version__list">
+                                            <a href="http://symfony.com/doc/2.8/reference/forms/types.html">
+                            2.8
+                                                    </a>
+                                            <a href="http://symfony.com/doc/3.4/reference/forms/types.html">
+                            3.4
+                                                    </a>
+                                            <a href="http://symfony.com/doc/4.0/reference/forms/types.html">
+                            4.0
+                                                    </a>
+                                            <a href="http://symfony.com/doc/master/reference/forms/types.html">
+                            4.2
+                                                            <small>master</small>
+                                                    </a>
+                                    </div>
+            
+                            <strong>Unmaintained</strong>
+                <div class="version__list">
+                                            <a href="http://symfony.com/doc/2.0/reference/forms/types.html">2.0</a>
+                                            <a href="http://symfony.com/doc/2.1/reference/forms/types.html">2.1</a>
+                                            <a href="http://symfony.com/doc/2.2/reference/forms/types.html">2.2</a>
+                                            <a href="http://symfony.com/doc/2.3/reference/forms/types.html">2.3</a>
+                                            <a href="http://symfony.com/doc/2.4/reference/forms/types.html">2.4</a>
+                                            <a href="http://symfony.com/doc/2.5/reference/forms/types.html">2.5</a>
+                                            <a href="http://symfony.com/doc/2.6/reference/forms/types.html">2.6</a>
+                                            <a href="http://symfony.com/doc/2.7/reference/forms/types.html">2.7</a>
+                                            <a href="http://symfony.com/doc/3.0/reference/forms/types.html">3.0</a>
+                                            <a href="http://symfony.com/doc/3.1/reference/forms/types.html">3.1</a>
+                                            <a href="http://symfony.com/doc/3.2/reference/forms/types.html">3.2</a>
+                                            <a href="http://symfony.com/doc/3.3/reference/forms/types.html">3.3</a>
+                                    </div>
+                    </div>
+    </div>
+
+            
+                            <div class="doc__edit">
+                    <a href="https://github.com/symfony/symfony-docs/edit/4.1/reference/forms/types.rst">edit this page</a>
+                </div>
+                    </div>
+
+        <div class="section" id="form-types-reference">
+<span id="index-0"></span><h1>Form Types Reference<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#form-types-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>A form is composed of <em>fields</em>, each of which are built with the help of
+a field <em>type</em> (e.g. <code class="notranslate">TextType</code>, <code class="notranslate">ChoiceType</code>, etc). Symfony comes
+standard with a large list of field types that can be used in your application.</p>
+<div class="section" id="supported-field-types">
+<h2>Supported Field Types<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#supported-field-types" title="Permalink to this headline">¶</a></h2>
+<p>The following field types are natively available in Symfony:</p>
+<div class="section" id="text-fields">
+<h3>Text Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#text-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/text.html"><em>TextType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/textarea.html"><em>TextareaType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/email.html"><em>EmailType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/integer.html"><em>IntegerType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/money.html"><em>MoneyType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/number.html"><em>NumberType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/password.html"><em>PasswordType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/percent.html"><em>PercentType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/search.html"><em>SearchType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/url.html"><em>UrlType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/range.html"><em>RangeType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/tel.html"><em>TelType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/color.html"><em>ColorType</em></a></li>
+</ul>
+</div>
+<div class="section" id="choice-fields">
+<h3>Choice Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#choice-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/choice.html"><em>ChoiceType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/entity.html"><em>EntityType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/country.html"><em>CountryType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/language.html"><em>LanguageType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/locale.html"><em>LocaleType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/timezone.html"><em>TimezoneType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/currency.html"><em>CurrencyType</em></a></li>
+</ul>
+</div>
+<div class="section" id="date-and-time-fields">
+<h3>Date and Time Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#date-and-time-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/date.html"><em>DateType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/dateinterval.html"><em>DateIntervalType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/datetime.html"><em>DateTimeType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/time.html"><em>TimeType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/birthday.html"><em>BirthdayType</em></a></li>
+</ul>
+</div>
+<div class="section" id="other-fields">
+<h3>Other Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#other-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/checkbox.html"><em>CheckboxType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/file.html"><em>FileType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/radio.html"><em>RadioType</em></a></li>
+</ul>
+</div>
+<div class="section" id="field-groups">
+<h3>Field Groups<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#field-groups" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/collection.html"><em>CollectionType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/repeated.html"><em>RepeatedType</em></a></li>
+</ul>
+</div>
+<div class="section" id="hidden-fields">
+<h3>Hidden Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#hidden-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/hidden.html"><em>HiddenType</em></a></li>
+</ul>
+</div>
+<div class="section" id="buttons">
+<h3>Buttons<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#buttons" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/button.html"><em>ButtonType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/reset.html"><em>ResetType</em></a></li>
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/submit.html"><em>SubmitType</em></a></li>
+</ul>
+</div>
+<div class="section" id="base-fields">
+<h3>Base Fields<a class="headerlink" href="http://symfony.com/doc/current/reference/forms/types.html#base-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference internal" href="http://symfony.com/doc/current/reference/forms/types/form.html"><em>FormType</em></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+    </div>
+
+    <div class="m-t-30">
+    <p class="text-muted">
+        This work, including the code samples, is licensed under a
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons BY-SA 3.0</a>
+        license.
+    </p>
+</div>
+
+                                                    </main>
+                    </div>
+                            </div>
+            
+                            <footer>
+    <section class="promos">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 m-b-30">
+                    <h4 class="text-accent">Latest from the Symfony Blog</h4>
+
+                    <ul class="list--unstyled list--border m-b-30">
+                                                    <li>
+                                <a href="http://symfony.com/blog/the-conference-schedule-for-symfonylive-london-2018-is-out">The conference schedule for SymfonyLive London 2018 is out!</a>
+                                <span class="metadata block m-b-0">July 17, 2018</span>
+                            </li>
+                                            </ul>
+
+                                        <h4 class="text-accent m-b-15">They Help Us Make Symfony</h4>
+                                        <div class="box box--small box--white box--shadow">
+                            <div class="d-flex ">
+        <img class="m-r-15 avatar avatar--large " width="40" height="40" alt="Avatar of Bruno Ferme Gasparin, a Symfony contributor" src="./Form Types Reference (Symfony Docs)_files/d316bde9-9a54-4777-b92a-a5ff0b0752fd.png">
+
+        <div class="">
+            
+            Thanks <strong>
+                            <a class="" href="https://connect.sensiolabs.com/profile/bfgasparin">Bruno Ferme Gasparin</a>
+
+            
+            </strong> for being a <a class="text-normal" title="List of all Symfony contributors" href="http://symfony.com/contributors">Symfony contributor</a>.
+            <small class="block m-t-5 text-muted">
+                                                
+                                    <strong title="4 commits">4</strong> commits
+                                · <strong title="43 lines of code/doc changed">43</strong> lines
+            </small>
+        </div>
+    </div>
+
+                    </div>
+                                    </div>
+
+                <div class="col-sm-4 m-b-30">
+                    <h4 class="text-accent">Upcoming official conferences</h4>
+                    <ul class="list--unstyled list--border">
+                                                    <li>
+                                                                    <a href="https://london2018.live.symfony.com/">SymfonyLive London 2018</a>
+                                
+                                <span class="metadata block m-b-0">London (United Kingdom) - September 27-28, 2018</span>
+                            </li>
+                                                    <li>
+                                                                    <a href="https://usa2018.live.symfony.com/">SymfonyLive USA 2018</a>
+                                
+                                <span class="metadata block m-b-0">San Francisco, CA (United States) - October 11-12, 2018</span>
+                            </li>
+                                                    <li>
+                                                                    <a href="http://berlin2018.live.symfony.com/">SymfonyLive Berlin 2018</a>
+                                
+                                <span class="metadata block m-b-0">Berlin (Germany) - October 24-26, 2018</span>
+                            </li>
+                                                    <li>
+                                                                    <a href="https://lisbon2018.symfony.com/">SymfonyCon Lisbon 2018</a>
+                                
+                                <span class="metadata block m-b-0">Lisbon (Portugal) - December 6-8, 2018</span>
+                            </li>
+                                            </ul>
+
+                                            <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"SymfonyLive London 2018","image":"\/images\/v5\/conferences\/sflive-london.png","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},"url":"https:\/\/london2018.live.symfony.com\/","startDate":"2018-09-27T00:00:00+00:00","endDate":"2018-09-28T00:00:00+00:00","offers":{"@type":"Offer","url":"https:\/\/london2018.live.symfony.com\/registration\/","availability":"https:\/\/schema.org\/InStock"}}</script>
+                                            <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"SymfonyLive USA 2018","image":"\/images\/v5\/conferences\/sflive-usa.png","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"San Francisco, CA","addressCountry":"US"}},"url":"https:\/\/usa2018.live.symfony.com\/","startDate":"2018-10-11T00:00:00+00:00","endDate":"2018-10-12T00:00:00+00:00","offers":{"@type":"Offer","url":"https:\/\/usa2018.live.symfony.com\/registration\/","availability":"https:\/\/schema.org\/InStock"}}</script>
+                                            <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"SymfonyLive Berlin 2018","image":"\/images\/v5\/conferences\/sflive-berlin.png","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"DE"}},"url":"http:\/\/berlin2018.live.symfony.com","startDate":"2018-10-24T00:00:00+00:00","endDate":"2018-10-26T00:00:00+00:00","offers":{"@type":"Offer","url":"http:\/\/berlin2018.live.symfony.com\/tickets","availability":"https:\/\/schema.org\/InStock"}}</script>
+                                            <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"SymfonyCon Lisbon 2018","image":"\/images\/v5\/conferences\/sfcon-lisbon.png","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Lisbon","addressCountry":"PT"}},"url":"https:\/\/lisbon2018.symfony.com\/","startDate":"2018-12-06T00:00:00+00:00","endDate":"2018-12-08T00:00:00+00:00","offers":{"@type":"Offer","url":"https:\/\/lisbon2018.symfony.com\/registration\/","availability":"https:\/\/schema.org\/InStock"}}</script>
+                                    </div>
+
+                <div class="col-sm-4 m-b-30">
+                    <h4 class="text-accent">Upcoming training sessions</h4>
+                    <ul class="list--unstyled list--border">
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C1&amp;from=07/23/2018&amp;to=07/24/2018">Getting Started with Symfony 3 on Blended Learning</a>
+            <span class="metadata block m-b-0">Paris - July 23, 2018</span>
+        </li>
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C4&amp;from=07/23/2018&amp;to=07/26/2018">Web Development with Symfony 3</a>
+            <span class="metadata block m-b-0">Paris - July 23, 2018</span>
+        </li>
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C2&amp;from=07/25/2018&amp;to=07/26/2018">Mastering Symfony 3 on Blended Learning</a>
+            <span class="metadata block m-b-0">Paris - July 25, 2018</span>
+        </li>
+    </ul>
+
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Getting Started with Symfony 3 on Blended Learning","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C1&from=07\/23\/2018&to=07\/24\/2018","startDate":"2018-07-23T00:00:00+00:00","endDate":"2018-07-24T00:00:00+00:00","location":{"@type":"Place","name":"Symfony SAS Offices","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"France"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C1&from=07\/23\/2018&to=07\/24\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Web Development with Symfony 3","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C4&from=07\/23\/2018&to=07\/26\/2018","startDate":"2018-07-23T00:00:00+00:00","endDate":"2018-07-26T00:00:00+00:00","location":{"@type":"Place","name":"Symfony SAS Offices","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"France"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C4&from=07\/23\/2018&to=07\/26\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Mastering Symfony 3 on Blended Learning","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C2&from=07\/25\/2018&to=07\/26\/2018","startDate":"2018-07-25T00:00:00+00:00","endDate":"2018-07-26T00:00:00+00:00","location":{"@type":"Place","name":"Symfony SAS Offices","address":{"@type":"PostalAddress","addressLocality":"Paris","addressCountry":"France"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C2&from=07\/25\/2018&to=07\/26\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+
+
+                    <p class="m-b-5">
+                        <a class="read-more" href="https://training.sensiolabs.com/">View all sessions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <p class="m-t-0 m-b-30 text-small">
+                <b>Symfony</b>™ is a trademark of Symfony SAS. <a href="http://symfony.com/trademark">All rights reserved</a>.
+            </p>
+
+            <ul class="sitemap ">
+    <li>
+        <h6><a href="http://symfony.com/what-is-symfony">What is Symfony?</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+        <li>
+        <a href="http://symfony.com/at-a-glance">Symfony at a Glance</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/components">Symfony Components</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/blog/category/case-studies">Case Studies</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/roadmap">Symfony Roadmap</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/doc/current/contributing/code/security.html">Security Policy</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/logo">Logo &amp; Screenshots</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/license">Trademark &amp; Licenses</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/legacy">symfony1 Legacy</a>
+    </li>
+    
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="http://symfony.com/doc/current/index.html">Learn Symfony</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+                
+    
+
+
+    <li class="">
+        <a href="http://symfony.com/doc/current/setup.html">Getting Started</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/doc/current/components/index.html">Components</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/doc/current/best_practices/index.html">Best Practices</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/doc/bundles/">Bundles</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/doc/current/reference/index.html">Reference</a>
+    </li>
+    <li class="">
+        <a href="https://training.sensiolabs.com/en/courses?q=symfony">Training</a>
+    </li>
+    <li class="">
+        <a href="https://certification.symfony.com/">Certification</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="http://symfony.com/community">Community</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+        <li>
+        <a href="https://connect.sensiolabs.com/">SensioLabs Connect</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/support">Support</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/doc/current/contributing/index.html">How to be Involved</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/events/">Events &amp; Meetups</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/projects">Projects using Symfony</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/stats/code">Code Stats</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/stats/downloads">Downloads Stats</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/contributors">Contributors</a>
+    </li>
+    
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="http://symfony.com/blog/">Blog</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li class="">
+        <a href="http://symfony.com/blog/category/a-week-of-symfony">A week of symfony</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/case-studies">Case studies</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/community">Community</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/conferences">Conferences</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/diversity">Diversity</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/documentation">Documentation</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/living-on-the-edge">Living on the edge</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/releases">Releases</a>
+    </li>
+    <li class="">
+        <a href="http://symfony.com/blog/category/security-advisories">Security Advisories</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="https://sensiolabs.com/">Services</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            <li><a href="https://sensiolabs.com/">Our services</a></li>
+            <li><a href="https://training.sensiolabs.com/en">Train developers</a></li>
+            <li><a href="https://insight.sensiolabs.com/">Manage your project quality</a></li>
+            <li><a href="https://blackfire.io/">Improve your project performance</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="http://symfony.com/about">About</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+        <li>
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">SensioLabs</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/contributors">Contributors</a>
+    </li>
+            <li>
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">Careers</a>
+    </li>
+            <li>
+        <a href="http://symfony.com/support">Support</a>
+    </li>
+    
+        </ul>
+    </li>
+</ul>
+
+
+            <div class="icon__group">
+                <h6 class="m-b-15">Follow Symfony</h6>
+                <a href="https://github.com/symfony" title="Symfony on GitHub">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0a8 8 0 0 0-8 8 8 8 0 0 0 5.47 7.59c.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82a7.67 7.67 0 0 1 2-.27 7.67 7.67 0 0 1 2 .27c1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117a3.1 3.1 0 0 1 .82 2.147c0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38A7.972 7.972 0 0 0 16 8a8 8 0 0 0-8-8"></path></svg></i>
+                </a>
+                <a href="https://stackoverflow.com/questions/tagged/symfony" title="Symfony on StackOverflow">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.658 14.577v-4.27h1.423V16H1.23v-5.693h1.42v4.27h10.006zm-8.583-1.423h7.16V11.73h-7.16v1.424zm.173-3.235l6.987 1.46.3-1.38L4.55 8.54l-.302 1.38zm.906-3.37l6.47 3.02.602-1.3-6.47-3.02-.602 1.29zm1.81-3.19l5.478 4.57.906-1.08L7.87 2.28l-.9 1.078zM10.502 0L9.338.863l4.27 5.735 1.164-.862L10.5 0z"></path></svg></i>
+                </a>
+                <a href="http://symfony.com/slack-invite" title="Symfony on Slack">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g fill-rule="nonzero"><path d="M6.586 7.33l.69 2.057 2.137-.716-.69-2.05-2.137.72z"></path><path d="M12.55 9.37l-1.037.347.36 1.073a.831.831 0 0 1-.814 1.092.843.843 0 0 1-.77-.566l-.36-1.072-2.14.716.36 1.072a.833.833 0 0 1-.82 1.093.843.843 0 0 1-.77-.566l-.36-1.08-1.04.35a.846.846 0 0 1-1.06-.53c-.15-.44.09-.91.52-1.05l1.04-.35L5 7.84l-1.034.35a.829.829 0 0 1-1.045-.522.834.834 0 0 1 .53-1.05l1.04-.346-.36-1.07a.832.832 0 0 1 .53-1.05c.44-.147.91.09 1.05.522l.36 1.072L8.2 5.03l-.36-1.07c-.14-.43.09-.9.526-1.05a.833.833 0 0 1 1.05.528l.36 1.08 1.037-.34a.831.831 0 0 1 1.05.52.83.83 0 0 1-.523 1.05l-1.038.35.69 2.057 1.034-.344a.833.833 0 0 1 1.05.53c.146.44-.09.91-.52 1.05zm2.78-3.57C13.68.304 11.298-.98 5.8.67.304 2.32-.98 4.7.67 10.2c1.65 5.497 4.03 6.78 9.53 5.13 5.497-1.65 6.78-4.03 5.13-9.53z"></path></g></svg></i>
+                </a>
+                <a href="https://twitter.com/symfony" title="Symfony on Twitter">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M16 3.038a6.62 6.62 0 0 1-1.885.517 3.299 3.299 0 0 0 1.443-1.816c-.634.37-1.337.64-2.085.79a3.282 3.282 0 0 0-5.593 2.99 9.307 9.307 0 0 1-6.766-3.42A3.222 3.222 0 0 0 .67 3.75c0 1.14.58 2.143 1.46 2.732a3.278 3.278 0 0 1-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22a3.336 3.336 0 0 1-1.475.056 3.29 3.29 0 0 0 3.07 2.28 6.578 6.578 0 0 1-4.85 1.359 9.332 9.332 0 0 0 5.04 1.474c6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42a6.63 6.63 0 0 0 1.64-1.7z" fill-rule="nonzero"></path></svg></i>
+                </a>
+                <a href="https://www.facebook.com/SymfonyFramework" title="Symfony on Facebook">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883A.883.883 0 0 0 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077a.883.883 0 0 0 .883-.883V.883A.883.883 0 0 0 15.117 0" fill-rule="nonzero"></path></svg></i>
+                </a>
+                <a href="https://www.youtube.com/user/SensioLabs" title="Symfony on YouTube">
+                    <i class="icon"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M0 7.345c0-1.294.16-2.59.16-2.59s.156-1.1.636-1.587c.608-.637 1.408-.617 1.764-.684C3.84 2.36 8 2.324 8 2.324s3.362.004 5.6.166c.314.038.996.04 1.604.678.48.486.636 1.588.636 1.588S16 6.05 16 7.346v1.258c0 1.296-.16 2.59-.16 2.59s-.156 1.102-.636 1.588c-.608.638-1.29.64-1.604.678-2.238.162-5.6.166-5.6.166s-4.16-.037-5.44-.16c-.356-.067-1.156-.047-1.764-.684-.48-.487-.636-1.587-.636-1.587S0 9.9 0 8.605v-1.26zm6.348 2.73V5.58l4.323 2.255-4.32 2.24z"></path></svg></i>
+                </a>
+                <a href="https://medium.com/@symfony" title="Symfony on Medium">
+                    <i class="icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.846 6.36a.928.928 0 0 0-.303-.784l-2.24-2.7v-.403H7.26l5.378 11.795 4.728-11.795H24v.403l-1.917 1.837a.561.561 0 0 0-.213.538v13.5a.561.561 0 0 0 .213.537l1.87 1.837v.403h-9.41v-.403l1.937-1.882c.19-.19.19-.246.19-.538V7.794l-5.39 13.688h-.727L4.278 7.794v9.174c-.052.386.076.774.347 1.053l2.52 3.06v.402H0v-.403l2.52-3.06c.27-.278.39-.67.326-1.052V6.36z"></path></svg></i>
+                </a>
+            </div>
+
+            <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","name":"Symfony","url":"https:\/\/symfony.com","sameAs":["https:\/\/github.com\/symfony","https:\/\/stackoverflow.com\/questions\/tagged\/symfony","https:\/\/twitter.com\/symfony","https:\/\/www.facebook.com\/SymfonyFramework","https:\/\/www.youtube.com\/user\/SensioLabs","https:\/\/medium.com\/@symfony"]}</script>
+        </div>
+    </section>
+</footer>
+
+                    </div>
+        
+        <script type="text/javascript">
+            // load Connect bar
+            window.addEventListener('load', function () {
+                var js, fjs = document.getElementsByTagName('script')[0], load = function(url, id) {
+                    if (document.getElementById(id)) { return; }
+                    js = document.createElement('script'); js.src = url; js.id = id;
+                    fjs.parentNode.insertBefore(js, fjs);
+                };
+                load('https://connect.sensiolabs.com/sln.js?customize_url=http://symfony.com/sln_customiser.js', 'sln_bar');
+
+                var s = document.createElement('link');
+                s.rel = 'stylesheet';
+                s.href = 'https://connect.sensiolabs.com/css/sln.css';
+                var x = document.getElementsByTagName('title')[0];
+                x.parentNode.insertBefore(s, x);
+            });
+        </script>
+        <script async="">
+            var themeSwitcher = document.getElementById('theme-switcher');
+
+            if (themeSwitcher) {
+                if (localStorage.getItem('themeName') == 'dark-theme') {
+                    themeSwitcher.innerText = 'Switch to light theme';
+                }
+
+                themeSwitcher.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    if (document.body.classList.contains('dark-theme')) {
+                        document.body.classList.remove('dark-theme');
+                        localStorage.setItem('themeName', 'light-theme');
+                        themeSwitcher.innerText = 'Switch to dark theme';
+                    } else {
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('themeName', 'dark-theme');
+                        themeSwitcher.innerText = 'Switch to light theme';
+                    }
+                });
+            }
+        </script>
+        
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b10765e88c","applicationID":"3535762","transactionName":"ZVVSYEdRWkACVEJRC1wfcVdBWVtdTHZGSDhxX15AR19YXwZFanoIXVdzW1tERlwPW1NKXghdVVpAcVdHClhY","queueTime":0,"applicationTime":763,"atts":"SRJRFg9LSU4=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+</body></html>

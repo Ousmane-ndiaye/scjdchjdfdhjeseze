@@ -65,10 +65,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             default:
                 $routes = array(
                     '/account/accueil' => array(array('_route' => 'accueil_account', '_controller' => 'App\\Controller\\AccountController::index'), null, null, null),
+                    '/account/ajouter/salle' => array(array('_route' => 'ajouter_salle', '_controller' => 'App\\Controller\\AccountController::ajouterSalle'), null, null, null),
                     '/back/accueil' => array(array('_route' => 'accueil_back', '_controller' => 'App\\Controller\\BackController::index'), null, null, null),
                     '/front/accueil' => array(array('_route' => 'accueil_front', '_controller' => 'App\\Controller\\FrontController::index'), null, null, null),
                     '/front/catalogue' => array(array('_route' => 'catalogue_front', '_controller' => 'App\\Controller\\FrontController::catalogue'), null, array('GET' => 0, 'POST' => 1), null),
-                    '/front/partager/salle' => array(array('_route' => 'partager_salle_front', '_controller' => 'App\\Controller\\FrontController::ajoutSalle'), null, array('GET' => 0, 'POST' => 1), null),
+                    '/front/partager/salle' => array(array('_route' => 'partager_salle_front', '_controller' => 'App\\Controller\\FrontController::partagerSalle'), null, array('GET' => 0, 'POST' => 1), null),
                     '/register' => array(array('_route' => 'user_registration', '_controller' => 'App\\Controller\\RegistrationController::registerAction'), null, null, null),
                     '/login' => array(array('_route' => 'security_login', '_controller' => 'App\\Controller\\SecurityController::login'), null, null, null),
                     '/logout' => array(array('_route' => 'security_logout', '_controller' => 'App\\Controller\\SecurityController::logout'), null, null, null),

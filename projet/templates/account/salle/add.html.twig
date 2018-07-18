@@ -1,0 +1,207 @@
+{% extends 'account/base.html.twig' %}
+
+{% block title %} PARTAGER UNE SALLE {% endblock %}
+
+{% block titrepage %}CRÉATION D'UNE NOUVELLE SALLE !{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{asset('assets/plugins/tagsinput/jquery.tagsinput.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/toggles/toggles.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/timepicker/bootstrap-timepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/colorpicker/colorpicker.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/plugins/select2/dist/css/select2.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/plugins/select2/dist/css/select2-bootstrap.css')}}" rel="stylesheet" type="text/css">
+    {% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title">Nouvelle salle</h3></div>
+            <div class="panel-body">
+                {{ form_start(form, {'attr': {'class': 'form-horizontal', 'role': 'form'}}) }}
+
+                    <div class="panel-heading"><h3 class="panel-title">Information sur la salle</h3></div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Pénom et nom</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.nomComplet, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Adresse</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.cArrondissement, {'attr': {'class': 'select2 form-control', 'data-placeholder': 'Choisir votre adresse...'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Quartier</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.quartier, {'attr': {'class': 'form-control', 'placeholder': 'Votre quartier, Rue'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Type de salle</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.typeDeBien, {'attr': {'class': 'select2 form-control', 'data-placeholder': 'Choisir votre adresse...'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Nombre de place</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.nbreDeplaces, {'attr': {'class': 'form-control', 'placeholder': 'Nombre de place de salle'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Prix de location (<span class="text-danger">FCFA</span>)</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.prixLocation, {'attr': {'class': 'form-control', 'placeholder': '12000'}}) }}
+                            <span class="help-block"><small>Renseigner le prix sans espace ni de FCFA à la fin. Ex: 12000.</small></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Description</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.description, {'attr': {'class': 'form-control', 'rows': '5', 'placeholder': 'Décrivez nous un peut votre salle...'}}) }}
+                        </div>
+                    </div>
+                    <!-- FIN DES INFORMATION SUR LA SALLE -->
+                    <div class="panel-heading"><h3 class="panel-title">Disponibilité de la salle</h3></div>
+
+                    {% for jour in jours %}
+                        <div class="row">
+                            <div class="col-sm-2" style="padding-top: 23px;">
+                                <div class="form-group">
+                                    <label class="col-sm-6 control-label">{{ jour.libelle }}</label>
+                                    <div class="col-sm-6 control-label">
+                                        <div class="toggle toggle-success" id="jour-{{ jour.id }}"></div>
+                                        <input type="hidden" name="jour_{{ jour.id }}" value="OUI"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 horaire-du-jour" style="padding-top: 25px;">
+                                <div class="form-group">
+                                    <div class="checkbox checkbox-primary">
+                                        <input name="24h_24_{{jour.id}}" id="checkbox{{jour.id}}" type="checkbox" class="disponible-24h">
+                                        <label for="checkbox{{jour.id}}">
+                                            24h/24
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 horaire-du-jour not-disponible-24h" style="padding-top: 30px;">
+                                <span class="text-info" style="padding-left: 15px;">ou</span>
+                            </div>
+                            <div class="col-sm-4 horaire-du-jour not-disponible-24h">
+                                <label>Heure d'Ouverture</label>
+                                <div class="input-group m-b-15">
+                                    <div class="bootstrap-timepicker"><input id="hOuverture{{ jour.id }}" name="hOuverture{{ jour.id }}" type="text" class="form-control"></div>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div><!-- input-group -->
+                            </div>
+                            <div class="col-sm-4 horaire-du-jour not-disponible-24h">
+                                <label>Heure de Fermeture</label>
+                                <div class="input-group m-b-15">
+                                    <div class="bootstrap-timepicker"><input id="hFermeture{{ jour.id }}" name="hOuverture{{ jour.id }}" type="text" class="form-control"></div>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div><!-- input-group -->
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="panel-heading"><h3 class="panel-title">&nbsp;</h3></div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+                            <button type="submit" class="btn btn-block btn-lg btn-primary waves-effect waves-light">AJouter</button>
+                        </div>
+                    </div>
+                {{ form_end(form) }}
+            </div> <!-- panel-body -->
+        </div> <!-- panel -->
+    </div> <!-- col -->
+</div> <!-- End row -->
+{% endblock %}
+
+{% block javascripts %}
+    {{parent()}}
+    <script src="{{asset('assets/plugins/select2/dist/js/select2.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/plugins/tagsinput/jquery.tagsinput.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/toggles/toggles.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/timepicker/bootstrap-timepicker.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/colorpicker/bootstrap-colorpicker.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/jquery-multi-select/jquery.multi-select.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/plugins/jquery-multi-select/jquery.quicksearch.js')}}"></script>
+    <script src="{{asset('assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js')}}" type="text/javascript"></script>
+    <script>
+        jQuery(document).ready(function() {
+            // Form Toggles With options (defaults shown below)
+            $('.toggle').toggles({
+                drag: true, // allow dragging the toggle between positions
+                click: true, // allow clicking on the toggle
+                text: {
+                    on: 'OUI', // text for the ON position
+                    off: 'NON' // and off
+                },
+                on: true, // is the toggle ON on init
+                animate: 250, // animation time (ms)
+                easing: 'swing', // animation transition easing function
+                checkbox: null, // the checkbox to toggle (for use in forms)
+                clicker: null, // element that can be clicked on to toggle. removes binding from the toggle itself (use nesting)
+                width: 50, // width used if not set in css
+                height: 20, // height if not set in css
+                type: 'compact' // if this is set to 'select' then the select style toggle will be used
+            });
+
+            // Getting notified of changes, and the new state:
+            $('.toggle').on('toggle', function(e, active) {
+                if (active) {
+                    $(this).next('input').val('OUI');
+                    $(this).closest('.row').find('.horaire-du-jour:first input:checkbox').each(function(){
+                        if($(this).is(":checked")){
+                            $(this).closest('.horaire-du-jour').removeClass('hide');
+                        } else {
+                            $(this).closest('.row').find('.horaire-du-jour').removeClass('hide');
+                        }
+                    })
+                } else {
+                    $(this).next('input').val('NON');
+                    $(this).closest('.row').find('.horaire-du-jour').addClass('hide');
+                }
+            });
+
+            $('.disponible-24h:checkbox').on('change', function(){
+                if($(this).is(":checked")){
+                    $(this).closest('.row').find('.not-disponible-24h').addClass('hide');
+                } else {
+                    $(this).closest('.row').find('.not-disponible-24h').removeClass('hide');
+                }
+            });
+
+            // Time Picker
+            for (let i = 1; i <= 7; i++) {
+                jQuery('#hOuverture' + i).timepicker({showMeridian: false});
+                jQuery('#hFermeture' + i).timepicker({showMeridian: false});
+            }
+
+            // Date Picker
+            jQuery('#datepicker').datepicker();
+            jQuery('#datepicker-inline').datepicker();
+            jQuery('#datepicker-multiple').datepicker({
+                numberOfMonths: 3,
+                showButtonPanel: true
+            });
+
+            // Select2
+            jQuery(".select2").select2({
+                width: '100%'
+            });
+        });
+    </script>
+{% endblock %}

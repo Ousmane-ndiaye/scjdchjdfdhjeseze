@@ -80,4 +80,9 @@ class Typedebien
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->nomType;
+    }
 }

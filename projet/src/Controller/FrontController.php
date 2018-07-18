@@ -73,7 +73,7 @@ class FrontController extends Controller
     /**
      * @Route("/partager/salle", name="partager_salle_front", methods={"GET", "POST"})
      */
-    public function ajoutSalle(Request $request, AuthenticationUtils $helper, EventDispatcherInterface $eventDispatcher)
+    public function partagerSalle(Request $request, AuthenticationUtils $helper, EventDispatcherInterface $eventDispatcher)
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);

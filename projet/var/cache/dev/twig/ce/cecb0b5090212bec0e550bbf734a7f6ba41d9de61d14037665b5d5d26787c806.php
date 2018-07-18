@@ -52,7 +52,6 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo " Tableau de bord ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -70,7 +69,6 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titrepage"));
 
-        echo "Bienvenue !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -239,16 +237,19 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
             </div>
             <div class=\"user-info\">
                 <div class=\"dropdown\">
-                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">John Doe <span class=\"caret\"></span></a>
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">";
+        // line 127
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 127, $this->source); })()), "user", array()), "proprietaire", array()), "nomComplet", array()), "html", null, true);
+        echo " <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\">
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile<div class=\"ripple-wrapper\"></div></a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
+                        <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profil<div class=\"ripple-wrapper\"></div></a></li>
+                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Paramétrage</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 
-                <p class=\"text-muted m-0\" style=\"color: #675656;\">Administrateur</p>
+                <p class=\"text-muted m-0\" style=\"color: #675656;\">Proprietaire</p>
             </div>
         </div>
         <!--- Divider -->
@@ -270,12 +271,13 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                 </li>
 
                 <li class=\"has_sub\">
-                    <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Domaine </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                    <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Salle </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                     <ul class=\"list-unstyled\">
-                        <li><a href=\"tables-basic.html\">Liste des domaines</a></li>
-                        <li><a href=\"tables-datatable.html\">Matrice de responsabilité</a></li>
-                        <li><a href=\"tables-editable.html\">Liste des activés</a></li>
-                        <li><a href=\"tables-responsive.html\">Responsive Table</a></li>
+                        <li><a href=\"tables-basic.html\">Liste de mes Salles</a></li>
+                        <li><a href=\"";
+        // line 158
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajouter_salle");
+        echo "\">Ajouter une salle</a></li>
                     </ul>
                 </li>
 
@@ -353,16 +355,16 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
 
     public function getDebugInfo()
     {
-        return array (  260 => 143,  237 => 123,  230 => 118,  221 => 117,  200 => 105,  192 => 100,  103 => 14,  99 => 13,  92 => 8,  83 => 7,  65 => 5,  47 => 3,  15 => 1,);
+        return array (  279 => 158,  261 => 143,  242 => 127,  235 => 123,  228 => 118,  219 => 117,  198 => 105,  190 => 100,  101 => 14,  97 => 13,  90 => 8,  81 => 7,  64 => 5,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("{% extends 'back.html.twig' %}
 
-{% block title %} Tableau de bord {% endblock %}
+{% block title %}{% endblock %}
 
-{% block titrepage %}Bienvenue !{% endblock %}
+{% block titrepage %}{% endblock %}
 
 {% block topbar %}
 <!-- Top Bar Start -->
@@ -484,16 +486,16 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
             </div>
             <div class=\"user-info\">
                 <div class=\"dropdown\">
-                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">John Doe <span class=\"caret\"></span></a>
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">{{ app.user.proprietaire.nomComplet }} <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\">
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile<div class=\"ripple-wrapper\"></div></a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
+                        <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profil<div class=\"ripple-wrapper\"></div></a></li>
+                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Paramétrage</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 
-                <p class=\"text-muted m-0\" style=\"color: #675656;\">Administrateur</p>
+                <p class=\"text-muted m-0\" style=\"color: #675656;\">Proprietaire</p>
             </div>
         </div>
         <!--- Divider -->
@@ -512,12 +514,10 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                 </li>
 
                 <li class=\"has_sub\">
-                    <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Domaine </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
+                    <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Salle </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                     <ul class=\"list-unstyled\">
-                        <li><a href=\"tables-basic.html\">Liste des domaines</a></li>
-                        <li><a href=\"tables-datatable.html\">Matrice de responsabilité</a></li>
-                        <li><a href=\"tables-editable.html\">Liste des activés</a></li>
-                        <li><a href=\"tables-responsive.html\">Responsive Table</a></li>
+                        <li><a href=\"tables-basic.html\">Liste de mes Salles</a></li>
+                        <li><a href=\"{{path('ajouter_salle')}}\">Ajouter une salle</a></li>
                     </ul>
                 </li>
 

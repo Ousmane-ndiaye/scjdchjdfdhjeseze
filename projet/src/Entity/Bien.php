@@ -62,6 +62,11 @@ class Bien
     private $proprietaire;
 
     /**
+     * @ORM\OneToMany(targetEntity="Ouvrable", mappedBy = "bien")
+     */
+    private $ouvrables;
+
+    /**
      * @ORM\OneToMany(targetEntity="Image", mappedBy = "bien")
      */
     private $images;
@@ -76,11 +81,22 @@ class Bien
      */
     private $reservations;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $etat;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $nomComplet;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
         $this->videos = new ArrayCollection();
         $this->reservations = new ArrayCollection();
+        $this->ouvrables = new ArrayCollection();
     }
 
     public function getId()
@@ -273,6 +289,61 @@ class Bien
     public function setCArrondissement(?CArrondissement $cArrondissement): self
     {
         $this->cArrondissement = $cArrondissement;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ouvrable[]
+     */
+    public function getOuvrables(): Collection
+    {
+        return $this->ouvrables;
+    }
+
+    public function addOuvrable(Ouvrable $ouvrable): self
+    {
+        if (!$this->ouvrables->contains($ouvrable)) {
+            $this->ouvrables[] = $ouvrable;
+            $ouvrable->setBien($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOuvrable(Ouvrable $ouvrable): self
+    {
+        if ($this->ouvrables->contains($ouvrable)) {
+            $this->ouvrables->removeElement($ouvrable);
+            // set the owning side to null (unless already changed)
+            if ($ouvrable->getBien() === $this) {
+                $ouvrable->setBien(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getEtat(): ?bool
+    {
+        return $this->etat;
+    }
+
+    public function setEtat(bool $etat): self
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    public function getNomComplet(): ?string
+    {
+        return $this->nomComplet;
+    }
+
+    public function setNomComplet(string $nomComplet): self
+    {
+        $this->nomComplet = $nomComplet;
 
         return $this;
     }

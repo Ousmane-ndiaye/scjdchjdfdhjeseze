@@ -70,7 +70,9 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "titrepage"));
 
-        echo "Bienvenue !";
+        echo "Bienvenue ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 5, $this->source); })()), "user", array()), "proprietaire", array()), "nomComplet", array()), "html", null, true);
+        echo " !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -611,7 +613,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
 
     public function getDebugInfo()
     {
-        return array (  579 => 397,  573 => 394,  567 => 391,  561 => 388,  557 => 387,  553 => 386,  549 => 385,  545 => 384,  541 => 383,  537 => 382,  533 => 381,  526 => 377,  520 => 374,  516 => 373,  510 => 370,  504 => 368,  495 => 367,  425 => 306,  408 => 292,  391 => 278,  374 => 264,  349 => 242,  338 => 234,  327 => 226,  316 => 218,  305 => 210,  294 => 202,  283 => 194,  272 => 186,  92 => 8,  83 => 7,  65 => 5,  47 => 3,  15 => 1,);
+        return array (  581 => 397,  575 => 394,  569 => 391,  563 => 388,  559 => 387,  555 => 386,  551 => 385,  547 => 384,  543 => 383,  539 => 382,  535 => 381,  528 => 377,  522 => 374,  518 => 373,  512 => 370,  506 => 368,  497 => 367,  427 => 306,  410 => 292,  393 => 278,  376 => 264,  351 => 242,  340 => 234,  329 => 226,  318 => 218,  307 => 210,  296 => 202,  285 => 194,  274 => 186,  94 => 8,  85 => 7,  65 => 5,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -620,7 +622,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
 
 {% block title %} Tableau de bord {% endblock %}
 
-{% block titrepage %}Bienvenue !{% endblock %}
+{% block titrepage %}Bienvenue {{ app.user.proprietaire.nomComplet }} !{% endblock %}
 
 {% block main %}
     <!-- Start Widget -->

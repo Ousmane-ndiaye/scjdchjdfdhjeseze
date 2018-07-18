@@ -235,7 +235,7 @@ div#OR {
         echo "\"/>
                                     <input type=\"hidden\" name=\"_target_path\" value=\"";
         // line 102
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_account");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajouter_salle");
         echo "\" />
                                     <div class=\"row\">
                                         <div class=\"col-sm-8 col-sm-offset-4\">
@@ -598,7 +598,7 @@ div#OR {
                                         </div>
                                     </div>
                                     <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\"/>
-                                    <input type=\"hidden\" name=\"_target_path\" value=\"{{ path('accueil_account') }}\" />
+                                    <input type=\"hidden\" name=\"_target_path\" value=\"{{ path('ajouter_salle') }}\" />
                                     <div class=\"row\">
                                         <div class=\"col-sm-8 col-sm-offset-4\">
                                             <button type=\"submit\" class=\"btn btn-main\">

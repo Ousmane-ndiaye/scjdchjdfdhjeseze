@@ -1,8 +1,8 @@
 {% extends 'back.html.twig' %}
 
-{% block title %} Tableau de bord {% endblock %}
+{% block title %}{% endblock %}
 
-{% block titrepage %}Bienvenue !{% endblock %}
+{% block titrepage %}{% endblock %}
 
 {% block topbar %}
 <!-- Top Bar Start -->
@@ -124,16 +124,16 @@
             </div>
             <div class="user-info">
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">John Doe <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{ app.user.proprietaire.nomComplet }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
-                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profil<div class="ripple-wrapper"></div></a></li>
+                        <li><a href="javascript:void(0)"><i class="md md-settings"></i> Paramétrage</a></li>
                         <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
                         <li><a href="javascript:void(0)"><i class="md md-settings-power"></i> Logout</a></li>
                     </ul>
                 </div>
 
-                <p class="text-muted m-0" style="color: #675656;">Administrateur</p>
+                <p class="text-muted m-0" style="color: #675656;">Proprietaire</p>
             </div>
         </div>
         <!--- Divider -->
@@ -152,12 +152,10 @@
                 </li>
 
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="md md-view-module"></i><span> Domaine </span><span class="pull-right"><i class="md md-add"></i></span></a>
+                    <a href="#" class="waves-effect"><i class="md md-view-module"></i><span> Salle </span><span class="pull-right"><i class="md md-add"></i></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="tables-basic.html">Liste des domaines</a></li>
-                        <li><a href="tables-datatable.html">Matrice de responsabilité</a></li>
-                        <li><a href="tables-editable.html">Liste des activés</a></li>
-                        <li><a href="tables-responsive.html">Responsive Table</a></li>
+                        <li><a href="tables-basic.html">Liste de mes Salles</a></li>
+                        <li><a href="{{path('ajouter_salle')}}">Ajouter une salle</a></li>
                     </ul>
                 </li>
 

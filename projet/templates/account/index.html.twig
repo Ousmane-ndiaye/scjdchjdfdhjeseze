@@ -2,7 +2,7 @@
 
 {% block title %} Tableau de bord {% endblock %}
 
-{% block titrepage %}Bienvenue !{% endblock %}
+{% block titrepage %}Bienvenue {{ app.user.proprietaire.nomComplet }} !{% endblock %}
 
 {% block main %}
     <!-- Start Widget -->
