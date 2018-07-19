@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App\Events;
-use App\Entity\Jour;
 use App\Entity\Bien;
+use App\Entity\Jour;
 use App\Entity\User;
 use App\Form\BienType;
 use App\Entity\Ouvrable;
@@ -12,22 +12,24 @@ use App\Entity\Typedebien;
 
 // Interface
 use App\Form\AjoutBienType;
+use App\Entity\Proprietaire;
 use App\Entity\Arrondissement;
-use App\Repository\UserRepository;
 
 // Entity, Form and repository
+use App\Repository\JourRepository;
+use App\Repository\UserRepository;
 use App\Repository\TypedebienRepository;
+
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\ArrondissementRepository;
-
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-use App\Repository\JourRepository;
 
 /**
  * @Route("/account")
@@ -38,18 +40,21 @@ class AccountController extends Controller
     private $passwordEncoder;
     private $TypedebienRepository;
     private $ArrondissementRepository;
+    private $security;
 
     public function __construct(
         EntityManagerInterface $em,
         UserPasswordEncoderInterface $encoder,
         TypedebienRepository $TypedebienRepo,
-        ArrondissementRepository $ArrondRepo
+        ArrondissementRepository $ArrondRepo,
+        Security $secur
     )
     {
         $this->entityManager = $em;
         $this->passwordEncoder = $encoder;
         $this->TypedebienRepository = $TypedebienRepo;
         $this->ArrondissementRepository = $ArrondRepo;
+        $this->security = $secur;
     }
 
     /**
@@ -69,9 +74,52 @@ class AccountController extends Controller
         $bien = new Bien();
         $form = $this->createForm(BienType::class, $bien);
 
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $bien
+                ->setDatePub(new \DateTime('now'))
+                ->setEtat(false)
+                ->setProprietaire($this->entityManager->getRepository(Proprietaire::class)->find($this->security->getUser()->getProprietaire()->getId()))
+            ;
+            for ($i=1; $i <= 7; $i++) {
+                $O = new Ouvrable();
+                $O
+                    ->setBien($bien)
+                    ->setJour($JourRepository->find($i))
+                ;
+                if (isset($_POST['jour_'.$i]) && $_POST['jour_'.$i] == 'OUI') {
+                    $O->setDisponible(true);
+                    if (isset($_POST['24h_24_'.$i])) {
+                        $O
+                            ->setOuverture(\DateTime::createFromFormat('H:i', '00:00'))
+                            ->setFermeture(\DateTime::createFromFormat('H:i', '00:00'))
+                        ;
+                    } else {
+                        $O
+                            ->setOuverture(\DateTime::createFromFormat('H:i', $_POST['hOuverture'.$i]))
+                            ->setFermeture(\DateTime::createFromFormat('H:i', $_POST['hFermeture'.$i]))
+                        ;
+                    }
+                } else {
+                    $O->setDisponible(false);
+                }
+                $this->entityManager->persist($O);
+                $this->entityManager->flush();
+            }
+
+            return $this->redirectToRoute('accueil_account');
+        }
         return $this->render('account/salle/add.html.twig', [
             'form' => $form->createView(),
             'jours' => $JourRepository->findAll(),
         ]);
+    }
+
+    /**
+     * @Route("/liste/salle", name="liste_salle")
+     */
+    public function listeSalle(Request $request, JourRepository $JourRepository)
+    {
+
     }
 }

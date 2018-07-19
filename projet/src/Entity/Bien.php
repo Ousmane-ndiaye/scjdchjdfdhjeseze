@@ -19,6 +19,16 @@ class Bien
     private $id;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $etat;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $nomComplet;
+
+    /**
      * @ORM\Column(type="string", length=100)
      */
     private $quartier;
@@ -80,16 +90,6 @@ class Bien
      * @ORM\OneToMany(targetEntity="Reservation", mappedBy = "bien")
      */
     private $reservations;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $etat;
-
-    /**
-     * @ORM\Column(type="string", length=100)
-     */
-    private $nomComplet;
 
     public function __construct()
     {

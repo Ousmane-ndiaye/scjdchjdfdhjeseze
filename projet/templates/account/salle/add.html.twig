@@ -14,7 +14,7 @@
     <link href="{{asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')}}" rel="stylesheet" />
     <link href="{{asset('assets/plugins/select2/dist/css/select2.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/plugins/select2/dist/css/select2-bootstrap.css')}}" rel="stylesheet" type="text/css">
-    {% endblock %}
+{% endblock %}
 
 {% block main %}
 <div class="row">
@@ -106,7 +106,7 @@
                             <div class="col-sm-4 horaire-du-jour not-disponible-24h">
                                 <label>Heure de Fermeture</label>
                                 <div class="input-group m-b-15">
-                                    <div class="bootstrap-timepicker"><input id="hFermeture{{ jour.id }}" name="hOuverture{{ jour.id }}" type="text" class="form-control"></div>
+                                    <div class="bootstrap-timepicker"><input id="hFermeture{{ jour.id }}" name="hFermeture{{ jour.id }}" type="text" class="form-control"></div>
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
                                 </div><!-- input-group -->
                             </div>

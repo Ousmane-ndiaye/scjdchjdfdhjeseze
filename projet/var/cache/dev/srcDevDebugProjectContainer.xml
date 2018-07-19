@@ -417,6 +417,7 @@
       <argument type="service" id="security.user_password_encoder.generic"/>
       <argument type="service" id="App\Repository\TypedebienRepository"/>
       <argument type="service" id="App\Repository\ArrondissementRepository"/>
+      <argument type="service" id="security.helper"/>
     </service>
     <service id="App\Controller\BackController" class="App\Controller\BackController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>

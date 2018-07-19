@@ -125,7 +125,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/select2/dist/css/select2-bootstrap.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
-    ";
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -287,7 +287,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                                     <div class=\"bootstrap-timepicker\"><input id=\"hFermeture";
             // line 109
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
-            echo "\" name=\"hOuverture";
+            echo "\" name=\"hFermeture";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\" type=\"text\" class=\"form-control\"></div>
                                     <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-time\"></i></span>
@@ -485,7 +485,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
     <link href=\"{{asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')}}\" rel=\"stylesheet\" />
     <link href=\"{{asset('assets/plugins/select2/dist/css/select2.css')}}\" rel=\"stylesheet\" type=\"text/css\">
     <link href=\"{{asset('assets/plugins/select2/dist/css/select2-bootstrap.css')}}\" rel=\"stylesheet\" type=\"text/css\">
-    {% endblock %}
+{% endblock %}
 
 {% block main %}
 <div class=\"row\">
@@ -577,7 +577,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                             <div class=\"col-sm-4 horaire-du-jour not-disponible-24h\">
                                 <label>Heure de Fermeture</label>
                                 <div class=\"input-group m-b-15\">
-                                    <div class=\"bootstrap-timepicker\"><input id=\"hFermeture{{ jour.id }}\" name=\"hOuverture{{ jour.id }}\" type=\"text\" class=\"form-control\"></div>
+                                    <div class=\"bootstrap-timepicker\"><input id=\"hFermeture{{ jour.id }}\" name=\"hFermeture{{ jour.id }}\" type=\"text\" class=\"form-control\"></div>
                                     <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-time\"></i></span>
                                 </div><!-- input-group -->
                             </div>
