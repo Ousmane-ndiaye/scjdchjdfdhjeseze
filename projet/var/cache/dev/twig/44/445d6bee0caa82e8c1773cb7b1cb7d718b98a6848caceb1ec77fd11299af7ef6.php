@@ -16,6 +16,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'titrepage' => array($this, 'block_titrepage'),
+            'filedarian' => array($this, 'block_filedarian'),
             'main' => array($this, 'block_main'),
             'javascripts' => array($this, 'block_javascripts'),
         );
@@ -82,6 +83,26 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
     }
 
     // line 7
+    public function block_filedarian($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "filedarian"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "filedarian"));
+
+        // line 8
+        echo "<li class=\"active\">Sen office</li>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 11
     public function block_main($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -90,7 +111,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
-        // line 8
+        // line 12
         echo "    <!-- Start Widget -->
     <!--Widget-4 -->
     <div class=\"row\">
@@ -270,7 +291,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 186
+        // line 190
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-1.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Chadengle</p>
@@ -281,7 +302,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 194
+        // line 198
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-2.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Tomaslau</p>
@@ -292,7 +313,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 202
+        // line 206
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-3.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Stillnotdavid</p>
@@ -303,7 +324,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 210
+        // line 214
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-4.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Kurafire</p>
@@ -314,7 +335,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 218
+        // line 222
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Shahedk</p>
@@ -325,7 +346,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 226
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-6.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Adhamdannaway</p>
@@ -336,7 +357,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 234
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-8.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Arashasghari</p>
@@ -347,7 +368,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                         <a href=\"#\">
                             <div class=\"inbox-item\">
                                 <div class=\"inbox-item-img\"><img src=\"";
-        // line 242
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-9.jpg"), "html", null, true);
         echo "\" class=\"img-circle\" alt=\"\"></div>
                                 <p class=\"inbox-item-author\">Joshaustin</p>
@@ -372,7 +393,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                             <li class=\"clearfix\">
                                 <div class=\"chat-avatar\">
                                     <img src=\"";
-        // line 264
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/avatar-1.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                     <i>10:00</i>
@@ -389,7 +410,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                             <li class=\"clearfix odd\">
                                 <div class=\"chat-avatar\">
                                     <img src=\"";
-        // line 278
+        // line 282
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" alt=\"Female\">
                                     <i>10:01</i>
@@ -406,7 +427,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                             <li class=\"clearfix\">
                                 <div class=\"chat-avatar\">
                                     <img src=\"";
-        // line 292
+        // line 296
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/avatar-1.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                     <i>10:01</i>
@@ -423,7 +444,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
                             <li class=\"clearfix odd\">
                                 <div class=\"chat-avatar\">
                                     <img src=\"";
-        // line 306
+        // line 310
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-5.jpg"), "html", null, true);
         echo "\" alt=\"male\">
                                     <i>10:02</i>
@@ -493,7 +514,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
 
     }
 
-    // line 367
+    // line 371
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -502,82 +523,82 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 368
+        // line 372
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <!-- jQuery  -->
     <script src=\"";
-        // line 370
+        // line 374
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/moment/moment.js"), "html", null, true);
         echo "\"></script>
 
     <!-- jQuery  -->
     <script src=\"";
-        // line 373
+        // line 377
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/waypoints/lib/jquery.waypoints.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 374
+        // line 378
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/counterup/jquery.counterup.min.js"), "html", null, true);
         echo "\"></script>
 
     <!-- jQuery  -->
     <script src=\"";
-        // line 377
+        // line 381
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/sweetalert/dist/sweetalert.min.js"), "html", null, true);
         echo "\"></script>
 
 
     <!-- flot Chart -->
     <script src=\"";
-        // line 381
+        // line 385
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 382
+        // line 386
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.time.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 383
+        // line 387
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.tooltip.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 384
+        // line 388
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.resize.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 385
+        // line 389
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.pie.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 386
+        // line 390
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.selection.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 387
+        // line 391
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.stack.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 388
+        // line 392
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/flot-chart/jquery.flot.crosshair.js"), "html", null, true);
         echo "\"></script>
 
     <!-- jQuery  -->
     <script src=\"";
-        // line 391
+        // line 395
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/pages/jquery.todo.js"), "html", null, true);
         echo "\"></script>
 
     <!-- jQuery  -->
     <script src=\"";
-        // line 394
+        // line 398
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/pages/jquery.chat.js"), "html", null, true);
         echo "\"></script>
 
     <!-- jQuery  -->
     <script src=\"";
-        // line 397
+        // line 401
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/pages/jquery.dashboard.js"), "html", null, true);
         echo "\"></script>
 
@@ -613,7 +634,7 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
 
     public function getDebugInfo()
     {
-        return array (  581 => 397,  575 => 394,  569 => 391,  563 => 388,  559 => 387,  555 => 386,  551 => 385,  547 => 384,  543 => 383,  539 => 382,  535 => 381,  528 => 377,  522 => 374,  518 => 373,  512 => 370,  506 => 368,  497 => 367,  427 => 306,  410 => 292,  393 => 278,  376 => 264,  351 => 242,  340 => 234,  329 => 226,  318 => 218,  307 => 210,  296 => 202,  285 => 194,  274 => 186,  94 => 8,  85 => 7,  65 => 5,  47 => 3,  15 => 1,);
+        return array (  602 => 401,  596 => 398,  590 => 395,  584 => 392,  580 => 391,  576 => 390,  572 => 389,  568 => 388,  564 => 387,  560 => 386,  556 => 385,  549 => 381,  543 => 378,  539 => 377,  533 => 374,  527 => 372,  518 => 371,  448 => 310,  431 => 296,  414 => 282,  397 => 268,  372 => 246,  361 => 238,  350 => 230,  339 => 222,  328 => 214,  317 => 206,  306 => 198,  295 => 190,  115 => 12,  106 => 11,  95 => 8,  86 => 7,  66 => 5,  48 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -623,6 +644,10 @@ class __TwigTemplate_fc80d61840cef835bbece1246234eed258dc7de00bba241b7ee0a3c1a88
 {% block title %} Tableau de bord {% endblock %}
 
 {% block titrepage %}Bienvenue {{ app.user.proprietaire.nomComplet }} !{% endblock %}
+
+{% block filedarian %}
+<li class=\"active\">Sen office</li>
+{% endblock %}
 
 {% block main %}
     <!-- Start Widget -->

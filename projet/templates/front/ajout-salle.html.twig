@@ -79,11 +79,8 @@ div#OR {
                         <div class="tab-content">
                             <div class="tab-pane active" id="Login">
                                 <form id="LoginForm"  method="post" action="{{ path('security_login') }}" role="form" class="form-horizontal">
-                                    {% if error %}
-                                        <div class="alert alert-danger">
-                                            {{ error.message }}
-                                        </div>
-                                    {% endif %}
+                                    <div class="alert alert-danger" id="alert-error">
+                                    </div>
                                     <div class="form-group">
                                         <label for="email" class="col-sm-4 control-label">
                                             E-mail</label>
@@ -99,12 +96,14 @@ div#OR {
                                         </div>
                                     </div>
                                     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+                                    <!--<input type="hidden" name="_failure_path" value="{{ path('partager_salle_front') }}" />-->
                                     <input type="hidden" name="_target_path" value="{{ path('ajouter_salle') }}" />
                                     <div class="row">
                                         <div class="col-sm-8 col-sm-offset-4">
                                             <button type="submit" class="btn btn-main">
                                                 Se connecter
                                             </button>
+                                            <img id="loading-verif" src="{{asset('assets/images/loading.gif')}}" alt="chargement...">
                                         </div>
                                     </div>
                                 </form>
@@ -245,7 +244,7 @@ div#OR {
                 <p>
                     Proposez la location de votre salle de réunion ou salle de séminaire et obtenez un revenu complémentaire. La création d'une annonce pour louer une salle sur Bird Office est gratuite et sans engagement !
                 </p>
-                <button class="btn btn-main" data-toggle="modal" data-target="#myModal">
+                <button id="btn-authenticate" class="btn btn-main" data-toggle="modal" data-target="#myModal">
                     <span style="font-weight: bold; text-transform: upperCase;">Je loue ma salle</span>
                 </button>
             </div>
@@ -262,4 +261,9 @@ div#OR {
 {% endblock %}
 
 {% block galerie %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{asset ('assets/template/js/authentication.js')}}"></script>
 {% endblock %}

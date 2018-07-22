@@ -2,15 +2,18 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use App\Entity\User;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\RouterInterface;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Security;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\RouterInterface;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
@@ -29,16 +32,28 @@ class SecurityController extends AbstractController
      */
     private $session;
 
+    private $encoderFactory;
+
+    private $entityManager;
+
     /**
      * @param RouterInterface $router
      * @param Security $security
      *  @param SessionInterface $session
      */
-    public function __construct(RouterInterface $router, Security $security, SessionInterface $session)
+    public function __construct(
+            RouterInterface $router,
+            Security $security,
+            EntityManagerInterface $em,
+            SessionInterface $session,
+            EncoderFactoryInterface $encoderFactory
+        )
     {
         $this->router = $router;
         $this->security = $security;
         $this->session = $session;
+        $this->entityManager = $em;
+        $this->encoderFactory = $encoderFactory;
     }
 
     /**
@@ -52,6 +67,33 @@ class SecurityController extends AbstractController
             // La derniere erreur de connexion (si il y en a une)
             'error' => $helper->getLastAuthenticationError(),
         ]);
+    }
+
+    /**
+     * @Route("/authentication", name="user_authentication", methods={"POST"})
+     */
+    public function verifUser(Request $request)
+    {
+        $response;
+
+        if ($request->isXmlHttpRequest())
+        {
+            $user = $this->entityManager->getRepository(User::class)->findOneByEmail($request->request->get('username'));
+
+            if ($user && password_verify($request->request->get('password'), $user->getPassword())) {
+
+                $response = new Response(json_encode([
+                    'massage' => null,
+                    'error' => false,
+                ]));
+            } else {
+                $response = new Response(json_encode([
+                    'message' => 'E-mail ou Mot de passe invalide.',
+                    'error' => true,
+                ]));
+            }
+        }
+        return $response;
     }
 
     /**

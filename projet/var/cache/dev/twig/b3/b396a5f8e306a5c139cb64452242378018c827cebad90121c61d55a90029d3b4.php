@@ -76,22 +76,18 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
             echo "                        <div class=\"alert alert-danger\">
                             ";
             // line 22
-            if ((twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 22, $this->source); })()), "message", array()) == "Bad credentials.")) {
-                // line 23
-                echo "                            E-mail ou Mot de passe incorrecte.
-                            ";
-            }
-            // line 25
-            echo "                        </div>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 22, $this->source); })()), "messageKey", array()), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new Twig_Error_Runtime('Variable "error" does not exist.', 22, $this->source); })()), "messageData", array()), "security"), "html", null, true);
+            echo "
+                        </div>
                     ";
         }
-        // line 27
+        // line 25
         echo "
                     <div class=\"form-group\">
                         <div class=\"col-xs-12\">
                             <input class=\"form-control input-lg\" type=\"email\" id=\"email\" name=\"_username\" value=\"";
-        // line 30
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 30, $this->source); })()), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 28, $this->source); })()), "html", null, true);
         echo "\" placeholder=\"E-mail\" required=\"required\">
                         </div>
                     </div>
@@ -103,7 +99,7 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
                     </div>
 
                     <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 40
+        // line 38
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"/>
 
@@ -131,7 +127,7 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
                         </div>
                         <div class=\"col-sm-5 text-right\">
                             <a href=\"";
-        // line 65
+        // line 63
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("partager_salle_front");
         echo "\">Nouveau proprietaire?</a>
                         </div>
@@ -163,7 +159,7 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
 
     public function getDebugInfo()
     {
-        return array (  135 => 65,  107 => 40,  94 => 30,  89 => 27,  85 => 25,  81 => 23,  79 => 22,  76 => 21,  74 => 20,  69 => 18,  53 => 4,  44 => 3,  15 => 1,);
+        return array (  131 => 63,  103 => 38,  90 => 28,  85 => 25,  79 => 22,  76 => 21,  74 => 20,  69 => 18,  53 => 4,  44 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -189,9 +185,7 @@ class __TwigTemplate_e84255ac22513a4f23a53d29505c0df174d6ecbc79306752e7a58aba01a
 
                     {% if error %}
                         <div class=\"alert alert-danger\">
-                            {% if error.message == \"Bad credentials.\" %}
-                            E-mail ou Mot de passe incorrecte.
-                            {% endif %}
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
                         </div>
                     {% endif %}
 

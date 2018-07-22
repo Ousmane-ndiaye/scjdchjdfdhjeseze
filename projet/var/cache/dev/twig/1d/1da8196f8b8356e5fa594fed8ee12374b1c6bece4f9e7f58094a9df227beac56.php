@@ -244,7 +244,10 @@ class __TwigTemplate_1c525bc7ca06e70d7b178d1c30625890a5daa96339fffd8e706a1728594
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile<div class=\"ripple-wrapper\"></div></a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
+                        <li><a href=\"";
+        // line 132
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
+        echo "\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 
@@ -353,7 +356,7 @@ class __TwigTemplate_1c525bc7ca06e70d7b178d1c30625890a5daa96339fffd8e706a1728594
 
     public function getDebugInfo()
     {
-        return array (  260 => 143,  237 => 123,  230 => 118,  221 => 117,  200 => 105,  192 => 100,  103 => 14,  99 => 13,  92 => 8,  83 => 7,  65 => 5,  47 => 3,  15 => 1,);
+        return array (  263 => 143,  249 => 132,  237 => 123,  230 => 118,  221 => 117,  200 => 105,  192 => 100,  103 => 14,  99 => 13,  92 => 8,  83 => 7,  65 => 5,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -489,7 +492,7 @@ class __TwigTemplate_1c525bc7ca06e70d7b178d1c30625890a5daa96339fffd8e706a1728594
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile<div class=\"ripple-wrapper\"></div></a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
+                        <li><a href=\"{{path('security_logout')}}\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 

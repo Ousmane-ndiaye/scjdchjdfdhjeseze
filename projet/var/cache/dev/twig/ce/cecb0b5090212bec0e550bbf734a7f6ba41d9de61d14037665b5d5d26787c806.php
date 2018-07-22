@@ -245,7 +245,10 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profil<div class=\"ripple-wrapper\"></div></a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Paramétrage</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
+                        <li><a href=\"";
+        // line 132
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
+        echo "\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 
@@ -258,7 +261,7 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                 <li>
                     <a href=\"";
         // line 143
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_back");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_account");
         echo "\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
                 </li>
 
@@ -273,7 +276,10 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                 <li class=\"has_sub\">
                     <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Salle </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                     <ul class=\"list-unstyled\">
-                        <li><a href=\"tables-basic.html\">Liste de mes Salles</a></li>
+                        <li><a href=\"";
+        // line 157
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_salle");
+        echo "\">Liste de mes Salles</a></li>
                         <li><a href=\"";
         // line 158
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajouter_salle");
@@ -355,7 +361,7 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
 
     public function getDebugInfo()
     {
-        return array (  279 => 158,  261 => 143,  242 => 127,  235 => 123,  228 => 118,  219 => 117,  198 => 105,  190 => 100,  101 => 14,  97 => 13,  90 => 8,  81 => 7,  64 => 5,  47 => 3,  15 => 1,);
+        return array (  285 => 158,  281 => 157,  264 => 143,  250 => 132,  242 => 127,  235 => 123,  228 => 118,  219 => 117,  198 => 105,  190 => 100,  101 => 14,  97 => 13,  90 => 8,  81 => 7,  64 => 5,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -491,7 +497,7 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profil<div class=\"ripple-wrapper\"></div></a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Paramétrage</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
-                        <li><a href=\"javascript:void(0)\"><i class=\"md md-settings-power\"></i> Logout</a></li>
+                        <li><a href=\"{{path('security_logout')}}\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
                 </div>
 
@@ -502,7 +508,7 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
         <div id=\"sidebar-menu\" style=\"box-shadow: 1px -3px 3px 0 rgba(0, 0, 0, 0.2);\">
             <ul>
                 <li>
-                    <a href=\"{{path('accueil_back')}}\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
+                    <a href=\"{{path('accueil_account')}}\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
                 </li>
 
                 <li>
@@ -516,7 +522,7 @@ class __TwigTemplate_de54b21c494831d69cd7f232c1cb3a6de4462f01cf87df2eec05bf4f69e
                 <li class=\"has_sub\">
                     <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Salle </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                     <ul class=\"list-unstyled\">
-                        <li><a href=\"tables-basic.html\">Liste de mes Salles</a></li>
+                        <li><a href=\"{{path('liste_salle')}}\">Liste de mes Salles</a></li>
                         <li><a href=\"{{path('ajouter_salle')}}\">Ajouter une salle</a></li>
                     </ul>
                 </li>

@@ -4,6 +4,12 @@
 
 {% block titrepage %}CRÉATION D'UNE NOUVELLE SALLE !{% endblock %}
 
+{% block filedarian %}
+<li><a href="{{path('accueil_account')}}">Sen office</a></li>
+<li><a href="{{path('liste_salle')}}">Mes salles</a></li>
+<li class="active">Nouvelle salle</li>
+{% endblock %}
+
 {% block stylesheets %}
     {{ parent() }}
     <link href="{{asset('assets/plugins/tagsinput/jquery.tagsinput.css')}}" rel="stylesheet">
@@ -83,10 +89,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-1 horaire-du-jour" style="padding-top: 25px;">
+                            <div class="col-sm-1 horaire-du-jour disponible-24h" style="padding-top: 25px;">
                                 <div class="form-group">
                                     <div class="checkbox checkbox-primary">
-                                        <input name="24h_24_{{jour.id}}" id="checkbox{{jour.id}}" type="checkbox" class="disponible-24h">
+                                        <input name="24h_24_{{jour.id}}" id="checkbox{{jour.id}}" type="checkbox">
                                         <label for="checkbox{{jour.id}}">
                                             24h/24
                                         </label>
@@ -163,9 +169,9 @@
             $('.toggle').on('toggle', function(e, active) {
                 if (active) {
                     $(this).next('input').val('OUI');
-                    $(this).closest('.row').find('.horaire-du-jour:first input:checkbox').each(function(){
+                    $(this).closest('.row').find('.disponible-24h input:checkbox').each(function(){
                         if($(this).is(":checked")){
-                            $(this).closest('.horaire-du-jour').removeClass('hide');
+                            $(this).closest('.disponible-24h').removeClass('hide');
                         } else {
                             $(this).closest('.row').find('.horaire-du-jour').removeClass('hide');
                         }
@@ -176,7 +182,7 @@
                 }
             });
 
-            $('.disponible-24h:checkbox').on('change', function(){
+            $('.disponible-24h').find("input:checkbox").on('change', function(){
                 if($(this).is(":checked")){
                     $(this).closest('.row').find('.not-disponible-24h').addClass('hide');
                 } else {

@@ -436,24 +436,24 @@
         </script>
         {% block javascripts %}
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="{{asset ('assets/template/js/jquery.min.js')}}"></script>
-		<script src="{{asset ('assets/js/jquery.validate.js')}}"></script>
-		<script src="{{asset ('assets/js/jquery.formtowizard.js ')}}"></script>
-		<script src="{{asset ('assets/autocomplete/ac.js')}}"></script>
+		<script src="{{asset('assets/template/js/jquery.min.js')}}"></script>
+		<script src="{{asset('assets/js/jquery.validate.js')}}"></script>
+		<script src="{{asset('assets/js/jquery.formtowizard.js')}}"></script>
+		<script src="{{asset('assets/autocomplete/ac.js')}}"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="{{asset ('assets/template/js/bootstrap.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/owl.carousel.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/jssor.slider.mini.js')}}"></script>
-		<script src="{{asset ('assets/template/js/classie.js')}}"></script>
-		<script src="{{asset ('assets/template/js/selectFx.js')}}"></script>
-		<script src="{{asset ('assets/template/js/bootstrap-datepicker.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/starrr.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/nivo-lightbox.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/jquery.shuffle.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/bootstrap.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/owl.carousel.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/jssor.slider.mini.js')}}"></script>
+		<script src="{{asset('assets/template/js/classie.js')}}"></script>
+		<script src="{{asset('assets/template/js/selectFx.js')}}"></script>
+		<script src="{{asset('assets/template/js/bootstrap-datepicker.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/starrr.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/nivo-lightbox.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/jquery.shuffle.min.js')}}"></script>
 		<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-		<script src="{{asset ('assets/template/js/gmaps.min.js')}}"></script>
-		<script src="{{asset ('assets/template/js/jquery.parallax-1.1.3.js')}}"></script>
-        <script src="{{asset ('assets/template/js/script.js')}}"></script>
+		<script src="{{asset('assets/template/js/gmaps.min.js')}}"></script>
+		<script src="{{asset('assets/template/js/jquery.parallax-1.1.3.js')}}"></script>
+        <script src="{{asset('assets/template/js/script.js')}}"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
         {% endblock %}
 		<!-- Fin bloc script -->
@@ -503,7 +503,6 @@
 				$signupForm.validate({
 					errorElement: 'em',
 					submitHandler: function(form) {
-						alert('submitted');
 						form.submit();
 					}
 				});

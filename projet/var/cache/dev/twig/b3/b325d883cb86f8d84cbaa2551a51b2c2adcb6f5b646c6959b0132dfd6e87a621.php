@@ -156,7 +156,7 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
     ";
         // line 99
         $this->displayBlock('body', $context, $blocks);
-        // line 547
+        // line 546
         echo "    </body>
 </html>
 ";
@@ -404,7 +404,6 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
 \t\t\t\t\$signupForm.validate({
 \t\t\t\t\terrorElement: 'em',
 \t\t\t\t\tsubmitHandler: function(form) {
-\t\t\t\t\t\talert('submitted');
 \t\t\t\t\t\tform.submit();
 \t\t\t\t\t}
 \t\t\t\t});
@@ -1061,7 +1060,7 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
         echo "\"></script>
 \t\t<script src=\"";
         // line 441
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.formtowizard.js "), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.formtowizard.js"), "html", null, true);
         echo "\"></script>
 \t\t<script src=\"";
         // line 442
@@ -1139,7 +1138,7 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
 
     public function getDebugInfo()
     {
-        return array (  1118 => 456,  1114 => 455,  1110 => 454,  1105 => 452,  1101 => 451,  1097 => 450,  1093 => 449,  1089 => 448,  1085 => 447,  1081 => 446,  1077 => 445,  1073 => 444,  1068 => 442,  1064 => 441,  1060 => 440,  1056 => 439,  1053 => 438,  1044 => 437,  978 => 374,  974 => 373,  970 => 372,  966 => 371,  962 => 370,  958 => 369,  954 => 368,  950 => 367,  946 => 366,  917 => 339,  908 => 338,  890 => 330,  886 => 329,  882 => 328,  878 => 327,  874 => 326,  870 => 325,  864 => 322,  860 => 321,  856 => 320,  852 => 319,  848 => 318,  844 => 317,  808 => 283,  799 => 282,  782 => 275,  778 => 274,  774 => 273,  770 => 272,  766 => 271,  741 => 248,  732 => 247,  634 => 157,  625 => 156,  615 => 155,  606 => 154,  596 => 153,  587 => 152,  577 => 151,  568 => 150,  558 => 148,  549 => 147,  516 => 129,  497 => 119,  487 => 118,  479 => 113,  466 => 102,  457 => 101,  384 => 484,  380 => 483,  376 => 482,  372 => 481,  368 => 480,  363 => 478,  358 => 476,  353 => 474,  349 => 473,  345 => 472,  341 => 471,  337 => 470,  333 => 469,  329 => 468,  325 => 467,  315 => 459,  313 => 437,  304 => 430,  301 => 338,  298 => 282,  296 => 247,  293 => 246,  290 => 156,  287 => 154,  284 => 152,  282 => 150,  279 => 149,  277 => 147,  274 => 146,  272 => 101,  269 => 100,  260 => 99,  248 => 93,  237 => 85,  233 => 84,  229 => 83,  225 => 82,  221 => 81,  217 => 80,  213 => 79,  209 => 78,  204 => 76,  199 => 75,  190 => 74,  172 => 5,  160 => 547,  158 => 99,  152 => 96,  149 => 95,  147 => 74,  141 => 71,  137 => 70,  132 => 68,  128 => 67,  124 => 66,  120 => 65,  116 => 64,  110 => 61,  106 => 60,  48 => 5,  42 => 1,);
+        return array (  1117 => 456,  1113 => 455,  1109 => 454,  1104 => 452,  1100 => 451,  1096 => 450,  1092 => 449,  1088 => 448,  1084 => 447,  1080 => 446,  1076 => 445,  1072 => 444,  1067 => 442,  1063 => 441,  1059 => 440,  1055 => 439,  1052 => 438,  1043 => 437,  977 => 374,  973 => 373,  969 => 372,  965 => 371,  961 => 370,  957 => 369,  953 => 368,  949 => 367,  945 => 366,  916 => 339,  907 => 338,  889 => 330,  885 => 329,  881 => 328,  877 => 327,  873 => 326,  869 => 325,  863 => 322,  859 => 321,  855 => 320,  851 => 319,  847 => 318,  843 => 317,  807 => 283,  798 => 282,  781 => 275,  777 => 274,  773 => 273,  769 => 272,  765 => 271,  740 => 248,  731 => 247,  633 => 157,  624 => 156,  614 => 155,  605 => 154,  595 => 153,  586 => 152,  576 => 151,  567 => 150,  557 => 148,  548 => 147,  515 => 129,  496 => 119,  486 => 118,  478 => 113,  465 => 102,  456 => 101,  384 => 484,  380 => 483,  376 => 482,  372 => 481,  368 => 480,  363 => 478,  358 => 476,  353 => 474,  349 => 473,  345 => 472,  341 => 471,  337 => 470,  333 => 469,  329 => 468,  325 => 467,  315 => 459,  313 => 437,  304 => 430,  301 => 338,  298 => 282,  296 => 247,  293 => 246,  290 => 156,  287 => 154,  284 => 152,  282 => 150,  279 => 149,  277 => 147,  274 => 146,  272 => 101,  269 => 100,  260 => 99,  248 => 93,  237 => 85,  233 => 84,  229 => 83,  225 => 82,  221 => 81,  217 => 80,  213 => 79,  209 => 78,  204 => 76,  199 => 75,  190 => 74,  172 => 5,  160 => 546,  158 => 99,  152 => 96,  149 => 95,  147 => 74,  141 => 71,  137 => 70,  132 => 68,  128 => 67,  124 => 66,  120 => 65,  116 => 64,  110 => 61,  106 => 60,  48 => 5,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -1582,24 +1581,24 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
         </script>
         {% block javascripts %}
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-\t\t<script src=\"{{asset ('assets/template/js/jquery.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/js/jquery.validate.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/js/jquery.formtowizard.js ')}}\"></script>
-\t\t<script src=\"{{asset ('assets/autocomplete/ac.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/jquery.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/js/jquery.validate.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/js/jquery.formtowizard.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/autocomplete/ac.js')}}\"></script>
 \t\t<!-- Include all compiled plugins (below), or include individual files as needed -->
-\t\t<script src=\"{{asset ('assets/template/js/bootstrap.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/owl.carousel.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/jssor.slider.mini.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/classie.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/selectFx.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/bootstrap-datepicker.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/starrr.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/nivo-lightbox.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/jquery.shuffle.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/bootstrap.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/owl.carousel.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/jssor.slider.mini.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/classie.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/selectFx.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/bootstrap-datepicker.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/starrr.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/nivo-lightbox.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/jquery.shuffle.min.js')}}\"></script>
 \t\t<script src=\"http://maps.google.com/maps/api/js?sensor=true\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/gmaps.min.js')}}\"></script>
-\t\t<script src=\"{{asset ('assets/template/js/jquery.parallax-1.1.3.js')}}\"></script>
-        <script src=\"{{asset ('assets/template/js/script.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/gmaps.min.js')}}\"></script>
+\t\t<script src=\"{{asset('assets/template/js/jquery.parallax-1.1.3.js')}}\"></script>
+        <script src=\"{{asset('assets/template/js/script.js')}}\"></script>
         <script defer src=\"https://use.fontawesome.com/releases/v5.0.9/js/all.js\" integrity=\"sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl\" crossorigin=\"anonymous\"></script>
         {% endblock %}
 \t\t<!-- Fin bloc script -->
@@ -1649,7 +1648,6 @@ class __TwigTemplate_4ebde0e266af19ee931ab10c6c8a4cd8c922fc5b341d4ccc5cad693f28e
 \t\t\t\t\$signupForm.validate({
 \t\t\t\t\terrorElement: 'em',
 \t\t\t\t\tsubmitHandler: function(form) {
-\t\t\t\t\t\talert('submitted');
 \t\t\t\t\t\tform.submit();
 \t\t\t\t\t}
 \t\t\t\t});

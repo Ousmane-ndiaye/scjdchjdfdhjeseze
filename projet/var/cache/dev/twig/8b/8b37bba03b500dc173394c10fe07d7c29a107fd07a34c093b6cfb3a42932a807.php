@@ -16,6 +16,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         $this->blocks = array(
             'title' => array($this, 'block_title'),
             'titrepage' => array($this, 'block_titrepage'),
+            'filedarian' => array($this, 'block_filedarian'),
             'stylesheets' => array($this, 'block_stylesheets'),
             'main' => array($this, 'block_main'),
             'javascripts' => array($this, 'block_javascripts'),
@@ -81,6 +82,33 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
     }
 
     // line 7
+    public function block_filedarian($context, array $blocks = array())
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "filedarian"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "filedarian"));
+
+        // line 8
+        echo "<li><a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_account");
+        echo "\">Sen office</a></li>
+<li><a href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_salle");
+        echo "\">Mes salles</a></li>
+<li class=\"active\">Nouvelle salle</li>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 13
     public function block_stylesheets($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -89,40 +117,40 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 8
+        // line 14
         echo "    ";
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
     <link href=\"";
-        // line 9
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/tagsinput/jquery.tagsinput.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 10
+        // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/toggles/toggles.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 11
+        // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/timepicker/bootstrap-timepicker.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 12
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 13
+        // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/colorpicker/colorpicker.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
     <link href=\"";
-        // line 14
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" />
     <link href=\"";
-        // line 15
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/select2/dist/css/select2.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
     <link href=\"";
-        // line 16
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/select2/dist/css/select2-bootstrap.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\">
 ";
@@ -134,7 +162,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
 
     }
 
-    // line 19
+    // line 25
     public function block_main($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -143,15 +171,15 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "main"));
 
-        // line 20
+        // line 26
         echo "<div class=\"row\">
     <div class=\"col-sm-12\">
         <div class=\"panel panel-default\">
             <div class=\"panel-heading\"><h3 class=\"panel-title\">Nouvelle salle</h3></div>
             <div class=\"panel-body\">
                 ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 25, $this->source); })()), 'form_start', array("attr" => array("class" => "form-horizontal", "role" => "form")));
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 31, $this->source); })()), 'form_start', array("attr" => array("class" => "form-horizontal", "role" => "form")));
         echo "
 
                     <div class=\"panel-heading\"><h3 class=\"panel-title\">Information sur la salle</h3></div>
@@ -160,8 +188,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Pénom et nom</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 32
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 32, $this->source); })()), "nomComplet", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Prénom et Nom")));
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 38, $this->source); })()), "nomComplet", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Prénom et Nom")));
         echo "
                         </div>
                     </div>
@@ -169,8 +197,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Adresse</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 38
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 38, $this->source); })()), "cArrondissement", array()), 'widget', array("attr" => array("class" => "select2 form-control", "data-placeholder" => "Choisir votre adresse...")));
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), "cArrondissement", array()), 'widget', array("attr" => array("class" => "select2 form-control", "data-placeholder" => "Choisir votre adresse...")));
         echo "
                         </div>
                     </div>
@@ -178,8 +206,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Quartier</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 44, $this->source); })()), "quartier", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Votre quartier, Rue")));
+        // line 50
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 50, $this->source); })()), "quartier", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Votre quartier, Rue")));
         echo "
                         </div>
                     </div>
@@ -187,8 +215,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Type de salle</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 50
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 50, $this->source); })()), "typeDeBien", array()), 'widget', array("attr" => array("class" => "select2 form-control", "data-placeholder" => "Choisir votre adresse...")));
+        // line 56
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 56, $this->source); })()), "typeDeBien", array()), 'widget', array("attr" => array("class" => "select2 form-control", "data-placeholder" => "Choisir votre adresse...")));
         echo "
                         </div>
                     </div>
@@ -196,8 +224,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Nombre de place</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 56
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 56, $this->source); })()), "nbreDeplaces", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Nombre de place de salle")));
+        // line 62
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 62, $this->source); })()), "nbreDeplaces", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Nombre de place de salle")));
         echo "
                         </div>
                     </div>
@@ -205,8 +233,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Prix de location (<span class=\"text-danger\">FCFA</span>)</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 62
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 62, $this->source); })()), "prixLocation", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "12000")));
+        // line 68
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 68, $this->source); })()), "prixLocation", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "12000")));
         echo "
                             <span class=\"help-block\"><small>Renseigner le prix sans espace ni de FCFA à la fin. Ex: 12000.</small></span>
                         </div>
@@ -215,8 +243,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         <label class=\"col-md-2 control-label\">Description</label>
                         <div class=\"col-md-10\">
                             ";
-        // line 69
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 69, $this->source); })()), "description", array()), 'widget', array("attr" => array("class" => "form-control", "rows" => "5", "placeholder" => "Décrivez nous un peut votre salle...")));
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 75, $this->source); })()), "description", array()), 'widget', array("attr" => array("class" => "form-control", "rows" => "5", "placeholder" => "Décrivez nous un peut votre salle...")));
         echo "
                         </div>
                     </div>
@@ -224,41 +252,41 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                     <div class=\"panel-heading\"><h3 class=\"panel-title\">Disponibilité de la salle</h3></div>
 
                     ";
-        // line 75
+        // line 81
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["jours"]) || array_key_exists("jours", $context) ? $context["jours"] : (function () { throw new Twig_Error_Runtime('Variable "jours" does not exist.', 75, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["jours"]) || array_key_exists("jours", $context) ? $context["jours"] : (function () { throw new Twig_Error_Runtime('Variable "jours" does not exist.', 81, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["jour"]) {
-            // line 76
+            // line 82
             echo "                        <div class=\"row\">
                             <div class=\"col-sm-2\" style=\"padding-top: 23px;\">
                                 <div class=\"form-group\">
                                     <label class=\"col-sm-6 control-label\">";
-            // line 79
+            // line 85
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "libelle", array()), "html", null, true);
             echo "</label>
                                     <div class=\"col-sm-6 control-label\">
                                         <div class=\"toggle toggle-success\" id=\"jour-";
-            // line 81
+            // line 87
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\"></div>
                                         <input type=\"hidden\" name=\"jour_";
-            // line 82
+            // line 88
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\" value=\"OUI\"/>
                                     </div>
                                 </div>
                             </div>
-                            <div class=\"col-sm-1 horaire-du-jour\" style=\"padding-top: 25px;\">
+                            <div class=\"col-sm-1 horaire-du-jour disponible-24h\" style=\"padding-top: 25px;\">
                                 <div class=\"form-group\">
                                     <div class=\"checkbox checkbox-primary\">
                                         <input name=\"24h_24_";
-            // line 89
+            // line 95
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\" id=\"checkbox";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
-            echo "\" type=\"checkbox\" class=\"disponible-24h\">
+            echo "\" type=\"checkbox\">
                                         <label for=\"checkbox";
-            // line 90
+            // line 96
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\">
                                             24h/24
@@ -273,7 +301,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                                 <label>Heure d'Ouverture</label>
                                 <div class=\"input-group m-b-15\">
                                     <div class=\"bootstrap-timepicker\"><input id=\"hOuverture";
-            // line 102
+            // line 108
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\" name=\"hOuverture";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
@@ -285,7 +313,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                                 <label>Heure de Fermeture</label>
                                 <div class=\"input-group m-b-15\">
                                     <div class=\"bootstrap-timepicker\"><input id=\"hFermeture";
-            // line 109
+            // line 115
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
             echo "\" name=\"hFermeture";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jour"], "id", array()), "html", null, true);
@@ -299,7 +327,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jour'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 115
+        // line 121
         echo "
                     <div class=\"panel-heading\"><h3 class=\"panel-title\">&nbsp;</h3></div>
 
@@ -309,8 +337,8 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                         </div>
                     </div>
                 ";
-        // line 123
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 123, $this->source); })()), 'form_end');
+        // line 129
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 129, $this->source); })()), 'form_end');
         echo "
             </div> <!-- panel-body -->
         </div> <!-- panel -->
@@ -325,7 +353,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
 
     }
 
-    // line 130
+    // line 136
     public function block_javascripts($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -334,48 +362,48 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 131
+        // line 137
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 132
+        // line 138
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/select2/dist/js/select2.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 133
+        // line 139
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/tagsinput/jquery.tagsinput.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 134
+        // line 140
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/toggles/toggles.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 135
+        // line 141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/timepicker/bootstrap-timepicker.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 136
+        // line 142
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 137
+        // line 143
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/colorpicker/bootstrap-colorpicker.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 138
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/jquery-multi-select/jquery.multi-select.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 139
+        // line 145
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/jquery-multi-select/jquery.quicksearch.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 140
+        // line 146
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script src=\"";
-        // line 141
+        // line 147
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
     <script>
@@ -402,9 +430,9 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
             \$('.toggle').on('toggle', function(e, active) {
                 if (active) {
                     \$(this).next('input').val('OUI');
-                    \$(this).closest('.row').find('.horaire-du-jour:first input:checkbox').each(function(){
+                    \$(this).closest('.row').find('.disponible-24h input:checkbox').each(function(){
                         if(\$(this).is(\":checked\")){
-                            \$(this).closest('.horaire-du-jour').removeClass('hide');
+                            \$(this).closest('.disponible-24h').removeClass('hide');
                         } else {
                             \$(this).closest('.row').find('.horaire-du-jour').removeClass('hide');
                         }
@@ -415,7 +443,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                 }
             });
 
-            \$('.disponible-24h:checkbox').on('change', function(){
+            \$('.disponible-24h').find(\"input:checkbox\").on('change', function(){
                 if(\$(this).is(\":checked\")){
                     \$(this).closest('.row').find('.not-disponible-24h').addClass('hide');
                 } else {
@@ -464,7 +492,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
 
     public function getDebugInfo()
     {
-        return array (  379 => 141,  375 => 140,  371 => 139,  367 => 138,  363 => 137,  359 => 136,  355 => 135,  351 => 134,  347 => 133,  343 => 132,  338 => 131,  329 => 130,  313 => 123,  303 => 115,  289 => 109,  277 => 102,  262 => 90,  256 => 89,  246 => 82,  242 => 81,  237 => 79,  232 => 76,  228 => 75,  219 => 69,  209 => 62,  200 => 56,  191 => 50,  182 => 44,  173 => 38,  164 => 32,  154 => 25,  147 => 20,  138 => 19,  126 => 16,  122 => 15,  118 => 14,  114 => 13,  110 => 12,  106 => 11,  102 => 10,  98 => 9,  93 => 8,  84 => 7,  66 => 5,  48 => 3,  15 => 1,);
+        return array (  407 => 147,  403 => 146,  399 => 145,  395 => 144,  391 => 143,  387 => 142,  383 => 141,  379 => 140,  375 => 139,  371 => 138,  366 => 137,  357 => 136,  341 => 129,  331 => 121,  317 => 115,  305 => 108,  290 => 96,  284 => 95,  274 => 88,  270 => 87,  265 => 85,  260 => 82,  256 => 81,  247 => 75,  237 => 68,  228 => 62,  219 => 56,  210 => 50,  201 => 44,  192 => 38,  182 => 31,  175 => 26,  166 => 25,  154 => 22,  150 => 21,  146 => 20,  142 => 19,  138 => 18,  134 => 17,  130 => 16,  126 => 15,  121 => 14,  112 => 13,  99 => 9,  94 => 8,  85 => 7,  67 => 5,  49 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -474,6 +502,12 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
 {% block title %} PARTAGER UNE SALLE {% endblock %}
 
 {% block titrepage %}CRÉATION D'UNE NOUVELLE SALLE !{% endblock %}
+
+{% block filedarian %}
+<li><a href=\"{{path('accueil_account')}}\">Sen office</a></li>
+<li><a href=\"{{path('liste_salle')}}\">Mes salles</a></li>
+<li class=\"active\">Nouvelle salle</li>
+{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -554,10 +588,10 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                                     </div>
                                 </div>
                             </div>
-                            <div class=\"col-sm-1 horaire-du-jour\" style=\"padding-top: 25px;\">
+                            <div class=\"col-sm-1 horaire-du-jour disponible-24h\" style=\"padding-top: 25px;\">
                                 <div class=\"form-group\">
                                     <div class=\"checkbox checkbox-primary\">
-                                        <input name=\"24h_24_{{jour.id}}\" id=\"checkbox{{jour.id}}\" type=\"checkbox\" class=\"disponible-24h\">
+                                        <input name=\"24h_24_{{jour.id}}\" id=\"checkbox{{jour.id}}\" type=\"checkbox\">
                                         <label for=\"checkbox{{jour.id}}\">
                                             24h/24
                                         </label>
@@ -634,9 +668,9 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
             \$('.toggle').on('toggle', function(e, active) {
                 if (active) {
                     \$(this).next('input').val('OUI');
-                    \$(this).closest('.row').find('.horaire-du-jour:first input:checkbox').each(function(){
+                    \$(this).closest('.row').find('.disponible-24h input:checkbox').each(function(){
                         if(\$(this).is(\":checked\")){
-                            \$(this).closest('.horaire-du-jour').removeClass('hide');
+                            \$(this).closest('.disponible-24h').removeClass('hide');
                         } else {
                             \$(this).closest('.row').find('.horaire-du-jour').removeClass('hide');
                         }
@@ -647,7 +681,7 @@ class __TwigTemplate_612e5541c5f212c95a3cb07eae4e87434494808c32ef0ff637bba2559f7
                 }
             });
 
-            \$('.disponible-24h:checkbox').on('change', function(){
+            \$('.disponible-24h').find(\"input:checkbox\").on('change', function(){
                 if(\$(this).is(\":checked\")){
                     \$(this).closest('.row').find('.not-disponible-24h').addClass('hide');
                 } else {

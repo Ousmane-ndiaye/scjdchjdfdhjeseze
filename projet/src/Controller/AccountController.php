@@ -107,7 +107,7 @@ class AccountController extends Controller
                 $this->entityManager->flush();
             }
 
-            return $this->redirectToRoute('accueil_account');
+            return $this->redirectToRoute('edit_salle');
         }
         return $this->render('account/salle/add.html.twig', [
             'form' => $form->createView(),
@@ -120,6 +120,39 @@ class AccountController extends Controller
      */
     public function listeSalle(Request $request, JourRepository $JourRepository)
     {
+        return $this->render('account/salle/all.html.twig', [
+            'salles' => $this->entityManager->getRepository(Bien::class)->findAll(),
+        ]);
+    }
 
+    /**
+     * @Route("/edit/salle", name="edit_salle")
+     */
+    public function editSalle(Request $request, JourRepository $JourRepository)
+    {
+        return $this->render('account/salle/edit.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/detail/salle", name="detail_salle", methods={"POST"})
+     */
+    public function detailSalle(Request $request, JourRepository $JourRepository)
+    {
+        $bien = $this->entityManager->getRepository(Bien::class)->find($_POST['id']);
+
+        $ouvrables = $this->entityManager->getRepository(Ouvrable::class)->findBy(['bien' => $bien]);
+
+        $form = $this->createForm(BienType::class, $bien);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+        }
+
+        return $this->render('account/salle/detail.html.twig', [
+            'salle' => $bien,
+            'form' => $form->createView(),
+            'ouvrables' => $ouvrables,
+        ]);
     }
 }

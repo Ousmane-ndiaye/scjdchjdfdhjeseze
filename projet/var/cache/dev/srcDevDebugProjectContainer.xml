@@ -438,7 +438,9 @@
       <tag name="container.service_subscriber.locator" id=".service_locator.ychIlgF.App\Controller\SecurityController"/>
       <argument type="service" id="router.default"/>
       <argument type="service" id="security.helper"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument type="service" id="session"/>
+      <argument type="service" id="security.encoder_factory.generic"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.ychIlgF.App\Controller\SecurityController"/>
       </call>
@@ -4729,14 +4731,20 @@
         <argument key="helper" type="service" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.qY2Bl5q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.i8b4A.V" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::ajouterSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController::detailSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController::editSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController::listeSalle" type="service" id=".service_locator.LY6bLxw"/>
         <argument key="App\Controller\FrontController::partagerSalle" type="service" id=".service_locator.FngfaY1"/>
         <argument key="App\Controller\RegistrationController::registerAction" type="service" id=".service_locator.JPXreA6"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.UlhrRhb"/>
         <argument key="App\Controller\AccountController:ajouterSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController:detailSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController:editSalle" type="service" id=".service_locator.LY6bLxw"/>
+        <argument key="App\Controller\AccountController:listeSalle" type="service" id=".service_locator.LY6bLxw"/>
         <argument key="App\Controller\FrontController:partagerSalle" type="service" id=".service_locator.FngfaY1"/>
         <argument key="App\Controller\RegistrationController:registerAction" type="service" id=".service_locator.JPXreA6"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.UlhrRhb"/>
@@ -5141,7 +5149,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.qY2Bl5q"/>
+      <argument type="service" id=".service_locator.i8b4A.V"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5393,7 +5401,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="sensio_framework_extra.converter.doctrine.orm.expression_language" alias="sensio_framework_extra.converter.doctrine.orm.expression_language.default" public="false"/>
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.qY2Bl5q"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.i8b4A.V"/>
     <service id="console.command.public_alias.doctrine_cache.contains_command" alias="doctrine_cache.contains_command" public="true"/>
     <service id="console.command.public_alias.doctrine_cache.delete_command" alias="doctrine_cache.delete_command" public="true"/>
     <service id="console.command.public_alias.doctrine_cache.flush_command" alias="doctrine_cache.flush_command" public="true"/>
