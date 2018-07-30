@@ -201,6 +201,7 @@ class Bien
         if (!$this->images->contains($image)) {
             $this->images[] = $image;
             $image->setBien($this);
+            
         }
 
         return $this;

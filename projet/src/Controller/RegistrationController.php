@@ -32,6 +32,9 @@ class RegistrationController extends Controller
             // Par defaut l'utilisateur aura toujours le rôle ROLE_USER
             $user->setEtat(false);
             $user->setRoles(['ROLE_USER']);
+            
+            //mettre une image par defaut 
+            $user->setPhoto("http://placehold.it/350x100");
 
             // On enregistre l'utilisateur dans la base
             $em = $this->getDoctrine()->getManager();

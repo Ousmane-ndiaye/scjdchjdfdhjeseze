@@ -46,4 +46,22 @@ class UserRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
+
+
+    public function findUserImage(){
+        $imageuser= $this->findAll();
+             foreach ($imageuser as $key => $value) {
+
+                if( ($value->getPhoto())==null){
+                    $string =  "assets/images/users/avatar-1.jpg";
+                    $stream = fopen('php://memory','r+');
+                    fwrite($stream, $string);
+                    rewind($stream);
+                    $value->setPhoto($stream);
+                }
+        $value->setPhoto(base64_encode(stream_get_contents($value->getPhoto())));
+       
+    }
+    
+}
 }

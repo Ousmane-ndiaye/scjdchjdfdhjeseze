@@ -1963,27 +1963,28 @@ body {
     width: 100%;
   }
   .mg-gallery .owl-controls .owl-buttons div {
-    background-color: rgba(255, 255, 255, 0.4) !important;
+    background-color: rgba(255, 255, 255, 0.4) ;
     padding: 13px 15px;
     border-radius: 25px;
     margin-top: -25px;
     opacity: 0;
     color: #16262e;
-    -webkit-transition: opacity 0.3s, background-color 0.3s, color 0.3s !important;
-            transition: opacity 0.3s, background-color 0.3s, color 0.3s !important;
+    -webkit-transition: opacity 0.3s, background-color 0.3s, color 0.3s ;
+            transition: opacity 0.3s, background-color 0.3s, color 0.3s ;
   }
   .mg-gallery .owl-controls .owl-buttons div.owl-prev {
     float: left;
-    margin-left: 25px !important;
+    margin-left: 25px ;
+    
   }
   .mg-gallery .owl-controls .owl-buttons div.owl-next {
     float: right;
-    margin-right: 25px !important;
+    margin-right: 25px ;
   }
   .mg-gallery .owl-controls .owl-buttons div:hover {
     opacity: 1;
-    color: #fff;
-    background-color: #e7b315 !important;
+    color: #fffb;
+    background-color: #e7b315 ;
   }
   .mg-gallery:hover .owl-controls .owl-buttons div {
     opacity: 0.5;

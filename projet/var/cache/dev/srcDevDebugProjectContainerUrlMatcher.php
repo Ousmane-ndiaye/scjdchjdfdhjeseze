@@ -68,7 +68,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                     '/account/ajouter/salle' => array(array('_route' => 'ajouter_salle', '_controller' => 'App\\Controller\\AccountController::ajouterSalle'), null, null, null),
                     '/account/liste/salle' => array(array('_route' => 'liste_salle', '_controller' => 'App\\Controller\\AccountController::listeSalle'), null, null, null),
                     '/account/edit/salle' => array(array('_route' => 'edit_salle', '_controller' => 'App\\Controller\\AccountController::editSalle'), null, null, null),
-                    '/account/detail/salle' => array(array('_route' => 'detail_salle', '_controller' => 'App\\Controller\\AccountController::detailSalle'), null, array('POST' => 0), null),
+                    '/account/detail/salle' => array(array('_route' => 'detail_salle', '_controller' => 'App\\Controller\\AccountController::detailSalle'), null, array('POST' => 0, 'GET' => 1), null),
                     '/back/accueil' => array(array('_route' => 'accueil_back', '_controller' => 'App\\Controller\\BackController::index'), null, null, null),
                     '/front/accueil' => array(array('_route' => 'accueil_front', '_controller' => 'App\\Controller\\FrontController::index'), null, null, null),
                     '/front/catalogue' => array(array('_route' => 'catalogue_front', '_controller' => 'App\\Controller\\FrontController::catalogue'), null, array('GET' => 0, 'POST' => 1), null),
@@ -109,19 +109,20 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $matchedPathinfo = $pathinfo;
         $regexList = array(
             0 => '{^(?'
+                    .'|/front/reserver/([^/]++)(*:31)'
                     .'|/_(?'
-                        .'|error/(\\d+)(?:\\.([^/]++))?(*:38)'
-                        .'|wdt/([^/]++)(*:57)'
+                        .'|error/(\\d+)(?:\\.([^/]++))?(*:69)'
+                        .'|wdt/([^/]++)(*:88)'
                         .'|profiler/([^/]++)(?'
                             .'|/(?'
-                                .'|search/results(*:102)'
-                                .'|router(*:116)'
+                                .'|search/results(*:133)'
+                                .'|router(*:147)'
                                 .'|exception(?'
-                                    .'|(*:136)'
-                                    .'|\\.css(*:149)'
+                                    .'|(*:167)'
+                                    .'|\\.css(*:180)'
                                 .')'
                             .')'
-                            .'|(*:159)'
+                            .'|(*:190)'
                         .')'
                     .')'
                 .')$}sD',
@@ -132,13 +133,14 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 switch ($m = (int) $matches['MARK']) {
                     default:
                         $routes = array(
-                            38 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
-                            57 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
-                            102 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
-                            116 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
-                            136 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
-                            149 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
-                            159 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
+                            31 => array(array('_route' => 'reserver_salle', '_controller' => 'App\\Controller\\FrontController::reserver'), array('id'), array('GET' => 0, 'POST' => 1), null),
+                            69 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
+                            88 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
+                            133 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
+                            147 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
+                            167 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
+                            180 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
+                            190 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -164,7 +166,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $ret;
                 }
 
-                if (159 === $m) {
+                if (190 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));

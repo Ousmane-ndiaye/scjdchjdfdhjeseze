@@ -94,7 +94,8 @@
                             <div class="col-md-3 col-xs-12">
                                 <div class="input-group">
                                     <div class="input-group-addon"><i class="fa fa-map-marker"></i></div>
-                                    <input type="number" class="form-control" name="nbreDePlaces" id="nbreDePlaces" placeholder="Nombre de participants">
+                                    <input type="number" class="form-control"   name="nbreDePlaces" id="nbreDePlaces" min="10"  placeholder="Nombre de participants">
+                                    
                                 </div>
                             </div>
                             <div class="col-md-2 col-xs-12">
@@ -119,20 +120,35 @@
                     <p>Les salles les plus choisies par nos clients</p>
                 </div>
                 <div class="row">
+                {% for bien in biens %}
                     <div class="col-sm-4">
-                        <figure class="mg-room">
-                            <img src="{{asset ('assets/template/images/room-1.png')}}" alt="img11" class="img-responsive">
+                        <figure style="width:300px; height:300px; margin:auto" class="mg-room">
+                             <img style="width:100%; height:100%; margin:auto" src="data:image/png;base64,{{bien.images[0].image}}" alt="img11" class="img-responsive"> 
+                            {# <img src="{{asset ('assets/template/images/room-2.png')}}" alt="img11" class="img-responsive"> #}
+
                             <figcaption>
-                                <h2>Super Deluxe</h2>
-                                <div class="mg-room-rating"><i class="fa fa-star"></i> 5.00</div>
-                                <div class="mg-room-price">$249<sup>.99/Night</sup></div>
-                                <p>adversantur probatum iudicante indicaverunt repugnantibus.</p>
-                                <a href="#" class="btn btn-link">View Details <i class="fa fa-angle-double-right"></i></a>
-                                <a href="#" class="btn btn-main">Book</a>
+                                <h2>{{bien.nomComplet |raw  }}</h2><br>
+                                 {# {{dump (bien)}} #}
+                                <div class="mg-room-rating"><i class="fa fa-star"></i> {{bien.prixLocation|raw }}</div>
+                                <div class="mg-room-price">{{bien.prixLocation|raw}} FCFA<sup>/JOUR</sup></div>
+                             <h4 style="color:white"><i class="fa fa-map-marker" aria-hidden="true"></i>{{bien.cArrondissement|raw }}
+                              <p>  Nombre de places {{bien.nbreDeplaces|raw}}.</p></h4>
+                                {# <a href="#" class="btn btn-link">View Details <i class="fa fa-angle-double-right"></i></a> #}
+                                <a href=" {{path('reserver_salle', {'id':   bien.id }) }}" class="btn btn-main">Reserver</a>
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-sm-4">
+                    
+                    {% else %} 
+                    <center><button type="submit" class="btn btn-main btn-block">Pas de Résultats Disponible</button></center>
+
+
+                    {% endfor %}
+                    <div style="color:black" class="text-center ">{{ knp_pagination_render(biens) }}</div>
+                    <div class="count">
+                Nombre de Bien Trouvés : {{ biens.getTotalItemCount }}
+                </div>
+                    {# <div class="col-sm-4">
                         <figure class="mg-room">
                             <img src="{{asset ('assets/template/images/room-2.png')}}" alt="img11" class="img-responsive">
                             <figcaption>
@@ -144,8 +160,8 @@
                                 <a href="#" class="btn btn-main">Book</a>
                             </figcaption>
                         </figure>
-                    </div>
-                    <div class="col-sm-4">
+                    </div> #}
+                    {# <div class="col-sm-4">
                         <figure class="mg-room">
                             <img src="{{asset ('assets/template/images/room-3.png')}}" alt="img11" class="img-responsive">
                             <figcaption>
@@ -157,12 +173,17 @@
                                 <a href="#" class="btn btn-main">Book</a>
                             </figcaption>
                         </figure>
-                    </div>
+                    </div> #}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<style type="text/css">
+
+
+</style>
 <!-- <div class="container">
     <div class="row">
         <div class="col-md-12">

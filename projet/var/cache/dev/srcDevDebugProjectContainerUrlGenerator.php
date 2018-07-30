@@ -29,6 +29,7 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'accueil_front' => array(array(), array('_controller' => 'App\\Controller\\FrontController::index'), array(), array(array('text', '/front/accueil')), array(), array()),
         'catalogue_front' => array(array(), array('_controller' => 'App\\Controller\\FrontController::catalogue'), array(), array(array('text', '/front/catalogue')), array(), array()),
         'partager_salle_front' => array(array(), array('_controller' => 'App\\Controller\\FrontController::partagerSalle'), array(), array(array('text', '/front/partager/salle')), array(), array()),
+        'reserver_salle' => array(array('id'), array('_controller' => 'App\\Controller\\FrontController::reserver'), array(), array(array('variable', '/', '[^/]++', 'id'), array('text', '/front/reserver')), array(), array()),
         'user_registration' => array(array(), array('_controller' => 'App\\Controller\\RegistrationController::registerAction'), array(), array(array('text', '/register')), array(), array()),
         'security_login' => array(array(), array('_controller' => 'App\\Controller\\SecurityController::login'), array(), array(array('text', '/login')), array(), array()),
         'user_authentication' => array(array(), array('_controller' => 'App\\Controller\\SecurityController::verifUser'), array(), array(array('text', '/authentication')), array(), array()),

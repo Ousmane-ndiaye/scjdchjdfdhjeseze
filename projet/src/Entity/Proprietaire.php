@@ -38,6 +38,8 @@ class Proprietaire
      */
     private $telephone;
 
+    
+
     /**
      * @ORM\OneToMany(targetEntity="Bien", mappedBy = "proprietaire")
      */
@@ -131,4 +133,6 @@ class Proprietaire
 
         return $this;
     }
+
+   
 }

@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Doctrine\Common\Persistence\ObjectManager;
 
 class SecurityController extends AbstractController
 {
@@ -146,7 +147,7 @@ class SecurityController extends AbstractController
      * @return RedirectResponse
      * @Route("/after/logout", name="after_logout")
      */
-    public function onLogoutSuccess(Request $request)
+    public function onLogoutSuccess(Request $request,ObjectManager $manager)
     {
         // Get list of roles for current user
         $roles = $this->security->getToken()->getRoles();
