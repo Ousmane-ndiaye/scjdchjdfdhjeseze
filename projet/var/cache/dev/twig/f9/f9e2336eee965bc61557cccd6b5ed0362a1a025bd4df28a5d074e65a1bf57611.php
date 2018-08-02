@@ -185,18 +185,32 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
                         <a href=\"#\" class=\"right-bar-toggle waves-effect\"><i class=\"md md-chat\"></i></a>
                     </li>
                     <li class=\"dropdown\">
-                        <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"data:image/png;base64,";
+                    ";
         // line 100
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "user", array()), "photo", array()), "html", null, true);
-        echo "\" alt=\"";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "user", array()), "username", array()), "html", null, true);
-        echo "\" class=\"img-circle\"> </a>
-                        <ul class=\"dropdown-menu\">
+        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "user", array()), "photo", array()) != null) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 100, $this->source); })()), "user", array()), "photo", array())) > 10000))) {
+            // line 101
+            echo "                        <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"data:image/png;base64,";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 101, $this->source); })()), "user", array()), "photo", array()), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 101, $this->source); })()), "user", array()), "username", array()), "html", null, true);
+            echo "\" class=\"img-circle\"> </a>
+
+                         ";
+        } else {
+            // line 104
+            echo "                     <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-6.jpg"), "html", null, true);
+            echo "\" alt=\"nom defini \" class=\"img-circle\"> </a>
+
+                      ";
+        }
+        // line 107
+        echo "                        <ul class=\"dropdown-menu\">
                             <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile</a></li>
                             <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
                             <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
                             <li><a href=\"";
-        // line 105
+        // line 111
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
         echo "\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                         </ul>
@@ -217,7 +231,7 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
 
     }
 
-    // line 117
+    // line 123
     public function block_leftsidebar($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -226,29 +240,48 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "leftsidebar"));
 
-        // line 118
+        // line 124
         echo "<!-- ========== Left Sidebar Start ========== -->
 <div class=\"left side-menu\">
     <div class=\"sidebar-inner slimscrollleft\">
         <div class=\"user-details\">
             <div class=\"pull-left\">
-                <img src=\"data:image/png;base64,";
-        // line 123
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 123, $this->source); })()), "user", array()), "photo", array()), "html", null, true);
-        echo "\" alt=\"\" class=\"thumb-md img-circle\">
-            </div>
+            ";
+        // line 129
+        if (((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 129, $this->source); })()), "user", array()), "photo", array()) != null) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 129, $this->source); })()), "user", array()), "photo", array())) > 10000))) {
+            // line 130
+            echo "            
+                <img  src=\"data:image/png;base64,";
+            // line 131
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 131, $this->source); })()), "user", array()), "photo", array()), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 131, $this->source); })()), "user", array()), "username", array()), "html", null, true);
+            echo "\" class=\"thumb-md img-circle\">
+            ";
+        } else {
+            // line 133
+            echo "            
+            <img src=\"";
+            // line 134
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-6.jpg"), "html", null, true);
+            echo "\" alt=\"no defini\" class=\"thumb-md img-circle\">
+            
+           ";
+        }
+        // line 137
+        echo "            </div>
             <div class=\"user-info\">
                 <div class=\"dropdown\">
                     <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">";
-        // line 127
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 127, $this->source); })()), "user", array()), "Proprietaire", array()), "nomComplet", array()), "html", null, true);
+        // line 140
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 140, $this->source); })()), "user", array()), "Proprietaire", array()), "nomComplet", array()), "html", null, true);
         echo " <span class=\"caret\"></span></a>
                     <ul class=\"dropdown-menu\">
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profil<div class=\"ripple-wrapper\"></div></a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Paramétrage</a></li>
                         <li><a href=\"javascript:void(0)\"><i class=\"md md-lock\"></i> Lock screen</a></li>
                         <li><a href=\"";
-        // line 132
+        // line 145
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_logout");
         echo "\"><i class=\"md md-settings-power\"></i> Logout</a></li>
                     </ul>
@@ -262,7 +295,7 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
             <ul>
                 <li>
                     <a href=\"";
-        // line 143
+        // line 156
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil_account");
         echo "\" class=\"waves-effect\"><i class=\"md md-home\"></i><span> Tableau de bord </span></a>
                 </li>
@@ -279,11 +312,11 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
                     <a href=\"#\" class=\"waves-effect\"><i class=\"md md-view-module\"></i><span> Salle </span><span class=\"pull-right\"><i class=\"md md-add\"></i></span></a>
                     <ul class=\"list-unstyled\">
                         <li><a href=\"";
-        // line 157
+        // line 170
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_salle");
         echo "\">Liste de mes Salles</a></li>
                         <li><a href=\"";
-        // line 158
+        // line 171
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajouter_salle");
         echo "\">Ajouter une salle</a></li>
                     </ul>
@@ -363,7 +396,7 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
 
     public function getDebugInfo()
     {
-        return array (  287 => 158,  283 => 157,  266 => 143,  252 => 132,  244 => 127,  237 => 123,  230 => 118,  221 => 117,  200 => 105,  190 => 100,  101 => 14,  97 => 13,  90 => 8,  81 => 7,  64 => 5,  47 => 3,  15 => 1,);
+        return array (  320 => 171,  316 => 170,  299 => 156,  285 => 145,  277 => 140,  272 => 137,  266 => 134,  263 => 133,  256 => 131,  253 => 130,  251 => 129,  244 => 124,  235 => 123,  214 => 111,  208 => 107,  201 => 104,  192 => 101,  190 => 100,  101 => 14,  97 => 13,  90 => 8,  81 => 7,  64 => 5,  47 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -467,7 +500,13 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
                         <a href=\"#\" class=\"right-bar-toggle waves-effect\"><i class=\"md md-chat\"></i></a>
                     </li>
                     <li class=\"dropdown\">
+                    {% if app.user.photo != null and app.user.photo|length > 10000  %}
                         <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"data:image/png;base64,{{ app.user.photo }}\" alt=\"{{ app.user.username }}\" class=\"img-circle\"> </a>
+
+                         {% else %}
+                     <a href=\"\" class=\"dropdown-toggle profile\" data-toggle=\"dropdown\" aria-expanded=\"true\"><img src=\"{{asset('assets/images/users/avatar-6.jpg')}}\" alt=\"nom defini \" class=\"img-circle\"> </a>
+
+                      {% endif %}
                         <ul class=\"dropdown-menu\">
                             <li><a href=\"javascript:void(0)\"><i class=\"md md-face-unlock\"></i> Profile</a></li>
                             <li><a href=\"javascript:void(0)\"><i class=\"md md-settings\"></i> Settings</a></li>
@@ -490,7 +529,14 @@ class __TwigTemplate_5cf303210f72d09577f8de40a75097bbc9c4c0a8fc32f8f16e56472ed59
     <div class=\"sidebar-inner slimscrollleft\">
         <div class=\"user-details\">
             <div class=\"pull-left\">
-                <img src=\"data:image/png;base64,{{ app.user.photo }}\" alt=\"\" class=\"thumb-md img-circle\">
+            {% if app.user.photo != null and app.user.photo|length >10000  %}
+            
+                <img  src=\"data:image/png;base64,{{ app.user.photo }}\" alt=\"{{ app.user.username }}\" class=\"thumb-md img-circle\">
+            {% else %}
+            
+            <img src=\"{{asset('assets/images/users/avatar-6.jpg')}}\" alt=\"no defini\" class=\"thumb-md img-circle\">
+            
+           {% endif %}
             </div>
             <div class=\"user-info\">
                 <div class=\"dropdown\">

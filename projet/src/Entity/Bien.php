@@ -91,6 +91,15 @@ class Bien
      */
     private $reservations;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="Commentaire", mappedBy = "bien")
+     * 
+     */
+    private $commentaires;
+
+
+
     public function __construct()
     {
         $this->images = new ArrayCollection();

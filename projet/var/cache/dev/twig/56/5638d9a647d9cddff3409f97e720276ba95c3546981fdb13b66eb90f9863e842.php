@@ -38,6 +38,9 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "front/reserver-salle.html.twig"));
 
+        // line 4
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 4, $this->source); })()), array(0 => "bootstrap_4_layout.html.twig"), true);
+        // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -65,7 +68,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 5
+    // line 6
     public function block_slide($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -74,7 +77,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "slide"));
 
-        // line 6
+        // line 7
         echo "    <div>
         <br><br>
 
@@ -89,7 +92,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 12
+    // line 13
     public function block_offre($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -98,185 +101,162 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "offre"));
 
-        // line 13
-        echo "    ";
         // line 14
+        echo "    ";
+        // line 15
         echo "
     <div class=\"mg-best-rooms maclasse\" style=\"display:flex\">
 
         <div class=\"container ok\">
             ";
-        // line 22
+        // line 23
         echo "
             <!--div contient forMulaire et iMages-->
-        <div>
-        
-         
-         
-        
-            
-            <div class=\"col-md-7\">
-                <h2 class=\"mg-sec-left-title\">";
-        // line 31
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 31, $this->source); })()), "nomComplet", array()), "html", null, true);
+            <div>
+
+                <div class=\"col-md-7\">
+                    <h2 class=\"mg-sec-left-title\">";
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 28, $this->source); })()), "nomComplet", array()));
         echo "</h2>
-               
-                <div style=\"width:600px;heigth:900px\" class=\"mg-gallery-container\">
-                    <ul  class=\"mg-gallery\" id=\"mg-gallery\">
 
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
+                    <div style=\"width:600px;heigth:900px\" class=\"mg-gallery-container\">
+                        <ul class=\"mg-gallery\" id=\"mg-gallery\">
+
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
+        // line 33
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 33, $this->source); })()), "images", array()), 0, array(), "array"), "image", array()), "html", null, true);
+        echo "\" alt=\"Partner Logo\"></li>
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
+        // line 34
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 34, $this->source); })()), "images", array()), 1, array(), "array"), "image", array()), "html", null, true);
+        echo "\" alt=\"Partner Logo\"></li>
+
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
         // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 36, $this->source); })()), "images", array()), 0, array(), "array"), "image", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 36, $this->source); })()), "images", array()), 2, array(), "array"), "image", array()), "html", null, true);
         echo "\" alt=\"Partner Logo\"></li>
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
-        // line 37
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 37, $this->source); })()), "images", array()), 1, array(), "array"), "image", array()), "html", null, true);
+                          
+
+                        </ul>
+
+                        <ul style=\"width:100% ;heigh:100%\" class=\"mg-gallery-thumb\" id=\"mg-gallery-thumb\">
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
+        // line 42
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 42, $this->source); })()), "images", array()), 0, array(), "array"), "image", array()), "html", null, true);
         echo "\" alt=\"Partner Logo\"></li>
 
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,";
-        // line 39
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 39, $this->source); })()), "images", array()), 2, array(), "array"), "image", array()), "html", null, true);
-        echo "\" alt=\"Partner Logo\"></li>
-                        ";
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
         // line 44
-        echo "          
-                    </ul>
-             
-                    <ul style=\"width:100% ;heigh:100%\"  class=\"mg-gallery-thumb\" id=\"mg-gallery-thumb\">
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
-        // line 48
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 48, $this->source); })()), "images", array()), 0, array(), "array"), "image", array()), "html", null, true);
-        echo "\" alt=\"Partner Logo\"></li>;
-
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
-        // line 50
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 50, $this->source); })()), "images", array()), 1, array(), "array"), "image", array()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 44, $this->source); })()), "images", array()), 1, array(), "array"), "image", array()), "html", null, true);
         echo "\" alt=\"Partner Logo\"></li>
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
-        // line 51
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 51, $this->source); })()), "images", array()), 2, array(), "array"), "image", array()), "html", null, true);
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,";
+        // line 45
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["salle"]) || array_key_exists("salle", $context) ? $context["salle"] : (function () { throw new Twig_Error_Runtime('Variable "salle" does not exist.', 45, $this->source); })()), "images", array()), 2, array(), "array"), "image", array()), "html", null, true);
         echo "\" alt=\"Partner Logo\"></li>
-                      
-                    </ul>
-                </div>
-            </div>
- 
 
-
-
-    
-
-    <div style=\"margin-left:20px ; \" class=\"container\">
-
-        <fieldset style=\"\">
-            <legend>
-                <a class=\"mg-sec-left-title\" id=\"conne\">
-                    SE CONNECTER
-                </a >
-            <span style=\"color:#ffb32f\">OU</span> 
-                <a class=\"mg-sec-left-title\" id=\"insc\">
-                    S'INSCRIRE
-                </a>
-            </legend>
-            <form id=\"formconnexion\" style=\"background-color:orange\">
-                <p class=\"h4 text-center mb-4\">CONNECTION</p>
-
-                <!-- Material input email -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">Votre Email</label>
-
-                    <input type=\"email\" name=\"mail\" id=\"materialFormLoginEmailEx\" class=\"form-control\">
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Material input password -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">Votre Mot de Passe</label>
+                <div style=\"margin-left:10px ; \" class=\"container\">
 
-                    <input name=\"password\" type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
+                    <fieldset >
 
-                <div class=\"text-center mt-4\">
-                    <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
-                </div>
-            </form>
-
-            <form id=\"formreservation\" action=\"\" method=\"post\" style=\"background-color:orange\">
-                <p class=\"h4 text-center mb-4\">INSCRIPTION</p>
-
-                <!-- numero piece -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">NUMERO PIECE</label>
-                    <input type=\"number\" id=\"materialFormLoginEmailEx\" name=\"numpiece\" placeholder=\"num piece..\" class=\"form-control\" required=\"required\">
-
-                </div>
-
-                <!-- Nom Complet -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-user prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">NOM COMPLET</label>
-
-                    <input type=\"text\" id=\"nomcomplet\" name=\"nomcomplet\" placeholder=\"Papa Tene..\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- NuMERO TELEPHONE -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-phone prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">TELEPHONE</label>
-                    <input type=\"number\" id=\"tel\" name=\"tel\" placeholder=\"77545454\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- ADRESSES -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-home prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">ADRESSE</label>
-                    <input type=\"text\" id=\"adresse\" name=\"adresse\" placeholder=\"Fass mbao..\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- Material input email -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">VOTRE EMAIL</label>
-                    <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"contact@senofice.sn\" class=\"form-control\" required=\"required\">
-
-                </div>
-
-                <!-- Material input password -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">VOTRE MOT DE PASSE</label>
-
-                    <input type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
-                <!-- Rettaper mt de pass -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">CONFIRMER MOT DE PASSE</label>
-
-                    <input type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
-                ";
-        // line 156
+                        <center>
+                            <img style=\"width:100px\" class=\"img-responsive center\" src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/giphy.gif"), "html", null, true);
+        echo "\" alt=\"reservation sen office\"></center>
+                        <div style=\"background-color:orange\">
+                            <p class=\"h4 text-center mb-4\">RESERVATION</p>
+                        </br>
+                        ";
+        // line 60
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 60, $this->source); })()), 'form_start');
         echo "
-                <div class=\"text-center mt-4\">
-                    <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
-                </div>
-            </form>
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-user prefix grey-text\"></i>
+                            ";
+        // line 63
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 63, $this->source); })()), "client", array()), "nomComplet", array())), 'row', array("attr" => array("placeholder" => "Boubacar SECK", "class" => "form-control")));
+        echo "
+                        </div>
 
-        </fieldset>
+                        <div style=\"width:110px\" class=\"md-form\">
+                            <i class=\"fa fa-phone prefix grey-text\"></i>
+                            ";
+        // line 68
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 68, $this->source); })()), "client", array()), "telephone", array())), 'row', array("attr" => array("placeholder" => "770000000", "class" => "form-control")));
+        echo "
+                        </div>
 
-     </div>
- </div>
-    
+                        <div class=\"md-form\">
+                            <i class=\"fa fa-envelope prefix grey-text\"></i>
+                            ";
+        // line 73
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 73, $this->source); })()), "client", array()), "mail", array())), 'row', array("attr" => array("placeholder" => "senoffice@gmail.com", "class" => "form-control")));
+        echo "
+                        </div>
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-clock prefix grey-text\"></i>
+                            <label >
+                                Date et Heure début de Cérémonie
+                                ";
+        // line 79
+        if ($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 79, $this->source); })()), "debut", array()), 'errors')) {
+            // line 80
+            echo "                                    <div class=\"alert alert-danger\">";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 80, $this->source); })()), "debut", array())), 'errors');
+            echo "
+                                    </div>
+                                ";
+        }
+        // line 83
+        echo "                            </label>
+                            ";
+        // line 84
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 84, $this->source); })()), "debut", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+                        </div>
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-clock\"></i>
+                            <label >
+                                Date et Heure Fin de Cérémonie
+                                ";
+        // line 90
+        if ($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 90, $this->source); })()), "fin", array()), 'errors')) {
+            // line 91
+            echo "                                    <div class=\"alert alert-danger\">";
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 91, $this->source); })()), "fin", array()), 'errors');
+            echo "
+                                    </div>
+                                ";
+        }
+        // line 94
+        echo "                            </label>
+                            ";
+        // line 95
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 95, $this->source); })()), "fin", array()), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+                        </div>
+
+                        <div class=\"text-center mt-4\">
+                            <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
+                        </div>
+                        ";
+        // line 101
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 101, $this->source); })()), 'form_end');
+        echo "
+                    </div>
+
+                </fieldset>
+
+            </div>
         </div>
+
     </div>
-
-    <style ></style>
-
 </div>
-
 
 ";
         
@@ -287,7 +267,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 177
+    // line 114
     public function block_recherche($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -304,7 +284,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 179
+    // line 116
     public function block_apropos($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -313,6 +293,95 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "apropos"));
 
+        // line 117
+        echo "
+
+
+";
+        // line 120
+        if ((twig_length_filter($this->env, (isset($context["commentaires"]) || array_key_exists("commentaires", $context) ? $context["commentaires"] : (function () { throw new Twig_Error_Runtime('Variable "commentaires" does not exist.', 120, $this->source); })())) > 0)) {
+            // line 121
+            echo "
+<div class=\"card \">
+    <div class=\"panel panel-warning\">
+        <div class=\"panel-heading\">
+            <h4 class=\"panel-title\">";
+            // line 125
+            echo twig_length_filter($this->env, (isset($context["commentaires"]) || array_key_exists("commentaires", $context) ? $context["commentaires"] : (function () { throw new Twig_Error_Runtime('Variable "commentaires" does not exist.', 125, $this->source); })()));
+            echo "
+                ";
+            // line 126
+            if ((twig_length_filter($this->env, (isset($context["commentaires"]) || array_key_exists("commentaires", $context) ? $context["commentaires"] : (function () { throw new Twig_Error_Runtime('Variable "commentaires" does not exist.', 126, $this->source); })())) == 1)) {
+                // line 127
+                echo "                    Commentaire Pour cette Publication
+                ";
+            } else {
+                // line 129
+                echo "                    Commentaires Pour cette Publication
+                ";
+            }
+            // line 131
+            echo "            ";
+        }
+        // line 132
+        echo "            </h4>
+       </div>
+    ";
+        // line 134
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["commentaires"]) || array_key_exists("commentaires", $context) ? $context["commentaires"] : (function () { throw new Twig_Error_Runtime('Variable "commentaires" does not exist.', 134, $this->source); })()));
+        $context['_iterated'] = false;
+        foreach ($context['_seq'] as $context["_key"] => $context["commentaire"]) {
+            // line 135
+            echo "        <div class=\"panel-body\">
+        
+            <div class=\"inbox-widget  \">
+
+                <a>
+                    <div class=\"inbox-item \">
+                        <div class=\"inbox-item-img\"><img src=\"";
+            // line 141
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/users/avatar-2.jpg"), "html", null, true);
+            echo "\" class=\"img-circle\" alt=\"\"></div>
+                        <p class=\"inbox-item-author\">";
+            // line 142
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["commentaire"], "user", array()), "username", array()));
+            echo "</p>
+                        <h5><p class=\"\">  ";
+            // line 143
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commentaire"], "contenu", array()));
+            echo "</p>  </h5>
+                        <p class=\"inbox-item-date\">";
+            // line 144
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commentaire"], "datePub", array())), "Y-m-d H:i:s"), "html", null, true);
+            echo "</p>  
+                    </div>
+                </a>
+            </div>
+        </div>
+           ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 150
+            echo "        <center>
+            <button class=\"btn btn-main \">Pas de Commentaires diponibles Soyez le premier à commenter</button>
+
+        </center>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commentaire'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 155
+        echo "    </div>
+
+</div>
+<br>
+<!-- end col -->
+
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -321,7 +390,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 180
+    // line 164
     public function block_partenaires($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -330,6 +399,55 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "partenaires"));
 
+        // line 165
+        echo "
+";
+        // line 166
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 166, $this->source); })()), "user", array())) {
+            // line 167
+            echo "
+<div>
+
+";
+            // line 170
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formC"]) || array_key_exists("formC", $context) ? $context["formC"] : (function () { throw new Twig_Error_Runtime('Variable "formC" does not exist.', 170, $this->source); })()), 'form_start');
+            echo "
+
+<label style=\"margin-left:20px\"  >
+
+    Ajouter Commentaires
+    ";
+            // line 175
+            if ($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formC"]) || array_key_exists("formC", $context) ? $context["formC"] : (function () { throw new Twig_Error_Runtime('Variable "formC" does not exist.', 175, $this->source); })()), "contenu", array()), 'errors')) {
+                // line 176
+                echo "        <div class=\"alert alert-danger\">";
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formC"]) || array_key_exists("formC", $context) ? $context["formC"] : (function () { throw new Twig_Error_Runtime('Variable "formC" does not exist.', 176, $this->source); })()), "contenu", array()), 'errors');
+                echo "
+        </div>
+    ";
+            }
+            // line 179
+            echo "</label>
+";
+            // line 180
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formC"]) || array_key_exists("formC", $context) ? $context["formC"] : (function () { throw new Twig_Error_Runtime('Variable "formC" does not exist.', 180, $this->source); })()), "contenu", array()), 'widget', array("attr" => array("class" => "form-control")));
+            echo "
+
+<input  style=\"margin-left:140px\" class=\"btn btn-main\" type=\"submit\" name=\"comment\" value=\"Commenter\">
+
+";
+            // line 184
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formC"]) || array_key_exists("formC", $context) ? $context["formC"] : (function () { throw new Twig_Error_Runtime('Variable "formC" does not exist.', 184, $this->source); })()), 'form_end');
+            echo "
+</div>
+<br>
+
+";
+        }
+        // line 189
+        echo "
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -338,7 +456,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 182
+    // line 192
     public function block_galerie($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -355,7 +473,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     }
 
-    // line 183
+    // line 193
     public function block_form($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -384,7 +502,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
 
     public function getDebugInfo()
     {
-        return array (  359 => 183,  342 => 182,  325 => 180,  308 => 179,  291 => 177,  262 => 156,  157 => 51,  153 => 50,  148 => 48,  142 => 44,  138 => 39,  133 => 37,  129 => 36,  121 => 31,  110 => 22,  104 => 14,  102 => 13,  93 => 12,  78 => 6,  69 => 5,  51 => 3,  15 => 1,);
+        return array (  477 => 193,  460 => 192,  448 => 189,  440 => 184,  433 => 180,  430 => 179,  423 => 176,  421 => 175,  413 => 170,  408 => 167,  406 => 166,  403 => 165,  394 => 164,  377 => 155,  367 => 150,  356 => 144,  352 => 143,  348 => 142,  344 => 141,  336 => 135,  331 => 134,  327 => 132,  324 => 131,  320 => 129,  316 => 127,  314 => 126,  310 => 125,  304 => 121,  302 => 120,  297 => 117,  288 => 116,  271 => 114,  249 => 101,  240 => 95,  237 => 94,  230 => 91,  228 => 90,  219 => 84,  216 => 83,  209 => 80,  207 => 79,  198 => 73,  190 => 68,  182 => 63,  176 => 60,  169 => 56,  155 => 45,  151 => 44,  146 => 42,  137 => 36,  132 => 34,  128 => 33,  120 => 28,  113 => 23,  107 => 15,  105 => 14,  96 => 13,  81 => 7,  72 => 6,  54 => 3,  44 => 1,  42 => 4,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -392,6 +510,7 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
         return new Twig_Source("{% extends 'front.html.twig' %}
 
 {% block title %}Reserever{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block slide %}
     <div>
@@ -412,164 +531,173 @@ class __TwigTemplate_833fc38f364d5571afc094bacdc506be1555ee66e17c8c4f7ea2e836d7e
             </div> #}
 
             <!--div contient forMulaire et iMages-->
-        <div>
-        
-         
-         
-        
-            
-            <div class=\"col-md-7\">
-                <h2 class=\"mg-sec-left-title\">{{ salle.nomComplet }}</h2>
-               
-                <div style=\"width:600px;heigth:900px\" class=\"mg-gallery-container\">
-                    <ul  class=\"mg-gallery\" id=\"mg-gallery\">
+            <div>
 
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[0].image}}\" alt=\"Partner Logo\"></li>
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[1].image}}\" alt=\"Partner Logo\"></li>
+                <div class=\"col-md-7\">
+                    <h2 class=\"mg-sec-left-title\">{{ salle.nomComplet |e |raw }}</h2>
 
-                        <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[2].image}}\" alt=\"Partner Logo\"></li>
-                        {# <li><img src=\"{{asset ('assets/template/images/gallery-06.png')}}\" alt=\"Partner Logo\"></li>
-                        <li><img src=\"{{asset ('assets/template/images/gallery-07.png')}}\" alt=\"Partner Logo\"></li>
-                        <li><img src=\"{{asset ('assets/template/images/gallery-08.png')}}\" alt=\"Partner Logo\"></li>
-                         #}
-          
-                    </ul>
-             
-                    <ul style=\"width:100% ;heigh:100%\"  class=\"mg-gallery-thumb\" id=\"mg-gallery-thumb\">
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[0].image}}\" alt=\"Partner Logo\"></li>;
+                    <div style=\"width:600px;heigth:900px\" class=\"mg-gallery-container\">
+                        <ul class=\"mg-gallery\" id=\"mg-gallery\">
 
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[1].image}}\" alt=\"Partner Logo\"></li>
-                        <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[2].image}}\" alt=\"Partner Logo\"></li>
-                      
-                    </ul>
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[0].image}}\" alt=\"Partner Logo\"></li>
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[1].image}}\" alt=\"Partner Logo\"></li>
+
+                            <li><img style=\"width:100%;heigth:200px\" src=\"data:image/png;base64,{{salle.images[2].image}}\" alt=\"Partner Logo\"></li>
+                          
+
+                        </ul>
+
+                        <ul style=\"width:100% ;heigh:100%\" class=\"mg-gallery-thumb\" id=\"mg-gallery-thumb\">
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[0].image}}\" alt=\"Partner Logo\"></li>
+
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[1].image}}\" alt=\"Partner Logo\"></li>
+                            <li><img style=\"width:100%; heigth:100%\" src=\"data:image/png;base64,{{salle.images[2].image}}\" alt=\"Partner Logo\"></li>
+
+                        </ul>
+                    </div>
                 </div>
+
+                <div style=\"margin-left:10px ; \" class=\"container\">
+
+                    <fieldset >
+
+                        <center>
+                            <img style=\"width:100px\" class=\"img-responsive center\" src=\"{{asset('assets/images/users/giphy.gif')}}\" alt=\"reservation sen office\"></center>
+                        <div style=\"background-color:orange\">
+                            <p class=\"h4 text-center mb-4\">RESERVATION</p>
+                        </br>
+                        {{ form_start(form)}}
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-user prefix grey-text\"></i>
+                            {{ form_row(form.client.nomComplet |raw |e,{'attr':{'placeholder':'Boubacar SECK','class':\"form-control\"}})}}
+                        </div>
+
+                        <div style=\"width:110px\" class=\"md-form\">
+                            <i class=\"fa fa-phone prefix grey-text\"></i>
+                            {{ form_row(form.client.telephone |raw |e,{'attr':{'placeholder':'770000000','class':\"form-control\"}})}}
+                        </div>
+
+                        <div class=\"md-form\">
+                            <i class=\"fa fa-envelope prefix grey-text\"></i>
+                            {{ form_row(form.client.mail |raw |e,{'attr':{'placeholder':'senoffice@gmail.com','class':\"form-control\"}})}}
+                        </div>
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-clock prefix grey-text\"></i>
+                            <label >
+                                Date et Heure début de Cérémonie
+                                {% if form_errors(form.debut) %}
+                                    <div class=\"alert alert-danger\">{{ form_errors(form.debut |raw |e) }}
+                                    </div>
+                                {% endif %}
+                            </label>
+                            {{ form_widget(form.debut,{'attr':{'class':\"form-control\"}})}}
+                        </div>
+                        <div style=\"margin-left:20px\" class=\"md-form\">
+                            <i class=\"fa fa-clock\"></i>
+                            <label >
+                                Date et Heure Fin de Cérémonie
+                                {% if form_errors(form.fin) %}
+                                    <div class=\"alert alert-danger\">{{ form_errors(form.fin) }}
+                                    </div>
+                                {% endif %}
+                            </label>
+                            {{ form_widget(form.fin,{'attr':{'class':\"form-control\"}})}}
+                        </div>
+
+                        <div class=\"text-center mt-4\">
+                            <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
+                        </div>
+                        {{ form_end(form)}}
+                    </div>
+
+                </fieldset>
+
             </div>
- 
-
-
-
-    
-
-    <div style=\"margin-left:20px ; \" class=\"container\">
-
-        <fieldset style=\"\">
-            <legend>
-                <a class=\"mg-sec-left-title\" id=\"conne\">
-                    SE CONNECTER
-                </a >
-            <span style=\"color:#ffb32f\">OU</span> 
-                <a class=\"mg-sec-left-title\" id=\"insc\">
-                    S'INSCRIRE
-                </a>
-            </legend>
-            <form id=\"formconnexion\" style=\"background-color:orange\">
-                <p class=\"h4 text-center mb-4\">CONNECTION</p>
-
-                <!-- Material input email -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">Votre Email</label>
-
-                    <input type=\"email\" name=\"mail\" id=\"materialFormLoginEmailEx\" class=\"form-control\">
-                </div>
-
-                <!-- Material input password -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">Votre Mot de Passe</label>
-
-                    <input name=\"password\" type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
-
-                <div class=\"text-center mt-4\">
-                    <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
-                </div>
-            </form>
-
-            <form id=\"formreservation\" action=\"\" method=\"post\" style=\"background-color:orange\">
-                <p class=\"h4 text-center mb-4\">INSCRIPTION</p>
-
-                <!-- numero piece -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">NUMERO PIECE</label>
-                    <input type=\"number\" id=\"materialFormLoginEmailEx\" name=\"numpiece\" placeholder=\"num piece..\" class=\"form-control\" required=\"required\">
-
-                </div>
-
-                <!-- Nom Complet -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-user prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">NOM COMPLET</label>
-
-                    <input type=\"text\" id=\"nomcomplet\" name=\"nomcomplet\" placeholder=\"Papa Tene..\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- NuMERO TELEPHONE -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-phone prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">TELEPHONE</label>
-                    <input type=\"number\" id=\"tel\" name=\"tel\" placeholder=\"77545454\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- ADRESSES -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-home prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">ADRESSE</label>
-                    <input type=\"text\" id=\"adresse\" name=\"adresse\" placeholder=\"Fass mbao..\" class=\"form-control\" required=\"required\">
-                </div>
-
-                <!-- Material input email -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-envelope prefix grey-text\"></i>
-                    <label for=\"materialFormLoginEmailEx\">VOTRE EMAIL</label>
-                    <input type=\"email\" id=\"email\" name=\"email\" placeholder=\"contact@senofice.sn\" class=\"form-control\" required=\"required\">
-
-                </div>
-
-                <!-- Material input password -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">VOTRE MOT DE PASSE</label>
-
-                    <input type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
-                <!-- Rettaper mt de pass -->
-                <div class=\"md-form\">
-                    <i class=\"fa fa-lock prefix grey-text\"></i>
-                    <label for=\"materialFormLoginPasswordEx\">CONFIRMER MOT DE PASSE</label>
-
-                    <input type=\"password\" id=\"materialFormLoginPasswordEx\" class=\"form-control\">
-                </div>
-                {# {% for bien in  biens %}
-   <input  type=\"hidden\" name=\"idbienareserver\" value=\"{{bien.id}}\">
-    {% endfor %} #}
-
-                <div class=\"text-center mt-4\">
-                    <input class=\"btn btn-dark\" type=\"submit\" name=\"reserver\" value=\"Reserver\">
-                </div>
-            </form>
-
-        </fieldset>
-
-     </div>
- </div>
-    
         </div>
+
     </div>
-
-    <style ></style>
-
 </div>
-
 
 {% endblock %}
 
 {% block recherche %}{% endblock %}
 
-{% block apropos %}{% endblock %}
-{% block partenaires %}{% endblock %}
+{% block apropos %}
 
+
+
+{% if commentaires | length > 0 %}
+
+<div class=\"card \">
+    <div class=\"panel panel-warning\">
+        <div class=\"panel-heading\">
+            <h4 class=\"panel-title\">{{commentaires|length |raw }}
+                {% if commentaires | length == 1 %}
+                    Commentaire Pour cette Publication
+                {% else %}
+                    Commentaires Pour cette Publication
+                {% endif %}
+            {% endif %}
+            </h4>
+       </div>
+    {% for commentaire in commentaires %}
+        <div class=\"panel-body\">
+        
+            <div class=\"inbox-widget  \">
+
+                <a>
+                    <div class=\"inbox-item \">
+                        <div class=\"inbox-item-img\"><img src=\"{{asset('assets/images/users/avatar-2.jpg')}}\" class=\"img-circle\" alt=\"\"></div>
+                        <p class=\"inbox-item-author\">{{commentaire.user.username |e |raw }}</p>
+                        <h5><p class=\"\">  {{commentaire.contenu |e |raw }}</p>  </h5>
+                        <p class=\"inbox-item-date\">{{commentaire.datePub |e |raw  |date('Y-m-d H:i:s') }}</p>  
+                    </div>
+                </a>
+            </div>
+        </div>
+           {% else %}
+        <center>
+            <button class=\"btn btn-main \">Pas de Commentaires diponibles Soyez le premier à commenter</button>
+
+        </center>
+{% endfor %}
+    </div>
+
+</div>
+<br>
+<!-- end col -->
+
+
+{% endblock %}
+
+{% block partenaires %}
+
+{% if app.user %}
+
+<div>
+
+{{ form_start(formC)}}
+
+<label style=\"margin-left:20px\"  >
+
+    Ajouter Commentaires
+    {% if form_errors(formC.contenu) %}
+        <div class=\"alert alert-danger\">{{ form_errors(formC.contenu) }}
+        </div>
+    {% endif %}
+</label>
+{{ form_widget(formC.contenu,{'attr':{'class':\"form-control\"}})}}
+
+<input  style=\"margin-left:140px\" class=\"btn btn-main\" type=\"submit\" name=\"comment\" value=\"Commenter\">
+
+{{ form_end(formC)}}
+</div>
+<br>
+
+{% endif %}
+
+
+{% endblock %}
 {% block galerie %}{% endblock %}
 {% block form %}{% endblock %}", "front/reserver-salle.html.twig", "/var/www/html/scjdchjdfdhjeseze/projet/templates/front/reserver-salle.html.twig");
     }

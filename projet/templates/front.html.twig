@@ -133,8 +133,18 @@
                             {% else %}
 					<li style="width:20px;height:20px; margin-right:50px" class="dropdown">
 
+                {% if app.user.photo != null and app.user.photo|length >10000  %}
+			
+                        <a  href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">
+						<img style="width:40px;height:40px" src="data:image/png;base64,{{ app.user.photo }}" alt="{{ app.user.username }}" class="img-circle">
+						 </a>
+                  {% else %}
+				  
+						 <a  href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true">
+						<img style="width:40px;height:40px" src="{{asset('assets/images/users/avatar-6.jpg')}}" alt="pas defini" class="img-circle">
+						 </a>
 
-                        <a  href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img style="width:40px;height:40px" src="data:image/png;base64,{{ app.user.photo }}" alt="{{ app.user.username }}" class="img-circle"> </a>
+						 {% endif %}
                         <ul class="dropdown-menu">
                             <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile</a></li>
                             <li><a href="{{path('liste_salle')}}"><i class="md md-home"></i> Mes salles</a></li>
@@ -311,6 +321,7 @@
 									<p>Nostram virtutem poterimus quoddam praesertim legendos libero exhorrescere saluti...</p>
 								</div>
 							</li>
+							
 							<li>
 								<div class="mg-recnt-post">
 									<div class="mg-rp-date">27 <div class="mg-rp-month">may</div></div>

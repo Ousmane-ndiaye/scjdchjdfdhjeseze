@@ -34,7 +34,7 @@ class RegistrationController extends Controller
             $user->setRoles(['ROLE_USER']);
             
             //mettre une image par defaut 
-            $user->setPhoto("http://placehold.it/350x100");
+            //$user->setPhoto("http://placehold.it/350x100");
 
             // On enregistre l'utilisateur dans la base
             $em = $this->getDoctrine()->getManager();

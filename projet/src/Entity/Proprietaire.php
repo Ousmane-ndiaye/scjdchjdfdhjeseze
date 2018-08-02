@@ -45,6 +45,9 @@ class Proprietaire
      */
     private $biens;
 
+
+    
+
     public function __construct()
     {
         $this->biens = new ArrayCollection();

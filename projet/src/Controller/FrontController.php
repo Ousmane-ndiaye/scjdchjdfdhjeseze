@@ -10,14 +10,22 @@ use App\Form\UserType;
 use App\Entity\Typedebien;
 
 // Interface
+use App\Entity\Commentaire;
+use App\Entity\Reservation;
+use App\Form\CommentaireType;
+
+// Entity, Form and repository
+use App\Form\ReservationType;
 use App\Entity\Arrondissement;
 use App\Repository\BienRepository;
 use App\Repository\UserRepository;
-
-// Entity, Form and repository
 use App\Repository\ImageRepository;
+
+
+
 use App\Repository\TypedebienRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\CommentaireRepository;
 use App\Repository\ProprietaireRepository;
 use App\Repository\ArrondissementRepository;
 
@@ -28,9 +36,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-
-
-
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -69,11 +74,8 @@ class FrontController extends Controller
     {
         //methode findUserImage Cree dans UserRepository
         $imageuser= $user->findUserImage();
-        
-        
-
         $image= $this->ImageRepository->findAll();
-        //dump($image)
+        dump($image);
         foreach ($image as $key => $value) {
            $value->setImage(base64_encode(stream_get_contents($value->getImage())));
 
@@ -119,6 +121,7 @@ class FrontController extends Controller
        //methode findUserImage Cree dans UserRepository
        $imageuser= $user->findUserImage();
         
+
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
 
@@ -130,6 +133,7 @@ class FrontController extends Controller
 
             // Par defaut l'utilisateur aura toujours le rôle ROLE_USER
             $user->setEtat(false);
+            
             $user->setRoles(['ROLE_PROPRIETAIRE']);
 
             // On enregistre l'utilisateur dans la base
@@ -154,11 +158,9 @@ class FrontController extends Controller
     /**
      * @Route("/reserver/{id}", name="reserver_salle", methods={"GET", "POST"})
      */
-    public function reserver($id,Request $request, UserRepository $user )
-
-    {
-
-                //methode findUserImage Cree dans UserRepository
+    public function reserver($id,Request $request, UserRepository $user,CommentaireRepository $comment )
+    { 
+        //methode findUserImage Cree dans UserRepository
                 $imageuser= $user->findUserImage();
 
                      $image= $this->ImageRepository->findAll();
@@ -167,15 +169,12 @@ class FrontController extends Controller
                         $value->setImage(base64_encode(stream_get_contents($value->getImage())));
              
                      }
-
-
         if (!is_Numeric($id)){
             return $this->redirectToRoute('accueil_front');
-
         }
     
-        $salle = $this->BienRepository->find($id);
-       dump($salle);
+                $salle = $this->BienRepository->find($id);
+                dump($salle);
 
             if (!$salle ) {
                 throw $this->createNotFoundException(
@@ -183,9 +182,65 @@ class FrontController extends Controller
                 );
             }
 
+        //Reservation
+        $reservation = new Reservation();
+        $form = $this->createForm(ReservationType::class,   $reservation);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $bien = $this->BienRepository->find($id);
+            $reservation->setBien($bien ); 
+            $reservation->setEtat(false);
+            $reservation->setDateReservation( new \DateTime('now'));
+
+            //periode a deteriner par le user
+            // On enregistre dans la base
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($reservation);
+            $em->flush();
+        }
+
+
+        //Commentaires
+        $commentaire = new Commentaire();
+        $formCommnent = $this->createForm(CommentaireType::class,    $commentaire);
+
+        $formCommnent->handleRequest($request);
+        if ($formCommnent->isSubmitted() && $formCommnent->isValid()) {
+            
+            $bien = $this->BienRepository->find($id);
+            $commentaire->setBien($bien); 
+            //Recuperation du user courant qui est connecté par la methode getUser()
+            $userId = $this->getUser()->getId();
+            $use = $user->find($userId);
+            $commentaire->setUser($use);
+            $commentaire->setEtat(true);
+            $commentaire->setDatePub( new \DateTime('now'));
+
+            // On enregistre dans la base
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($commentaire);
+            $em->flush();
+        }
+
+        //Affichage des commentaires seulement si vous ete connecte c a dire profil proprietaire
+        $comments= $comment->findBy(array('bien'=>$id,'etat'=>true));
+
         return $this->render('front/reserver-salle.html.twig', array(
 
-            "salle"=>$salle
+            "salle"=>$salle,
+            "form"=> $form->createView(),
+            "salle"=>$salle,
+            "formC"=> $formCommnent->createView(),
+            "commentaires"=>$comments
         ));
     }
+
+
+
+
+
+
+    
 }

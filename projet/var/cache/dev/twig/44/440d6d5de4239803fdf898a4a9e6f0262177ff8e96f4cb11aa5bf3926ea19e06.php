@@ -256,7 +256,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 118
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 118, $this->source); })()), "proprietaire", array()), "nomComplet", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Prénom et Nom")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 118, $this->source); })()), "proprietaire", array()), "nomComplet", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Prénom et Nom")));
         echo "
                                         </div>
                                     </div>
@@ -267,7 +267,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 126
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 126, $this->source); })()), "proprietaire", array()), "numPiece", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "175619940126")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 126, $this->source); })()), "proprietaire", array()), "numPiece", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "175619940126")));
         echo "
                                         </div>
                                     </div>
@@ -278,7 +278,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 134
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 134, $this->source); })()), "proprietaire", array()), "adresse", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Colobane, Dakar")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 134, $this->source); })()), "proprietaire", array()), "adresse", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Colobane, Dakar")));
         echo "
                                         </div>
                                     </div>
@@ -288,7 +288,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 141
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 141, $this->source); })()), "email", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "E-mail")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 141, $this->source); })()), "email", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "E-mail")));
         echo "
                                         </div>
                                     </div>
@@ -299,7 +299,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 149
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 149, $this->source); })()), "proprietaire", array()), "telephone", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "775919686")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 149, $this->source); })()), "proprietaire", array()), "telephone", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "775919686")));
         echo "
                                         </div>
                                     </div>
@@ -310,7 +310,7 @@ div#OR {
                                         <div class=\"col-sm-8\">
                                             ";
         // line 157
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 157, $this->source); })()), "username", array()), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Username")));
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new Twig_Error_Runtime('Variable "form" does not exist.', 157, $this->source); })()), "username", array())), 'widget', array("attr" => array("class" => "form-control", "placeholder" => "Username")));
         echo "
                                         </div>
                                     </div>
@@ -654,7 +654,7 @@ div#OR {
                                             Prénom et Nom
                                         </label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.proprietaire.nomComplet, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
+                                            {{ form_widget(form.proprietaire.nomComplet |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -662,7 +662,7 @@ div#OR {
                                             Numéro de pièce
                                         </label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.proprietaire.numPiece, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
+                                            {{ form_widget(form.proprietaire.numPiece |raw |e, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -670,14 +670,14 @@ div#OR {
                                             Adresse
                                         </label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.proprietaire.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
+                                            {{ form_widget(form.proprietaire.adresse |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
                                         <label for=\"email\" class=\"col-sm-4 control-label\">
                                             E-mail</label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
+                                            {{ form_widget(form.email |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -685,7 +685,7 @@ div#OR {
                                             Téléphone
                                         </label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.proprietaire.telephone, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
+                                            {{ form_widget(form.proprietaire.telephone |raw |e, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">
@@ -693,7 +693,7 @@ div#OR {
                                             Nom d'utilisateur
                                         </label>
                                         <div class=\"col-sm-8\">
-                                            {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
+                                            {{ form_widget(form.username |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
                                         </div>
                                     </div>
                                     <div class=\"form-group\">

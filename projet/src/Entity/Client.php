@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,19 +20,39 @@ class Client
     private $id;
 
     /**
+     * 
      * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 30,
+     *      minMessage="{{value}} un nom à au moins 2 lettres",
+     *      maxMessage=" {{value}} depasse 30 lettres",
+     * )
      */
-    private $structure;
+    private $nomComplet;
 
     /**
      * @ORM\Column(type="string", length=100)
-     */
-    private $adresse;
-
-    /**
-     * @ORM\Column(type="string", length=15)
+     *  @Assert\NotBlank()
+     *   @Assert\Length(
+     *      min = 9,
+     *      max = 14,
+     *      minMessage="Le numéro doit avoir au moins 9 chiffres",
+     *      maxMessage="Le numéro doit avoir au plus 14 chiffres",
+     * )
      */
     private $telephone;
+
+    /**
+     * @ORM\Column(type="string", length=30)
+     *  @Assert\NotBlank()
+     * @Assert\Email(
+     *     message = "l' email '{{ value }}' n'est pas valide.",
+     *     checkMX = true
+     * )
+     */
+    private $mail;
 
     /**
      * @ORM\OneToMany(targetEntity="Reservation", mappedBy = "client")
@@ -111,6 +132,46 @@ class Client
                 $reservation->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * Get the value of nomComplet
+     */ 
+    public function getNomComplet()
+    {
+        return $this->nomComplet;
+    }
+
+    /**
+     * Set the value of nomComplet
+     *
+     * @return  self
+     */ 
+    public function setNomComplet($nomComplet)
+    {
+        $this->nomComplet = $nomComplet;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of mail
+     */ 
+    public function getMail()
+    {
+        return $this->mail;
+    }
+
+    /**
+     * Set the value of mail
+     *
+     * @return  self
+     */ 
+    public function setMail($mail)
+    {
+        $this->mail = $mail;
 
         return $this;
     }
