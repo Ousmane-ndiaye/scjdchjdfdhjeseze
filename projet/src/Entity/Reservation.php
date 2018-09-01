@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -24,12 +25,18 @@ class Reservation
     private $dateReservation;
 
     /**
+     * 
      * @ORM\Column(type="datetime")
+     * @Assert\GreaterThanOrEqual("today")
+     * * @Assert\NotBlank()
      */
     private $debut;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank()
+     * @Assert\GreaterThanOrEqual(propertyPath="debut")
+     * 
      */
     private $fin;
 
@@ -39,21 +46,20 @@ class Reservation
     private $etat;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Bien", inversedBy="reservations")
+     * @ORM\ManyToOne(targetEntity="Bien", inversedBy="reservations" )
      * @ORM\JoinColumn(name = "bien", referencedColumnName = "id", nullable=false)
      */
     private $bien;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Client", inversedBy="reservations")
+     * @ORM\ManyToOne(targetEntity="Client", inversedBy="reservations" , cascade={"persist"})
      * @ORM\JoinColumn(name = "client", referencedColumnName = "id", nullable=false)
+     *  @Assert\Valid
+     * 
      */
     private $client;
 
-    /**
-     * @ORM\OneToMany(targetEntity="Periode", mappedBy = "reservation")
-     */
-    private $periodes;
+   
 
     public function __construct()
     {

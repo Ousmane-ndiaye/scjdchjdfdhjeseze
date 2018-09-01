@@ -115,7 +115,7 @@ div#OR {
                                             Prénom et Nom
                                         </label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.proprietaire.nomComplet, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
+                                            {{ form_widget(form.proprietaire.nomComplet |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Prénom et Nom'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -123,7 +123,7 @@ div#OR {
                                             Numéro de pièce
                                         </label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.proprietaire.numPiece, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
+                                            {{ form_widget(form.proprietaire.numPiece |raw |e, {'attr': {'class': 'form-control', 'placeholder': '175619940126'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -131,14 +131,14 @@ div#OR {
                                             Adresse
                                         </label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.proprietaire.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
+                                            {{ form_widget(form.proprietaire.adresse |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Colobane, Dakar'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class="col-sm-4 control-label">
                                             E-mail</label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
+                                            {{ form_widget(form.email |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'E-mail'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -146,7 +146,7 @@ div#OR {
                                             Téléphone
                                         </label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.proprietaire.telephone, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
+                                            {{ form_widget(form.proprietaire.telephone |raw |e, {'attr': {'class': 'form-control', 'placeholder': '775919686'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -154,7 +154,7 @@ div#OR {
                                             Nom d'utilisateur
                                         </label>
                                         <div class="col-sm-8">
-                                            {{ form_widget(form.username, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
+                                            {{ form_widget(form.username |raw |e, {'attr': {'class': 'form-control', 'placeholder': 'Username'}}) }}
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -244,9 +244,16 @@ div#OR {
                 <p>
                     Proposez la location de votre salle de réunion ou salle de séminaire et obtenez un revenu complémentaire. La création d'une annonce pour louer une salle sur Bird Office est gratuite et sans engagement !
                 </p>
+                {% if  app.user %}
+                <a href="{{path('ajouter_salle')}}" id="btn-authenticate" class="btn btn-main" data-toggle="modal" data-target="">
+                    <span style="font-weight: bold; text-transform: upperCase;">Je loue ma salle</span>
+                </a>
+                {% else %}
+                    
                 <button id="btn-authenticate" class="btn btn-main" data-toggle="modal" data-target="#myModal">
                     <span style="font-weight: bold; text-transform: upperCase;">Je loue ma salle</span>
                 </button>
+                {% endif %}
             </div>
         </div>
     </div>

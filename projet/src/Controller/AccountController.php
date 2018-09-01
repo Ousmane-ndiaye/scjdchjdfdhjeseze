@@ -21,6 +21,7 @@ use App\Repository\UserRepository;
 use App\Repository\TypedebienRepository;
 
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\ProprietaireRepository;
 use App\Repository\ArrondissementRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Security;
@@ -60,8 +61,10 @@ class AccountController extends Controller
     /**
      * @Route("/accueil", name="accueil_account")
      */
-    public function index(Request $request)
+    public function index(Request $request, UserRepository $user)
     {
+        //methode findUserImage Cree dans UserRepository
+        $imageuser= $user->findUserImage();
         return $this->render('account/index.html.twig', [
         ]);
     }
@@ -69,8 +72,13 @@ class AccountController extends Controller
     /**
      * @Route("/ajouter/salle", name="ajouter_salle")
      */
-    public function ajouterSalle(Request $request, JourRepository $JourRepository)
-    {
+    public function ajouterSalle(Request $request, JourRepository $JourRepository,UserRepository $user)
+    {   
+
+       //methode findUserImage Cree dans UserRepository
+       $imageuser= $user->findUserImage();
+        
+        
         $bien = new Bien();
         $form = $this->createForm(BienType::class, $bien);
 
@@ -118,8 +126,11 @@ class AccountController extends Controller
     /**
      * @Route("/liste/salle", name="liste_salle")
      */
-    public function listeSalle(Request $request, JourRepository $JourRepository)
+    public function listeSalle(Request $request, JourRepository $JourRepository, UserRepository $user)
     {
+         //methode findUserImage Cree dans UserRepository
+          $imageuser= $user->findUserImage();
+        
         return $this->render('account/salle/all.html.twig', [
             'salles' => $this->entityManager->getRepository(Bien::class)->findAll(),
         ]);
@@ -135,20 +146,25 @@ class AccountController extends Controller
     }
 
     /**
-     * @Route("/detail/salle", name="detail_salle", methods={"POST"})
+     * @Route("/detail/salle", name="detail_salle", methods={"POST","GET"})
      */
     public function detailSalle(Request $request, JourRepository $JourRepository)
     {
-        $bien = $this->entityManager->getRepository(Bien::class)->find($_POST['id']);
-
-        $ouvrables = $this->entityManager->getRepository(Ouvrable::class)->findBy(['bien' => $bien]);
-
-        $form = $this->createForm(BienType::class, $bien);
-
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($request->isMethod('GET')) {
+            return $this->redirectToRoute('liste_salle');
         }
-
+        $bien = $this->entityManager->getRepository(Bien::class)->find($_POST['id']);
+       
+        $ouvrables = $this->entityManager->getRepository(Ouvrable::class)->findBy(['bien' => $bien]);
+    
+        $form = $this->createForm(BienType::class, $bien);
+    
+        $form->handleRequest($request);
+    
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+        }
+    
         return $this->render('account/salle/detail.html.twig', [
             'salle' => $bien,
             'form' => $form->createView(),

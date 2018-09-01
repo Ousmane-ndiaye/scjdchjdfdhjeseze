@@ -59,17 +59,20 @@ class User implements UserInterface, \Serializable
      */
     private $photo;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Client", cascade={"persist"})
-     * @ORM\JoinColumn(name = "client", referencedColumnName = "id", nullable=true)
-     */
-    private $client;
+    
 
     /**
      * @ORM\ManyToOne(targetEntity="Proprietaire", cascade={"persist"})
      * @ORM\JoinColumn(name = "proprietaire", referencedColumnName = "id", nullable=true)
      */
     private $proprietaire;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Commentaire", mappedBy = "user")
+     * 
+     */
+    private $commentaires;
 
     public function __construct()
     {
